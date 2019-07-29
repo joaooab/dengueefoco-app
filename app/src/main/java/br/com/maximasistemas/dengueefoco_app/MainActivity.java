@@ -3,6 +3,8 @@ package br.com.maximasistemas.dengueefoco_app;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -38,6 +40,18 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        abreFragmentInicial();
+    }
+
+    public void abreFragmentInicial() {
+        Fragment formularioAntivetorialFragment = FormularioAntivetorialFragment.newInstance();
+        abreFragment(R.id.frameLayout, formularioAntivetorialFragment);
+    }
+
+    public void abreFragment(int frameLayout, Fragment formularioAntivetorialFragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(frameLayout, formularioAntivetorialFragment);
+        fragmentTransaction.commit();
     }
 
     @Override
