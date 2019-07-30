@@ -20,10 +20,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 //	private AppDatabase db = Room.databaseBuilder(getContext(), AppDatabase.class, "database-name").build();
 //	private AntivetorialDao antivetorialDao = db.antivetorialDao();
 	private EditText editTextAgente;
-	private Spinner spinnerLarvicida;
 	private EditText editTextQuantidade;
-	private Spinner spinnerStatusImovel;
-	private Spinner spinnerTipoImovel;
 	private EditText editTextCep;
 	private String larvicidaSelecionado;
 	private String statusImovelSelecionado;
@@ -44,18 +41,19 @@ public class FormularioAntivetorialFragment extends Fragment {
 		editTextAgente = view.findViewById(R.id.editTextAgente);
 		editTextQuantidade = view.findViewById(R.id.editTextQuantidade);
 		editTextCep = view.findViewById(R.id.editTextCep);
-		configuraTipoImovel();
+		configuraTipoImovel(view);
 		configuraStatusImovel(view);
-		configuraSpinnerLarvicida();
+		configuraSpinnerLarvicida(view);
 		configuraBotaoSalvar(view);
 		configuraBotaoLimpar(view);
 
 		super.onViewCreated(view, savedInstanceState);
 	}
 
-	private void configuraTipoImovel() {
-		final List<String> tipoImovel = Arrays.asList("Tipo de imóvel", "Casa", "Apartamento", "Terreno baldio", "Comércio");
-		ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), R.layout.spinner_item, tipoImovel);
+	private void configuraTipoImovel(@NonNull View view) {
+		final List<String> tipoImovel = Arrays.asList("Casa", "Apartamento", "Terreno baldio", "Comércio");
+		ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, tipoImovel);
+        Spinner spinnerStatusImovel = view.findViewById(R.id.spinnerTipoImovel);
 		spinnerStatusImovel.setAdapter(stringArrayAdapter);
 		spinnerStatusImovel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 			@Override
@@ -71,10 +69,10 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private void configuraStatusImovel(@NonNull View view) {
-		final List<String> statusImovel = Arrays.asList("Status do imóvel", "Visitado", "Fechado", "Recusado");
-		ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), R.layout.spinner_item, statusImovel);
-		spinnerStatusImovel.setAdapter(stringArrayAdapter);
-		spinnerStatusImovel = view.findViewById(R.id.spinnerStatusImovel);
+		final List<String> statusImovel = Arrays.asList("Visitado", "Fechado", "Recusado");
+		ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, statusImovel);
+        Spinner spinnerStatusImovel = view.findViewById(R.id.spinnerStatusImovel);
+        spinnerStatusImovel.setAdapter(stringArrayAdapter);
 		spinnerStatusImovel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -88,10 +86,11 @@ public class FormularioAntivetorialFragment extends Fragment {
 		});
 	}
 
-	private void configuraSpinnerLarvicida() {
+	private void configuraSpinnerLarvicida(View view) {
 		final List<String> larvicidas = Arrays.asList("Sinopsade", "Pryriproxfen");
-		ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), R.layout.spinner_item, larvicidas);
-		spinnerLarvicida.setAdapter(stringArrayAdapter);
+		ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, larvicidas);
+        Spinner spinnerLarvicida = view.findViewById(R.id.spinnerLarvicida);
+        spinnerLarvicida.setAdapter(stringArrayAdapter);
 		spinnerLarvicida.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
