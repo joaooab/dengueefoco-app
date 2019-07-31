@@ -1,11 +1,8 @@
 package br.com.maximasistemas.dengueefoco_app.ui;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
@@ -37,14 +34,18 @@ public class MainActivity extends AppCompatActivity
         abreFragmentInicial();
     }
 
-
     public void abreFragmentInicial() {
         abreFragment(ListaAntivetorialFragment.newInstance());
     }
 
     public void abreFragment(Fragment fragment) {
+        abreFragment(fragment, false);
+    }
+
+    public void abreFragment(Fragment fragment , Boolean salvarEstado) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, fragment);
+        if(salvarEstado) fragmentTransaction.addToBackStack(fragment.getClass().toString());
         fragmentTransaction.commit();
     }
 
@@ -86,12 +87,12 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-            // Handle the camera action
+        if (id == R.id.nav_antivetorial) {
+            abreFragment(ListaAntivetorialFragment.newInstance());
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
-
+        } else if (id == R.id.nav_supervisor) {
+            abreFragment(ListaSupervisorFragment.newInstance());
         } else if (id == R.id.nav_tools) {
 
         } else if (id == R.id.nav_share) {

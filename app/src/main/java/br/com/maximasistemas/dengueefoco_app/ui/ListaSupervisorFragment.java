@@ -3,7 +3,6 @@ package br.com.maximasistemas.dengueefoco_app.ui;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -21,13 +20,13 @@ import br.com.maximasistemas.dengueefoco_app.model.AntivetorialDao;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class ListaAntivetorialFragment extends Fragment {
+public class ListaSupervisorFragment extends Fragment {
 
     private AntivetorialDao antivetorialDao;
-    private AntivetorialAdapter adapter;
+    private SupervisorAdapter adapter;
 
-    static ListaAntivetorialFragment newInstance() {
-        return new ListaAntivetorialFragment();
+    static ListaSupervisorFragment newInstance() {
+        return new ListaSupervisorFragment();
     }
 
     @Override
@@ -39,15 +38,14 @@ public class ListaAntivetorialFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_lista_antivetorial, container, false);
-        configuraFab(view);
+        View view = inflater.inflate(R.layout.include_lista, container, false);
         configuraLista(view);
         return view;
     }
 
     private void configuraLista(View view) {
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewAntivetorial);
-        adapter = new AntivetorialAdapter(new ArrayList<>());
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        adapter = new SupervisorAdapter(new ArrayList<>());
         recyclerView.setAdapter(adapter);
     }
 
@@ -66,16 +64,6 @@ public class ListaAntivetorialFragment extends Fragment {
 
     private void processaLista(List<Antivetorial> lista) {
         adapter.atualizaLista(lista);
-    }
-
-    private void configuraFab(View view) {
-        final FloatingActionButton fab = view.findViewById(R.id.fab);
-        fab.setOnClickListener(v -> {
-            MainActivity activity = (MainActivity) getActivity();
-            if (activity != null) {
-                activity.abreFragment(FormularioAntivetorialFragment.newInstance(), true);
-            }
-        });
     }
 
 }
