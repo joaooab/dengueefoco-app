@@ -9,16 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.*;
+import br.com.maximasistemas.dengueefoco_app.AppDatabase;
 import br.com.maximasistemas.dengueefoco_app.R;
 import br.com.maximasistemas.dengueefoco_app.model.Antivetorial;
+import br.com.maximasistemas.dengueefoco_app.model.AntivetorialDao;
+import br.com.maximasistemas.dengueefoco_app.util.Util;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 public class FormularioAntivetorialFragment extends Fragment {
 
-//	private AppDatabase db = Room.databaseBuilder(getContext(), AppDatabase.class, "database-name").build();
-//	private AntivetorialDao antivetorialDao = db.antivetorialDao();
+	private AntivetorialDao antivetorialDao;
 	private EditText editTextAgente;
 	private EditText editTextQuantidade;
 	private EditText editTextCep;
@@ -28,6 +31,12 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	static FormularioAntivetorialFragment newInstance() {
 		return new FormularioAntivetorialFragment();
+	}
+
+	@Override
+	public void onCreate(@Nullable Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
 	}
 
 	@Nullable
@@ -52,7 +61,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private void configuraTipoImovel(@NonNull View view) {
 		final List<String> tipoImovel = Arrays.asList("Casa", "Apartamento", "Terreno baldio", "Comércio");
-		ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, tipoImovel);
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(tipoImovel);
         Spinner spinnerStatusImovel = view.findViewById(R.id.spinnerTipoImovel);
 		spinnerStatusImovel.setAdapter(stringArrayAdapter);
 		spinnerStatusImovel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -68,9 +77,13 @@ public class FormularioAntivetorialFragment extends Fragment {
 		});
 	}
 
+	private ArrayAdapter<String> criaArrayAdapterSpinner(List<String> lista) {
+		return new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, lista);
+	}
+
 	private void configuraStatusImovel(@NonNull View view) {
 		final List<String> statusImovel = Arrays.asList("Visitado", "Fechado", "Recusado");
-		ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, statusImovel);
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(statusImovel);
         Spinner spinnerStatusImovel = view.findViewById(R.id.spinnerStatusImovel);
         spinnerStatusImovel.setAdapter(stringArrayAdapter);
 		spinnerStatusImovel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -88,7 +101,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private void configuraSpinnerLarvicida(View view) {
 		final List<String> larvicidas = Arrays.asList("Sinopsade", "Pryriproxfen");
-		ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, larvicidas);
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(larvicidas);
         Spinner spinnerLarvicida = view.findViewById(R.id.spinnerLarvicida);
         spinnerLarvicida.setAdapter(stringArrayAdapter);
 		spinnerLarvicida.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -106,12 +119,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private void configuraBotaoLimpar(@NonNull View view) {
 		Button buttonLimpar = view.findViewById(R.id.buttonLimpar);
-		buttonLimpar.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				limparFormulario();
-			}
-		});
+		buttonLimpar.setOnClickListener(v -> limparFormulario());
 	}
 
 	private void limparFormulario() {
@@ -122,22 +130,32 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private void configuraBotaoSalvar(@NonNull View view) {
 		Button buttonSalvar = view.findViewById(R.id.buttonSalvar);
-		buttonSalvar.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Long agente = Long.valueOf(editTextAgente.getText().toString());
-				Double quantidade = Double.valueOf(editTextQuantidade.getText().toString());
-				String cep = editTextQuantidade.getText().toString();
-				Antivetorial antivetorial = new Antivetorial();
-				antivetorial.setIdUsuario(agente);
-				antivetorial.setQtdLarvicida(quantidade);
-				antivetorial.setLarvicida(larvicidaSelecionado);
-				antivetorial.setStatusImovel(statusImovelSelecionado);
-				antivetorial.setTipoImovel(tipoImoveSelecionado);
-				Toast.makeText(getContext(), "Operação realizada com sucesso", Toast.LENGTH_SHORT).show();
-				limparFormulario();
-			}
+		buttonSalvar.setOnClickListener(v -> {
+			Antivetorial antivetorial = criaAntivetorial();
+			salvaAntivetorial(antivetorial);
+			Toast.makeText(getContext(), "Operação realizada com sucesso", Toast.LENGTH_SHORT).show();
+			limparFormulario();
 		});
+	}
+
+	private void salvaAntivetorial(final Antivetorial antivetorial) {
+		antivetorialDao.insertAll(antivetorial);
+	}
+
+	private Antivetorial criaAntivetorial() {
+		Long agente = Long.valueOf(editTextAgente.getText().toString());
+		Double quantidade = Double.valueOf(editTextQuantidade.getText().toString());
+		String cep = editTextQuantidade.getText().toString();
+
+		Antivetorial antivetorial = new Antivetorial();
+		antivetorial.setIdUsuario(agente);
+		antivetorial.setQtdLarvicida(quantidade);
+		antivetorial.setLarvicida(larvicidaSelecionado);
+		antivetorial.setStatusImovel(statusImovelSelecionado);
+		antivetorial.setTipoImovel(tipoImoveSelecionado);
+		antivetorial.setDataVisita(Util.getDataHojeString());
+
+		return antivetorial;
 	}
 
 	@Override

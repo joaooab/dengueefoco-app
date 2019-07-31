@@ -6,14 +6,14 @@ import android.arch.persistence.room.PrimaryKey;
 
 import java.util.Date;
 
-@Entity
+@Entity(tableName = "antivetorial")
 public class Antivetorial {
     @PrimaryKey()
     private Long id;
     @ColumnInfo(name = "id_usuario")
     private Long idUsuario;
     @ColumnInfo(name = "data_visita")
-    private Date dataVisita;
+    private String dataVisita;
     @ColumnInfo(name = "larvicida")
     private String larvicida;
     @ColumnInfo(name = "qtd_larvicida")
@@ -45,11 +45,11 @@ public class Antivetorial {
         this.idUsuario = idUsuario;
     }
 
-    public Date getDataVisita() {
+    public String getDataVisita() {
         return dataVisita;
     }
 
-    public void setDataVisita(Date dataVisita) {
+    public void setDataVisita(String dataVisita) {
         this.dataVisita = dataVisita;
     }
 
