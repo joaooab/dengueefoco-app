@@ -5,7 +5,7 @@ apply plugin: 'com.android.application'
 android {
 	compileSdkVersion 28
 	defaultConfig {
-		applicationId "br.com.maximasistemas.dengueefoco_app"
+		applicationId "br.com.dengueefoco_app"
 		minSdkVersion 21
 		targetSdkVersion 28
 		versionCode 1

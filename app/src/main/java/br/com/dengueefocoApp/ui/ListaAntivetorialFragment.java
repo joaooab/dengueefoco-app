@@ -17,7 +17,7 @@ import java.util.List;
 import br.com.dengueefocoApp.AppDatabase;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
-import br.com.maximasistemas.dengueefoco_app.R;
+import br.com.dengueefocoApp.R;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 

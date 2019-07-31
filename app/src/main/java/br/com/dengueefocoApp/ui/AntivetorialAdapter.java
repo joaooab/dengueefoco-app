@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import br.com.dengueefocoApp.model.Antivetorial;
-import br.com.maximasistemas.dengueefoco_app.R;
+import br.com.dengueefocoApp.R;
 
 import java.util.List;
 

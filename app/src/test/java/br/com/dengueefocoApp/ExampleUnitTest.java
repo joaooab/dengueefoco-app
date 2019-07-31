@@ -1,4 +1,4 @@
-package br.com.maximasistemas.dengueefoco_app;
+package br.com.dengueefocoApp;
 
 import org.junit.Test;
 

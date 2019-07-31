@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import br.com.dengueefocoApp.model.Antivetorial;
-import br.com.maximasistemas.dengueefoco_app.R;
+import br.com.dengueefocoApp.R;
 
 public class SupervisorAdapter extends RecyclerView.Adapter<SupervisorAdapter.ViewHolder> {
 

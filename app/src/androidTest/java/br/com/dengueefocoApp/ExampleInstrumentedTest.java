@@ -1,4 +1,4 @@
-package br.com.maximasistemas.dengueefoco_app;
+package br.com.dengueefocoApp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("br.com.maximasistemas.dengueefoco_app", appContext.getPackageName());
+        assertEquals("br.com.dengueefoco_app", appContext.getPackageName());
     }
 }

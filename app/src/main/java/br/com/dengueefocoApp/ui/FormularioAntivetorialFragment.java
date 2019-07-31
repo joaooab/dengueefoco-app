@@ -12,7 +12,7 @@ import android.widget.*;
 import br.com.dengueefocoApp.AppDatabase;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
-import br.com.maximasistemas.dengueefoco_app.R;
+import br.com.dengueefocoApp.R;
 import br.com.dengueefocoApp.util.Util;
 
 import java.util.Arrays;
