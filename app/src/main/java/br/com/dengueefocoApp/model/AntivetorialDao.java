@@ -1,4 +1,4 @@
-package br.com.maximasistemas.dengueefoco_app.model;
+package br.com.dengueefocoApp.model;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;

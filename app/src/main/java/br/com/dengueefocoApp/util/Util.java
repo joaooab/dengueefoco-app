@@ -1,4 +1,4 @@
-package br.com.maximasistemas.dengueefoco_app.util;
+package br.com.dengueefocoApp.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

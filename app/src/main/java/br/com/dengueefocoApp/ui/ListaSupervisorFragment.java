@@ -1,4 +1,4 @@
-package br.com.maximasistemas.dengueefoco_app.ui;
+package br.com.dengueefocoApp.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,10 +13,10 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.maximasistemas.dengueefoco_app.AppDatabase;
+import br.com.dengueefocoApp.AppDatabase;
+import br.com.dengueefocoApp.model.Antivetorial;
+import br.com.dengueefocoApp.model.AntivetorialDao;
 import br.com.maximasistemas.dengueefoco_app.R;
-import br.com.maximasistemas.dengueefoco_app.model.Antivetorial;
-import br.com.maximasistemas.dengueefoco_app.model.AntivetorialDao;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 

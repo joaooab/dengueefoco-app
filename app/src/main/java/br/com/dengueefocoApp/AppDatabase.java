@@ -1,12 +1,12 @@
-package br.com.maximasistemas.dengueefoco_app;
+package br.com.dengueefocoApp;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 
 import android.content.Context;
-import br.com.maximasistemas.dengueefoco_app.model.Antivetorial;
-import br.com.maximasistemas.dengueefoco_app.model.AntivetorialDao;
+import br.com.dengueefocoApp.model.Antivetorial;
+import br.com.dengueefocoApp.model.AntivetorialDao;
 
 @Database(entities = {Antivetorial.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {

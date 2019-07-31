@@ -1,4 +1,4 @@
-package br.com.maximasistemas.dengueefoco_app.ui;
+package br.com.dengueefocoApp.ui;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -6,17 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import br.com.maximasistemas.dengueefoco_app.R;
-import br.com.maximasistemas.dengueefoco_app.model.Antivetorial;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
-public class AntivetorialAdapter extends RecyclerView.Adapter<AntivetorialAdapter.ViewHolder> {
+import br.com.dengueefocoApp.model.Antivetorial;
+import br.com.maximasistemas.dengueefoco_app.R;
+
+public class SupervisorAdapter extends RecyclerView.Adapter<SupervisorAdapter.ViewHolder> {
 
 	private List<Antivetorial> lista;
 
-	AntivetorialAdapter(List<Antivetorial> lista) {
+	SupervisorAdapter(List<Antivetorial> lista) {
 		this.lista = lista;
 	}
 

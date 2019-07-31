@@ -1,4 +1,4 @@
-package br.com.maximasistemas.dengueefoco_app.ui;
+package br.com.dengueefocoApp.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
