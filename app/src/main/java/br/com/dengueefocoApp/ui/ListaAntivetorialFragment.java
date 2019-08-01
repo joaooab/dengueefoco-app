@@ -1,5 +1,6 @@
 package br.com.dengueefocoApp.ui;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -21,8 +22,9 @@ import br.com.dengueefocoApp.R;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class ListaAntivetorialFragment extends Fragment {
+public class ListaAntivetorialFragment extends Fragment implements AntivetorialAdapterCallback {
 
+    private MainActivity mActivity;
     private AntivetorialDao antivetorialDao;
     private AntivetorialAdapter adapter;
 
@@ -33,6 +35,7 @@ public class ListaAntivetorialFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mActivity = (MainActivity) getActivity();
         antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
     }
 
@@ -47,7 +50,7 @@ public class ListaAntivetorialFragment extends Fragment {
 
     private void configuraLista(View view) {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewAntivetorial);
-        adapter = new AntivetorialAdapter(new ArrayList<>());
+        adapter = new AntivetorialAdapter(new ArrayList<>(), this);
         recyclerView.setAdapter(adapter);
     }
 
@@ -71,11 +74,17 @@ public class ListaAntivetorialFragment extends Fragment {
     private void configuraFab(View view) {
         final FloatingActionButton fab = view.findViewById(R.id.fab);
         fab.setOnClickListener(v -> {
-            MainActivity activity = (MainActivity) getActivity();
-            if (activity != null) {
-                activity.abreFragment(FormularioAntivetorialFragment.newInstance(), true);
-            }
+            if (mActivity != null) mActivity.abreFragment(FormularioAntivetorialFragment.newInstance(), true);
         });
     }
 
+    @Override
+    public void onClick(Antivetorial antivetorial) {
+        if (mActivity != null) mActivity.abreFragment(FormularioAntivetorialFragment.newInstance());
+    }
+
+    @Override
+    public void onLongClick(Antivetorial antivetorial) {
+
+    }
 }

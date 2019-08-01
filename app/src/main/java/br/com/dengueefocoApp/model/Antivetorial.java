@@ -26,6 +26,11 @@ public class Antivetorial {
     private Double longitude;
     @ColumnInfo(name = "latitude")
     private Double latitude;
+    private String status;
+
+    public Antivetorial() {
+        this.status = Status.AGUARDANDO.valor;
+    }
 
     public Long getId() {
         return id;
@@ -106,5 +111,14 @@ public class Antivetorial {
     public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 }
 

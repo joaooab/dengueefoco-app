@@ -17,6 +17,7 @@ import br.com.dengueefocoApp.AppDatabase;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
 import br.com.dengueefocoApp.R;
+import br.com.dengueefocoApp.model.Status;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
@@ -56,7 +57,7 @@ public class ListaSupervisorFragment extends Fragment {
     }
 
     private void processaLista() {
-        antivetorialDao.getAll()
+        antivetorialDao.getAllByStatus(Status.AGUARDANDO.valor)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::processaLista, e -> Log.e(this.getTag(), e.getMessage()));

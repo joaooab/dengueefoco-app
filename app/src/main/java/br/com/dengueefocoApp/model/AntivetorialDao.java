@@ -13,6 +13,9 @@ public interface AntivetorialDao {
     @Query ("SELECT * FROM antivetorial")
     Single<List<Antivetorial>> getAll();
 
+    @Query ("SELECT * FROM antivetorial WHERE status = :status")
+    Single<List<Antivetorial>> getAllByStatus(String status);
+
     @Query ("SELECT * FROM antivetorial WHERE id = :id")
     Antivetorial loadAllById(int id);
 

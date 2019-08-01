@@ -14,9 +14,11 @@ import java.util.List;
 public class AntivetorialAdapter extends RecyclerView.Adapter<AntivetorialAdapter.ViewHolder> {
 
 	private List<Antivetorial> lista;
+	private AntivetorialAdapterCallback callback;
 
-	AntivetorialAdapter(List<Antivetorial> lista) {
+	AntivetorialAdapter(List<Antivetorial> lista, AntivetorialAdapterCallback callback) {
 		this.lista = lista;
+		this.callback = callback;
 	}
 
 	@NonNull
@@ -30,6 +32,12 @@ public class AntivetorialAdapter extends RecyclerView.Adapter<AntivetorialAdapte
 	@Override
 	public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
 		Antivetorial antivetorial = lista.get(position);
+		View itemView = viewHolder.itemView;
+		itemView.setOnClickListener(v -> callback.onClick(antivetorial));
+		itemView.setOnLongClickListener(v -> {
+			callback.onLongClick(antivetorial);
+			return true;
+		});
 		viewHolder.bindView(antivetorial);
 	}
 
@@ -63,4 +71,9 @@ public class AntivetorialAdapter extends RecyclerView.Adapter<AntivetorialAdapte
 			data = itemView.findViewById(R.id.textViewData);
 		}
 	}
+}
+
+interface AntivetorialAdapterCallback {
+	void onClick(Antivetorial antivetorial);
+	void onLongClick(Antivetorial antivetorial);
 }
