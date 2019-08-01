@@ -1,6 +1,5 @@
 package br.com.dengueefocoApp.ui;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -80,7 +79,7 @@ public class ListaAntivetorialFragment extends Fragment implements AntivetorialA
 
     @Override
     public void onClick(Antivetorial antivetorial) {
-        if (mActivity != null) mActivity.abreFragment(FormularioAntivetorialFragment.newInstance());
+        if (mActivity != null) mActivity.abreFragment(DetalheAntivetorialFragment.newInstance(antivetorial));
     }
 
     @Override
