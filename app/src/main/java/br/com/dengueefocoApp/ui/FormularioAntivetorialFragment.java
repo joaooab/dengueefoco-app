@@ -20,6 +20,7 @@ import java.util.List;
 
 public class FormularioAntivetorialFragment extends Fragment {
 
+	private MainActivity mActivity;
 	private AntivetorialDao antivetorialDao;
 	private EditText editTextAgente;
 	private EditText editTextQuantidade;
@@ -35,6 +36,8 @@ public class FormularioAntivetorialFragment extends Fragment {
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		mActivity = (MainActivity) getActivity();
+		mActivity.setActionBarTitle("Cadastrar antivetorial");
 		antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
 	}
 

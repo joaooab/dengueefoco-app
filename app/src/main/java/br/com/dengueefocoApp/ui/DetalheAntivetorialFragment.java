@@ -16,6 +16,7 @@ import br.com.dengueefocoApp.model.Status;
 
 public class DetalheAntivetorialFragment extends Fragment {
 
+    private MainActivity mActivity;
     private static Antivetorial antivetorial;
     private TextView agente;
     private TextView larvicida;
@@ -28,6 +29,13 @@ public class DetalheAntivetorialFragment extends Fragment {
     public static DetalheAntivetorialFragment newInstance(final Antivetorial antivetorial) {
         setAntivetorial(antivetorial);
         return new DetalheAntivetorialFragment();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mActivity = (MainActivity) getActivity();
+        mActivity.setActionBarTitle("Detalhes antivetorial");
     }
 
     @Nullable
