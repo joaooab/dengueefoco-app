@@ -35,7 +35,6 @@ public class ListaAntivetorialFragment extends Fragment implements AntivetorialA
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = (MainActivity) getActivity();
-        mActivity.setActionBarTitle("Antivetorial");
         antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
     }
 
@@ -57,6 +56,7 @@ public class ListaAntivetorialFragment extends Fragment implements AntivetorialA
     @Override
     public void onResume() {
         super.onResume();
+        mActivity.setActionBarTitle("Antivetorial");
         processaLista();
     }
 

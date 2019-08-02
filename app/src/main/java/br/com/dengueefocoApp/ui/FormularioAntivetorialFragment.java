@@ -1,14 +1,25 @@
 package br.com.dengueefocoApp.ui;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.*;
+
 import br.com.dengueefocoApp.AppDatabase;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
@@ -18,7 +29,7 @@ import br.com.dengueefocoApp.util.Util;
 import java.util.Arrays;
 import java.util.List;
 
-public class FormularioAntivetorialFragment extends Fragment {
+public class FormularioAntivetorialFragment extends Fragment implements LocationListener {
 
 	private MainActivity mActivity;
 	private AntivetorialDao antivetorialDao;
@@ -28,6 +39,8 @@ public class FormularioAntivetorialFragment extends Fragment {
 	private String larvicidaSelecionado;
 	private String statusImovelSelecionado;
 	private String tipoImoveSelecionado;
+	private LocationManager locationManager;
+	private int LOCATION_PERMISSION_CODE = 1;
 
 	static FormularioAntivetorialFragment newInstance() {
 		return new FormularioAntivetorialFragment();
@@ -39,6 +52,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 		mActivity = (MainActivity) getActivity();
 		mActivity.setActionBarTitle("Cadastrar antivetorial");
 		antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
+		locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
 	}
 
 	@Nullable
@@ -57,8 +71,15 @@ public class FormularioAntivetorialFragment extends Fragment {
 		configuraSpinnerLarvicida(view);
 		configuraBotaoSalvar(view);
 		configuraBotaoLimpar(view);
+		configuraGps(view);
 
 		super.onViewCreated(view, savedInstanceState);
+	}
+
+	private void configuraGps(@NonNull View view) {
+		ImageView iconGps = view.findViewById(R.id.iconGps);
+		iconGps.setOnClickListener(v -> requestPermissions());
+
 	}
 
 	private void configuraTipoImovel(@NonNull View view) {
@@ -160,8 +181,66 @@ public class FormularioAntivetorialFragment extends Fragment {
 		return antivetorial;
 	}
 
-	@Override
-	public void onResume() {
-		super.onResume();
-	}
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    private void requestPermissions() {
+        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(
+                    getActivity(),
+                    Manifest.permission.ACCESS_FINE_LOCATION
+            )) {
+            } else {
+                ActivityCompat.requestPermissions(
+                        getActivity(),
+                        new String[] {Manifest.permission.ACCESS_FINE_LOCATION},
+                        LOCATION_PERMISSION_CODE
+                );
+            }
+        } else {
+            startLocationRequests();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == LOCATION_PERMISSION_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                startLocationRequests();
+            }
+        }
+    }
+
+    @SuppressLint ("MissingPermission")
+    private void startLocationRequests() {
+        locationManager.requestLocationUpdates(
+                LocationManager.GPS_PROVIDER,
+                0,
+                0f,
+                this
+        );
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        Log.i("onLocationChanged", location.getLatitude() + String.valueOf(location.getLongitude()));
+    }
+
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+        Log.i("onStatusChanged", provider);
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+        Log.i("onProviderEnabled", provider);
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+        Log.i("onProviderDisabled", provider);
+    }
 }
