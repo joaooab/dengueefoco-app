@@ -1,6 +1,7 @@
 package br.com.dengueefocoApp.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
@@ -13,23 +14,28 @@ import br.com.dengueefocoApp.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextView login;
-    private TextView senha;
-    private Button entrar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        login = findViewById(R.id.editTextLogin);
-        senha = findViewById(R.id.editTextSenha);
-        entrar = findViewById(R.id.buttonEntrar);
+        TextView edtLogin = findViewById(R.id.editTextLogin);
+        TextView edtSenha = findViewById(R.id.editTextSenha);
+        Button entrar = findViewById(R.id.buttonEntrar);
         entrar.setOnClickListener(v -> {
-            if (isEmpty(login.getText())) {
-                login.setError("Campo obrigatório não informado");
+            String login = edtLogin.getText().toString();
+            String senha = edtSenha.getText().toString();
+            boolean sucess = true;
+            if (isEmpty(login)) {
+                edtLogin.setError("Campo obrigatório não informado");
+                sucess = false;
             }
-            if (isEmpty(senha.getText())) {
-                senha.setError("Campo obrigatório não informado");
+            if (isEmpty(senha)) {
+                edtSenha.setError("Campo obrigatório não informado");
+                sucess = false;
+            }
+            if(sucess) {
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -39,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         return super.onCreateView(parent, name, context, attrs);
     }
 
-    private Boolean isEmpty(CharSequence text) {
+    private Boolean isEmpty(String text) {
         return text == null || text.equals("");
     }
 
