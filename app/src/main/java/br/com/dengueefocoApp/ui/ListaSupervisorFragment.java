@@ -1,22 +1,23 @@
 package br.com.dengueefocoApp.ui;
 
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.dengueefocoApp.AppDatabase;
+import br.com.dengueefocoApp.R;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
-import br.com.dengueefocoApp.R;
 import br.com.dengueefocoApp.model.Status;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;

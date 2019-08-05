@@ -2,10 +2,19 @@ package br.com.dengueefocoApp.model;
 
 public class Usuario {
 
+    private Integer id;
     private String email;
     private String nome;
     private String password;
     private TipoUsuario TipoUsuario;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getEmail() {
         return email;
@@ -38,4 +47,5 @@ public class Usuario {
     public void setTipoUsuario(br.com.dengueefocoApp.model.TipoUsuario tipoUsuario) {
         TipoUsuario = tipoUsuario;
     }
+
 }
