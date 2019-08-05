@@ -1,10 +1,10 @@
 package br.com.dengueefocoApp.ui;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.core.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +26,7 @@ public class DetalheAntivetorialFragment extends Fragment {
     private TextView statusImovel;
     private TextView tipoImovel;
 
-    public static DetalheAntivetorialFragment newInstance(final Antivetorial antivetorial) {
+    static DetalheAntivetorialFragment newInstance(final Antivetorial antivetorial) {
         setAntivetorial(antivetorial);
         return new DetalheAntivetorialFragment();
     }

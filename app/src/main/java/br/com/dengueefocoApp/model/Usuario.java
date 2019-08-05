@@ -5,6 +5,7 @@ public class Usuario {
     private String email;
     private String nome;
     private String password;
+    private TipoUsuario TipoUsuario;
 
     public String getEmail() {
         return email;
@@ -28,5 +29,13 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public br.com.dengueefocoApp.model.TipoUsuario getTipoUsuario() {
+        return TipoUsuario;
+    }
+
+    public void setTipoUsuario(br.com.dengueefocoApp.model.TipoUsuario tipoUsuario) {
+        TipoUsuario = tipoUsuario;
     }
 }
