@@ -8,11 +8,6 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +16,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -31,13 +25,18 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-import android.widget.*;
 
 import br.com.dengueefocoApp.AppDatabase;
+import br.com.dengueefocoApp.api.RetrofitClient;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
 import br.com.dengueefocoApp.R;
+import br.com.dengueefocoApp.model.Status;
 import br.com.dengueefocoApp.util.Util;
+import com.google.gson.JsonElement;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import java.util.Arrays;
 import java.util.List;
@@ -161,14 +160,28 @@ public class FormularioAntivetorialFragment extends Fragment implements Location
         buttonSalvar.setOnClickListener(v -> {
             Antivetorial antivetorial = criaAntivetorial();
             salvaAntivetorial(antivetorial);
-            Toast.makeText(getContext(), "Operação realizada com sucesso", Toast.LENGTH_SHORT).show();
+
             limparFormulario();
         });
     }
 
     private void salvaAntivetorial(final Antivetorial antivetorial) {
+		antivetorial.setStatus(Status.AGUARDANDO.valor);
+		RetrofitClient.getApi().salvaAntivetorial(antivetorial).enqueue(new Callback<JsonElement>() {
+			@Override
+			public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
+				Toast.makeText(getContext(), "Operação realizada com sucesso", Toast.LENGTH_SHORT).show();
         antivetorialDao.insertAll(antivetorial);
     }
+
+			@Override
+			public void onFailure(Call<JsonElement> call, Throwable t) {
+				Toast.makeText(getContext(), "Falha ao enviar formulário", Toast.LENGTH_SHORT).show();
+				antivetorial.setStatus(Status.NAO_ENVIANDO.valor);
+				antivetorialDao.insertAll(antivetorial);
+			}
+		});
+	}
 
     private Antivetorial criaAntivetorial() {
         Long agente = Long.valueOf(editTextAgente.getText().toString());
@@ -182,6 +195,7 @@ public class FormularioAntivetorialFragment extends Fragment implements Location
         antivetorial.setStatusImovel(statusImovelSelecionado);
         antivetorial.setTipoImovel(tipoImoveSelecionado);
         antivetorial.setDataVisita(Util.getDataHojeString());
+		antivetorial.setStatus(Status.NAO_ENVIANDO.valor);
 
         return antivetorial;
     }
