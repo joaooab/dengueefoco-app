@@ -1,5 +1,6 @@
 package br.com.dengueefocoApp.api;
 
+import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.Usuario;
 import com.google.gson.JsonElement;
 
@@ -14,5 +15,9 @@ public interface Api {
 	@Headers("Content-Type: application/json;charset=utf-8")
 	@POST("login")
 	Call<JsonElement> login(@Body Usuario usuario);
+
+	@Headers("Content-Type: application/json;charset=utf-8")
+	@POST("antivetoriais")
+	Call<JsonElement> salvaAntivetorial(@Body Antivetorial antivetorial);
 
 }

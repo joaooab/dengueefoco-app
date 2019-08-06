@@ -49,27 +49,35 @@ public class LoginActivity extends AppCompatActivity {
 				Usuario usuario = new Usuario();
 				usuario.setEmail(email);
 				usuario.setSenha(senha);
-				api.login(usuario).enqueue(new Callback<JsonElement>() {
-					@Override
-					public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
-						if(response.code() == 200) {
-							Usuario usuarioLogado = new Gson().fromJson(response.body(), Usuario.class);
-							Configuracao.setUsuarioLogado(usuarioLogado);
-							Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-							startActivity(intent);
-						} else {
-							edtLogin.setError("Usuário não encontrado");
-						}
-					}
-
-					@Override
-					public void onFailure(Call<JsonElement> call, Throwable t) {
-						Log.e(this.getClass().toString(), t.getMessage());
-					}
-				});
-
+				iniciaTelaPrincipal();
+//				login(edtLogin, usuario);
 			}
 		});
+	}
+
+	private void login(TextView edtLogin, Usuario usuario) {
+		api.login(usuario).enqueue(new Callback<JsonElement>() {
+			@Override
+			public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
+				if(response.code() == 200) {
+					Usuario usuarioLogado = new Gson().fromJson(response.body(), Usuario.class);
+					Configuracao.setUsuarioLogado(usuarioLogado);
+					iniciaTelaPrincipal();
+				} else {
+					edtLogin.setError("Usuário não encontrado");
+				}
+			}
+
+			@Override
+			public void onFailure(Call<JsonElement> call, Throwable t) {
+				Log.e(this.getClass().toString(), t.getMessage());
+			}
+		});
+	}
+
+	private void iniciaTelaPrincipal() {
+		Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+		startActivity(intent);
 	}
 
 	@Override
