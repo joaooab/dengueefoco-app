@@ -1,10 +1,14 @@
 package br.com.dengueefocoApp.ui;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,16 +27,25 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.gson.JsonElement;
 
 import java.util.Arrays;
 import java.util.List;
 
 import br.com.dengueefocoApp.AppDatabase;
 import br.com.dengueefocoApp.R;
+import br.com.dengueefocoApp.api.GoogleApi;
+import br.com.dengueefocoApp.api.RetrofitClient;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
 import br.com.dengueefocoApp.util.Util;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class FormularioAntivetorialFragment extends Fragment {
 
@@ -44,11 +57,11 @@ public class FormularioAntivetorialFragment extends Fragment {
     private String larvicidaSelecionado;
     private String statusImovelSelecionado;
     private String tipoImoveSelecionado;
-    private LocationManager locationManager;
     private int LOCATION_PERMISSION_CODE = 1;
     private FusedLocationProviderClient fusedLocationClient;
-    private Double latitude;
-    private Double longitude;
+    private Location location;
+    private LocationCallback locationCallback;
+    private LocationRequest mLocationRequest;
 
     static FormularioAntivetorialFragment newInstance() {
         return new FormularioAntivetorialFragment();
@@ -60,8 +73,27 @@ public class FormularioAntivetorialFragment extends Fragment {
         mActivity = (MainActivity) getActivity();
         mActivity.setActionBarTitle("Cadastrar antivetorial");
         antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
-        locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(mActivity);
+        mLocationRequest = LocationRequest.create()
+                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                .setInterval(60000)      // 10 seconds, in milliseconds
+          .setFastestInterval(10000); // 1 second, in milliseconds
+        locationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                Log.e("teste", "teste");
+                if (locationResult == null) {
+                    return;
+                }
+                for (Location location : locationResult.getLocations()) {
+                    // Update UI with location data
+                    // ...
+                    FormularioAntivetorialFragment.this.location = location;
+                    Log.i("onLocationChanged", location.getLatitude() + String.valueOf(location.getLongitude()));
+                    geocode();
+                }
+            };
+        };
     }
 
     @Nullable
@@ -210,11 +242,9 @@ public class FormularioAntivetorialFragment extends Fragment {
                 );
             }
         } else {
-            fusedLocationClient.getLastLocation()
-                    .addOnSuccessListener(mActivity, location -> {
-                        double longitude = location.getLongitude();
-                    });
+            initLocationRequests();
         }
+        geocode();
     }
 
     @Override
@@ -226,4 +256,39 @@ public class FormularioAntivetorialFragment extends Fragment {
         }
     }
 
+    @SuppressLint ("MissingPermission")
+    private void initLocationRequests() {
+        fusedLocationClient.requestLocationUpdates(mLocationRequest,
+                                                   locationCallback,
+                                                   null /* Looper */);
+    }
+
+    private void geocode() {
+        if (location == null) {
+            return;
+        }
+        String latitude = String.valueOf(location.getLatitude());
+        String longitude = String.valueOf(location.getLongitude());
+        String latLng = String.format("%s, %s", latitude, longitude);
+        GoogleApi service = new RetrofitClient().getGoogleApi();
+        Call<JsonElement> call = (Call<JsonElement>) service.reverseGeocode(latLng, "");
+        call.enqueue(new Callback<JsonElement>() {
+            @Override
+            public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
+                Log.e("Response", "sucesso");
+            }
+
+            @Override
+            public void onFailure(Call<JsonElement> call, Throwable t) {
+                Log.e("Response", "error");
+            }
+        });
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        fusedLocationClient.removeLocationUpdates(locationCallback);
+    }
 }
