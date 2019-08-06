@@ -26,6 +26,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import br.com.dengueefocoApp.Configuracao;
+import br.com.dengueefocoApp.model.Status;
+import br.com.dengueefocoApp.model.Usuario;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -49,246 +52,260 @@ import retrofit2.Response;
 
 public class FormularioAntivetorialFragment extends Fragment {
 
-    private MainActivity mActivity;
-    private AntivetorialDao antivetorialDao;
-    private EditText editTextAgente;
-    private EditText editTextQuantidade;
-    private EditText editTextCep;
-    private String larvicidaSelecionado;
-    private String statusImovelSelecionado;
-    private String tipoImoveSelecionado;
-    private int LOCATION_PERMISSION_CODE = 1;
-    private FusedLocationProviderClient fusedLocationClient;
-    private Location location;
-    private LocationCallback locationCallback;
-    private LocationRequest mLocationRequest;
+	private MainActivity mActivity;
+	private AntivetorialDao antivetorialDao;
+	private EditText editTextQuantidade;
+	private EditText editTextCep;
+	private String larvicidaSelecionado;
+	private String statusImovelSelecionado;
+	private String tipoImoveSelecionado;
+	private int LOCATION_PERMISSION_CODE = 1;
+	private FusedLocationProviderClient fusedLocationClient;
+	private Location location;
+	private LocationCallback locationCallback;
+	private LocationRequest mLocationRequest;
 
-    static FormularioAntivetorialFragment newInstance() {
-        return new FormularioAntivetorialFragment();
-    }
+	static FormularioAntivetorialFragment newInstance() {
+		return new FormularioAntivetorialFragment();
+	}
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mActivity = (MainActivity) getActivity();
-        mActivity.setActionBarTitle("Cadastrar antivetorial");
-        antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(mActivity);
-        mLocationRequest = LocationRequest.create()
-                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                .setInterval(60000)      // 10 seconds, in milliseconds
-          .setFastestInterval(10000); // 1 second, in milliseconds
-        locationCallback = new LocationCallback() {
-            @Override
-            public void onLocationResult(LocationResult locationResult) {
-                Log.e("teste", "teste");
-                if (locationResult == null) {
-                    return;
-                }
-                for (Location location : locationResult.getLocations()) {
-                    // Update UI with location data
-                    // ...
-                    FormularioAntivetorialFragment.this.location = location;
-                    Log.i("onLocationChanged", location.getLatitude() + String.valueOf(location.getLongitude()));
-                    geocode();
-                }
-            };
-        };
-    }
+	@Override
+	public void onCreate(@Nullable Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		mActivity = (MainActivity) getActivity();
+		mActivity.setActionBarTitle("Cadastrar antivetorial");
+		antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
+		fusedLocationClient = LocationServices.getFusedLocationProviderClient(mActivity);
+		mLocationRequest = LocationRequest.create()
+				.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+				.setInterval(60000)      // 10 seconds, in milliseconds
+				.setFastestInterval(10000); // 1 second, in milliseconds
+		locationCallback = new LocationCallback() {
+			@Override
+			public void onLocationResult(LocationResult locationResult) {
+				Log.e("teste", "teste");
+				if (locationResult == null) {
+					return;
+				}
+				for (Location location : locationResult.getLocations()) {
+					// Update UI with location data
+					// ...
+					FormularioAntivetorialFragment.this.location = location;
+					Log.i("onLocationChanged", location.getLatitude() + String.valueOf(location.getLongitude()));
+					geocode();
+				}
+			}
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_formulario_antivetorial, container, false);
-    }
+		};
+	}
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        editTextAgente = view.findViewById(R.id.editTextAgente);
-        editTextQuantidade = view.findViewById(R.id.editTextQuantidade);
-        editTextCep = view.findViewById(R.id.editTextCep);
-        configuraTipoImovel(view);
-        configuraStatusImovel(view);
-        configuraSpinnerLarvicida(view);
-        configuraBotaoSalvar(view);
-        configuraBotaoLimpar(view);
-        configuraGps(view);
+	@Nullable
+	@Override
+	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		return inflater.inflate(R.layout.fragment_formulario_antivetorial, container, false);
+	}
 
-        super.onViewCreated(view, savedInstanceState);
-    }
+	@Override
+	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+		editTextQuantidade = view.findViewById(R.id.editTextQuantidade);
+		editTextCep = view.findViewById(R.id.editTextCep);
+		configuraTipoImovel(view);
+		configuraStatusImovel(view);
+		configuraSpinnerLarvicida(view);
+		configuraBotaoSalvar(view);
+		configuraBotaoLimpar(view);
+		configuraGps(view);
 
-    private void configuraGps(@NonNull View view) {
-        ImageView iconGps = view.findViewById(R.id.iconGps);
-        iconGps.setOnClickListener(v -> startLocationRequests());
+		super.onViewCreated(view, savedInstanceState);
+	}
 
-    }
+	private void configuraGps(@NonNull View view) {
+		ImageView iconGps = view.findViewById(R.id.iconGps);
+		iconGps.setOnClickListener(v -> startLocationRequests());
 
-    private void configuraTipoImovel(@NonNull View view) {
-        final List<String> tipoImovel = Arrays.asList("Casa", "Apartamento", "Terreno baldio", "Comércio");
-        ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(tipoImovel);
-        Spinner spinnerStatusImovel = view.findViewById(R.id.spinnerTipoImovel);
-        spinnerStatusImovel.setAdapter(stringArrayAdapter);
-        spinnerStatusImovel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                tipoImoveSelecionado = tipoImovel.get(position);
-            }
+	}
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+	private void configuraTipoImovel(@NonNull View view) {
+		final List<String> tipoImovel = Arrays.asList("Casa", "Apartamento", "Terreno baldio", "Comércio");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(tipoImovel);
+		Spinner spinnerStatusImovel = view.findViewById(R.id.spinnerTipoImovel);
+		spinnerStatusImovel.setAdapter(stringArrayAdapter);
+		spinnerStatusImovel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+				tipoImoveSelecionado = tipoImovel.get(position);
+			}
 
-            }
-        });
-    }
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
 
-    private ArrayAdapter<String> criaArrayAdapterSpinner(List<String> lista) {
-        return new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, lista);
-    }
+			}
+		});
+	}
 
-    private void configuraStatusImovel(@NonNull View view) {
-        final List<String> statusImovel = Arrays.asList("Visitado", "Fechado", "Recusado");
-        ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(statusImovel);
-        Spinner spinnerStatusImovel = view.findViewById(R.id.spinnerStatusImovel);
-        spinnerStatusImovel.setAdapter(stringArrayAdapter);
-        spinnerStatusImovel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                statusImovelSelecionado = statusImovel.get(position);
-            }
+	private ArrayAdapter<String> criaArrayAdapterSpinner(List<String> lista) {
+		return new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, lista);
+	}
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+	private void configuraStatusImovel(@NonNull View view) {
+		final List<String> statusImovel = Arrays.asList("Visitado", "Fechado", "Recusado");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(statusImovel);
+		Spinner spinnerStatusImovel = view.findViewById(R.id.spinnerStatusImovel);
+		spinnerStatusImovel.setAdapter(stringArrayAdapter);
+		spinnerStatusImovel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+				statusImovelSelecionado = statusImovel.get(position);
+			}
 
-            }
-        });
-    }
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
 
-    private void configuraSpinnerLarvicida(View view) {
-        final List<String> larvicidas = Arrays.asList("Sinopsade", "Pryriproxfen");
-        ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(larvicidas);
-        Spinner spinnerLarvicida = view.findViewById(R.id.spinnerLarvicida);
-        spinnerLarvicida.setAdapter(stringArrayAdapter);
-        spinnerLarvicida.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                larvicidaSelecionado = larvicidas.get(position);
-            }
+			}
+		});
+	}
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+	private void configuraSpinnerLarvicida(View view) {
+		final List<String> larvicidas = Arrays.asList("Sinopsade", "Pryriproxfen");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(larvicidas);
+		Spinner spinnerLarvicida = view.findViewById(R.id.spinnerLarvicida);
+		spinnerLarvicida.setAdapter(stringArrayAdapter);
+		spinnerLarvicida.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+				larvicidaSelecionado = larvicidas.get(position);
+			}
 
-            }
-        });
-    }
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
 
-    private void configuraBotaoLimpar(@NonNull View view) {
-        Button buttonLimpar = view.findViewById(R.id.buttonLimpar);
-        buttonLimpar.setOnClickListener(v -> limparFormulario());
-    }
+			}
+		});
+	}
 
-    private void limparFormulario() {
-        editTextAgente.setText("");
-        editTextQuantidade.setText("");
-        editTextCep.setText("");
-    }
+	private void configuraBotaoLimpar(@NonNull View view) {
+		Button buttonLimpar = view.findViewById(R.id.buttonLimpar);
+		buttonLimpar.setOnClickListener(v -> limparFormulario());
+	}
 
-    private void configuraBotaoSalvar(@NonNull View view) {
-        Button buttonSalvar = view.findViewById(R.id.buttonSalvar);
-        buttonSalvar.setOnClickListener(v -> {
-            Antivetorial antivetorial = criaAntivetorial();
-            salvaAntivetorial(antivetorial);
-            Toast.makeText(getContext(), "Operação realizada com sucesso", Toast.LENGTH_SHORT).show();
-            limparFormulario();
-        });
-    }
+	private void limparFormulario() {
+		editTextQuantidade.setText("");
+		editTextCep.setText("");
+	}
 
-    private void salvaAntivetorial(final Antivetorial antivetorial) {
-        antivetorialDao.insertAll(antivetorial);
-    }
+	private void configuraBotaoSalvar(@NonNull View view) {
+		Button buttonSalvar = view.findViewById(R.id.buttonSalvar);
+		buttonSalvar.setOnClickListener(v -> {
+			Antivetorial antivetorial = criaAntivetorial();
+			salvaAntivetorial(antivetorial);
 
-    private Antivetorial criaAntivetorial() {
-        Long agente = Long.valueOf(editTextAgente.getText().toString());
-        Double quantidade = Double.valueOf(editTextQuantidade.getText().toString());
-        String cep = editTextQuantidade.getText().toString();
+			limparFormulario();
+		});
+	}
 
-        Antivetorial antivetorial = new Antivetorial();
-        antivetorial.setIdUsuario(agente);
-        antivetorial.setQtdLarvicida(quantidade);
-        antivetorial.setLarvicida(larvicidaSelecionado);
-        antivetorial.setStatusImovel(statusImovelSelecionado);
-        antivetorial.setTipoImovel(tipoImoveSelecionado);
-        antivetorial.setDataVisita(Util.getDataHojeString());
+	private void salvaAntivetorial(final Antivetorial antivetorial) {
+		antivetorial.setStatus(Status.AGUARDANDO.valor);
+		RetrofitClient.getApi().salvaAntivetorial(antivetorial).enqueue(new Callback<JsonElement>() {
+			@Override
+			public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
+				Toast.makeText(getContext(), "Operação realizada com sucesso", Toast.LENGTH_SHORT).show();
+				antivetorialDao.insertAll(antivetorial);
+			}
 
-        return antivetorial;
-    }
+			@Override
+			public void onFailure(Call<JsonElement> call, Throwable t) {
+				Toast.makeText(getContext(), "Falha ao enviar formulário", Toast.LENGTH_SHORT).show();
+				antivetorial.setStatus(Status.NAO_ENVIANDO.valor);
+				antivetorialDao.insertAll(antivetorial);
+			}
+		});
+	}
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
+	private Antivetorial criaAntivetorial() {
+		Double quantidade = Double.valueOf(editTextQuantidade.getText().toString());
+		String cep = editTextQuantidade.getText().toString();
 
-    private void startLocationRequests() {
-        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(
-                    getActivity(),
-                    Manifest.permission.ACCESS_FINE_LOCATION
-            )) {
-            } else {
-                ActivityCompat.requestPermissions(
-                        getActivity(),
-                        new String[] {Manifest.permission.ACCESS_FINE_LOCATION},
-                        LOCATION_PERMISSION_CODE
-                );
-            }
-        } else {
-            initLocationRequests();
-        }
-        geocode();
-    }
+		Antivetorial antivetorial = new Antivetorial();
+		antivetorial.setIdUsuario(Configuracao.getUsuarioLogado().getId());
+		antivetorial.setIdSupervisor(Configuracao.getUsuarioLogado().getIdSupervisor());
+		antivetorial.setQtdLarvicida(quantidade);
+		antivetorial.setLarvicida(larvicidaSelecionado);
+		antivetorial.setStatusImovel(statusImovelSelecionado);
+		antivetorial.setTipoImovel(tipoImoveSelecionado);
+		antivetorial.setDataVisita(Util.getDataHojeString());
+		antivetorial.setStatus(Status.NAO_ENVIANDO.valor);
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == LOCATION_PERMISSION_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                startLocationRequests();
-            }
-        }
-    }
+		return antivetorial;
+	}
 
-    @SuppressLint ("MissingPermission")
-    private void initLocationRequests() {
-        fusedLocationClient.requestLocationUpdates(mLocationRequest,
-                                                   locationCallback,
-                                                   null /* Looper */);
-    }
+	@Override
+	public void onResume() {
+		super.onResume();
+	}
 
-    private void geocode() {
-        if (location == null) {
-            return;
-        }
-        String latitude = String.valueOf(location.getLatitude());
-        String longitude = String.valueOf(location.getLongitude());
-        String latLng = String.format("%s, %s", latitude, longitude);
-        GoogleApi service = new RetrofitClient().getGoogleApi();
-        Call<JsonElement> call = (Call<JsonElement>) service.reverseGeocode(latLng, "");
-        call.enqueue(new Callback<JsonElement>() {
-            @Override
-            public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
-                Log.e("Response", "sucesso");
-            }
+	private void startLocationRequests() {
+		if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
+				!= PackageManager.PERMISSION_GRANTED) {
+			if (ActivityCompat.shouldShowRequestPermissionRationale(
+					getActivity(),
+					Manifest.permission.ACCESS_FINE_LOCATION
+			)) {
+			} else {
+				ActivityCompat.requestPermissions(
+						getActivity(),
+						new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+						LOCATION_PERMISSION_CODE
+				);
+			}
+		} else {
+			initLocationRequests();
+		}
+		geocode();
+	}
 
-            @Override
-            public void onFailure(Call<JsonElement> call, Throwable t) {
-                Log.e("Response", "error");
-            }
-        });
+	@Override
+	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+		if (requestCode == LOCATION_PERMISSION_CODE) {
+			if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+				startLocationRequests();
+			}
+		}
+	}
 
-    }
+	@SuppressLint("MissingPermission")
+	private void initLocationRequests() {
+		fusedLocationClient.requestLocationUpdates(mLocationRequest,
+				locationCallback,
+				null /* Looper */);
+	}
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        fusedLocationClient.removeLocationUpdates(locationCallback);
-    }
+	private void geocode() {
+		if (location == null) {
+			return;
+		}
+		String latitude = String.valueOf(location.getLatitude());
+		String longitude = String.valueOf(location.getLongitude());
+		String latLng = String.format("%s, %s", latitude, longitude);
+		GoogleApi service = RetrofitClient.getGoogleApi();
+		Call<JsonElement> call = service.reverseGeocode(latLng, "");
+		call.enqueue(new Callback<JsonElement>() {
+			@Override
+			public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
+				Log.e("Response", "sucesso");
+			}
+
+			@Override
+			public void onFailure(Call<JsonElement> call, Throwable t) {
+				Log.e("Response", "error");
+			}
+		});
+
+	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		fusedLocationClient.removeLocationUpdates(locationCallback);
+	}
+
 }

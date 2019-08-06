@@ -1,13 +1,14 @@
 package br.com.dengueefocoApp.api;
 
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
     private static String URL = "https://api.github.com/";
     private static String GOOGLE_URL = "https://maps.googleapis.com/maps/api/";
-    private Retrofit INSTANCE;
-    private Retrofit GOOGLE_INSTANSE;
+    private static Retrofit INSTANCE;
+    private static Retrofit GOOGLE_INSTANSE;
 
     static Retrofit getInstance() {
         if (INSTANCE == null) {
@@ -17,7 +18,7 @@ public class RetrofitClient {
         }
     }
 
-    Retrofit getGoogleInstance() {
+    static Retrofit getGoogleInstance() {
         if (GOOGLE_INSTANSE == null) {
             return createGoogleInstance();
         } else {
@@ -32,7 +33,7 @@ public class RetrofitClient {
                 .build();
     }
 
-    private Retrofit createGoogleInstance() {
+    private static Retrofit createGoogleInstance() {
         return new Retrofit.Builder()
                 .baseUrl(GOOGLE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -43,4 +44,5 @@ public class RetrofitClient {
         return getInstance().create(Api.class);
     }
 
+    public static GoogleApi getGoogleApi() { return getGoogleInstance().create(GoogleApi.class); }
 }

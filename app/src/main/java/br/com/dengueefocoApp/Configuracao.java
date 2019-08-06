@@ -16,7 +16,8 @@ public class Configuracao {
     }
 
     public static Boolean isUsuarioLogadoAgente() {
-        return Configuracao.getUsuarioLogado().getTipoUsuario().equals(TipoUsuario.AGENTE);
+		Usuario usuarioLogado = Configuracao.getUsuarioLogado();
+		return usuarioLogado != null && usuarioLogado.getTipoUsuario().equals(TipoUsuario.AGENTE);
     }
 
 }

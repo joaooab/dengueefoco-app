@@ -10,6 +10,8 @@ public class Antivetorial {
     private Long id;
     @ColumnInfo(name = "id_usuario")
     private Long idUsuario;
+    @ColumnInfo(name = "id_supervisor")
+    private Long idSupervisor;
     @ColumnInfo(name = "data_visita")
     private String dataVisita;
     @ColumnInfo(name = "larvicida")
@@ -27,6 +29,7 @@ public class Antivetorial {
     @ColumnInfo(name = "latitude")
     private Double latitude;
     private String status;
+    private Boolean notificado;
 
     public Antivetorial() {
         this.status = Status.AGUARDANDO.valor;
@@ -46,6 +49,14 @@ public class Antivetorial {
 
     public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
+    }
+
+    public Long getIdSupervisor() {
+        return idSupervisor;
+    }
+
+    public void setIdSupervisor(Long idSupervisor) {
+        this.idSupervisor = idSupervisor;
     }
 
     public String getDataVisita() {
@@ -120,5 +131,12 @@ public class Antivetorial {
         this.status = status;
     }
 
+	public Boolean getNotificado() {
+		return notificado;
+	}
+
+	public void setNotificado(Boolean notificado) {
+		this.notificado = notificado;
+	}
 }
 

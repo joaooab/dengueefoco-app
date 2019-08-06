@@ -2,17 +2,18 @@ package br.com.dengueefocoApp.model;
 
 public class Usuario {
 
-    private Integer id;
+    private Long id;
     private String email;
     private String nome;
     private String senha;
+    private Long idSupervisor;
     private TipoUsuario tipoUsuario;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -48,4 +49,11 @@ public class Usuario {
         this.tipoUsuario = tipoUsuario;
     }
 
+	public Long getIdSupervisor() {
+		return idSupervisor;
+	}
+
+	public void setIdSupervisor(Long idSupervisor) {
+		this.idSupervisor = idSupervisor;
+	}
 }

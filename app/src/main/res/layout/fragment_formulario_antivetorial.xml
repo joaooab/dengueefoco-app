@@ -1,135 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+												   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTextAgente"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Agente"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+	<TextView
+			android:id="@+id/labelSpinnerLarvicida"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Larvicida:"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
 
-    <TextView
-        android:id="@+id/labelSpinnerLarvicida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Larvicida:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextAgente"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAgente" />
+	<Spinner
+			android:id="@+id/spinnerLarvicida"
+			android:layout_width="0dp"
+			android:layout_height="30dp"
+			app:layout_constraintEnd_toStartOf="@+id/editTextQuantidade"
+			app:layout_constraintHorizontal_chainStyle="spread_inside"
+			app:layout_constraintTop_toBottomOf="@+id/labelSpinnerLarvicida" app:layout_constraintStart_toStartOf="@+id/labelSpinnerLarvicida" android:layout_marginEnd="8dp"/>
 
-    <Spinner
-        android:id="@+id/spinnerLarvicida"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/labelSpinnerLarvicida"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/labelSpinnerLarvicida"
-        app:layout_constraintTop_toTopOf="@+id/labelSpinnerLarvicida" />
+	<EditText
+			android:id="@+id/editTextQuantidade"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="8dp"
+			android:ems="10"
+			android:inputType="numberDecimal"
+			android:hint="Qtd. Larvicida"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/spinnerLarvicida"
+			app:layout_constraintTop_toTopOf="@+id/labelSpinnerLarvicida" app:layout_constraintBottom_toBottomOf="@+id/spinnerLarvicida"/>
 
-    <EditText
-        android:id="@+id/editTextQuantidade"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Quantidade"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/labelSpinnerLarvicida"
-        app:layout_constraintTop_toBottomOf="@+id/labelSpinnerLarvicida" />
+	<TextView
+			android:id="@+id/labelSpinnerStatusImovel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Status Imóvel:"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/spinnerLarvicida" android:layout_marginStart="8dp" android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/labelSpinnerStatusImovel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Status Imóvel:"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextQuantidade"
-        app:layout_constraintTop_toBottomOf="@id/editTextQuantidade" />
+	<Spinner
+			android:id="@+id/spinnerStatusImovel"
+			android:layout_width="0dp"
+			android:layout_height="30dp"
+			app:layout_constraintTop_toBottomOf="@+id/labelSpinnerStatusImovel" app:layout_constraintStart_toStartOf="@+id/labelSpinnerStatusImovel" app:layout_constraintEnd_toStartOf="@+id/spinnerTipoImovel" android:layout_marginEnd="8dp"/>
 
-    <Spinner
-        android:id="@+id/spinnerStatusImovel"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/labelSpinnerStatusImovel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/labelSpinnerStatusImovel"
-        app:layout_constraintTop_toTopOf="@+id/labelSpinnerStatusImovel" />
+	<TextView
+			android:id="@+id/labelSpinnerTipoImovel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="16sp"
+			android:text="Tipo Imóvel:"
+			android:textStyle="bold"
+			app:layout_constraintTop_toTopOf="@+id/labelSpinnerStatusImovel" app:layout_constraintStart_toStartOf="@+id/spinnerTipoImovel"/>
 
-    <TextView
-        android:id="@+id/labelSpinnerTipoImovel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Tipo Imóvel:"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/labelSpinnerStatusImovel"
-        app:layout_constraintTop_toBottomOf="@+id/labelSpinnerStatusImovel" />
+	<Spinner
+			android:id="@+id/spinnerTipoImovel"
+			android:layout_width="0dp"
+			android:layout_height="30dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/labelSpinnerTipoImovel" app:layout_constraintStart_toEndOf="@+id/spinnerStatusImovel"/>
 
-    <Spinner
-        android:id="@+id/spinnerTipoImovel"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/labelSpinnerTipoImovel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/labelSpinnerTipoImovel"
-        app:layout_constraintTop_toTopOf="@+id/labelSpinnerTipoImovel" />
+	<EditText
+			android:id="@+id/editTextCep"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="8dp"
+			android:ems="10"
+			android:hint="CEP"
+			android:inputType="number"
+			app:layout_constraintEnd_toStartOf="@+id/iconGps"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/switch1" android:layout_marginStart="8dp"/>
 
-    <EditText
-        android:id="@+id/editTextCep"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="CEP"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/iconGps"
-        app:layout_constraintStart_toStartOf="@+id/labelSpinnerTipoImovel"
-        app:layout_constraintTop_toBottomOf="@+id/labelSpinnerTipoImovel" />
-
-    <ImageView
-        android:id="@+id/iconGps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/ic_gps_fixed_black_24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextCep"
-        app:layout_constraintTop_toTopOf="@+id/editTextCep"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextCep"/>
+	<ImageView
+			android:id="@+id/iconGps"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:layout_marginEnd="8dp"
+			android:src="@drawable/ic_gps_fixed_black_24dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/editTextCep"
+			app:layout_constraintTop_toTopOf="@+id/editTextCep"
+			app:layout_constraintBottom_toBottomOf="@+id/editTextCep"/>
 
 
-    <Button
-        android:id="@+id/buttonSalvar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Salvar"
-        app:layout_constraintEnd_toStartOf="@+id/buttonLimpar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCep" />
+	<Button
+			android:id="@+id/buttonSalvar"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:text="Salvar"
+			app:layout_constraintEnd_toStartOf="@+id/buttonLimpar"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
         android:id="@+id/buttonLimpar"
@@ -141,4 +111,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonSalvar"
         app:layout_constraintTop_toTopOf="@+id/buttonSalvar" />
+	<EditText
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:inputType="textMultiLine"
+			android:gravity="start|top"
+			android:ems="10"
+			android:id="@+id/editTextObservacao" android:hint="Observação" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/editTextSetor" android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/buttonSalvar"/>
+	<Switch
+			android:text="Notificado"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/switch1" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/spinnerStatusImovel" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+	<EditText
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:inputType="textPersonName"
+			android:ems="10"
+			android:id="@+id/editText2" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/editTextCep" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:hint="Logradouro"/>
+	<EditText
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:inputType="textPersonName"
+			android:ems="10"
+			app:layout_constraintVertical_chainStyle="packed"
+			app:layout_constraintEnd_toStartOf="@+id/editTextLote"
+			android:id="@+id/editTextQuadra" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/editText2" android:hint="Quadra"/>
+	<EditText
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:inputType="textPersonName"
+			android:ems="10"
+			android:id="@+id/editTextLote" app:layout_constraintStart_toEndOf="@+id/editTextQuadra" android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="@+id/editTextQuadra" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="@id/editTextNumero" android:hint="Lote"/>
+	<EditText
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:inputType="textPersonName"
+			android:ems="10"
+			app:layout_constraintStart_toEndOf="@id/editTextLote"
+			app:layout_constraintTop_toTopOf="@id/editTextLote"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:id="@+id/editTextNumero" android:layout_marginStart="8dp" android:hint="Número" android:layout_marginEnd="8dp"/>
+	<EditText
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:inputType="textPersonName"
+			android:ems="10"
+			android:id="@+id/editTextSetor" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/editTextQuadra" android:hint="Setor"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
