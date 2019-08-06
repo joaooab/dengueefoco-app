@@ -5,8 +5,8 @@ public class Usuario {
     private Integer id;
     private String email;
     private String nome;
-    private String password;
-    private TipoUsuario TipoUsuario;
+    private String senha;
+    private TipoUsuario tipoUsuario;
 
     public Integer getId() {
         return id;
@@ -32,20 +32,20 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public br.com.dengueefocoApp.model.TipoUsuario getTipoUsuario() {
-        return TipoUsuario;
+        return tipoUsuario;
     }
 
     public void setTipoUsuario(br.com.dengueefocoApp.model.TipoUsuario tipoUsuario) {
-        TipoUsuario = tipoUsuario;
+        this.tipoUsuario = tipoUsuario;
     }
 
 }

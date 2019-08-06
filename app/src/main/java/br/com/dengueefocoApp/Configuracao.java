@@ -11,7 +11,7 @@ public class Configuracao {
         return usuarioLogado;
     }
 
-    public void setUsuarioLogado(Usuario usuarioLogado) {
+    public static void setUsuarioLogado(Usuario usuarioLogado) {
         Configuracao.usuarioLogado = usuarioLogado;
     }
 

@@ -1,13 +1,14 @@
 package br.com.dengueefocoApp.api;
 
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static String URL = "https://api.github.com/";
-    private Retrofit INSTANCE;
+    private static String URL = "http://192.168.0.13:8080/";
+    private static Retrofit INSTANCE;
 
-    Retrofit getInstance() {
+    static Retrofit getInstance() {
         if (INSTANCE == null) {
             return createInstance();
         } else {
@@ -15,14 +16,15 @@ public class RetrofitClient {
         }
     }
 
-    private Retrofit createInstance() {
+    private static Retrofit createInstance() {
         return new Retrofit.Builder()
                 .baseUrl(URL)
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
 
-    private Api getApi() {
-        return INSTANCE.create(Api.class);
+    public static Api getApi() {
+        return getInstance().create(Api.class);
     }
 
 }
