@@ -59,7 +59,7 @@ public class SupervisorAdapter extends RecyclerView.Adapter<SupervisorAdapter.Vi
 
 		ViewHolder(@NonNull View itemView) {
 			super(itemView);
-			id = itemView.findViewById(R.id.textViewId);
+			id = itemView.findViewById(R.id.textViewAgente);
 			distrito = itemView.findViewById(R.id.textViewDistrito);
 			data = itemView.findViewById(R.id.textViewData);
 		}

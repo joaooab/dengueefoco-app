@@ -21,10 +21,13 @@ import br.com.dengueefocoApp.R;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Configuracao configuracao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        configuracao = new Configuracao(this);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -67,9 +70,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuItem item = menu.findItem(R.id.nav_supervisor);
-        if (Configuracao.isUsuarioLogadoAgente()) {
-            item.setVisible(false);
-        }
+//        if (configuracao.isUsuarioLogadoAgente()) {
+//            item.setVisible(false);
+//        }
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }

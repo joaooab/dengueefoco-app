@@ -45,7 +45,7 @@ public class DetalheAntivetorialFragment extends Fragment {
         agente = view.findViewById(R.id.textViewAgente);
         larvicida = view.findViewById(R.id.textViewLarvicida);
         quantidade = view.findViewById(R.id.textViewQuantidade);
-        status = view.findViewById(R.id.textViewStatus);
+        status = view.findViewById(R.id.textViewLabelStatus);
         data = view.findViewById(R.id.textViewData);
         statusImovel = view.findViewById(R.id.textViewStatusImovel);
         tipoImovel = view.findViewById(R.id.textViewTipoImovel);

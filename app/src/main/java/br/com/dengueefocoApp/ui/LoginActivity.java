@@ -25,11 +25,13 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
 
 	private Api api = RetrofitClient.getApi();
+	private Configuracao configuracao;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		configuracao = new Configuracao(this);
 		TextView edtLogin = findViewById(R.id.editTextLogin);
 		TextView edtSenha = findViewById(R.id.editTextSenha);
 		Button entrar = findViewById(R.id.buttonEntrar);
@@ -61,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
 			public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
 				if(response.code() == 200) {
 					Usuario usuarioLogado = new Gson().fromJson(response.body(), Usuario.class);
-					Configuracao.setUsuarioLogado(usuarioLogado);
+					configuracao.setUsuarioLogado(usuarioLogado);
 					iniciaTelaPrincipal();
 				} else {
 					edtLogin.setError("Usuário não encontrado");

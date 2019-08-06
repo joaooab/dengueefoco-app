@@ -87,4 +87,5 @@ public class ListaAntivetorialFragment extends Fragment implements AntivetorialA
     public void onLongClick(Antivetorial antivetorial) {
 
     }
+
 }
