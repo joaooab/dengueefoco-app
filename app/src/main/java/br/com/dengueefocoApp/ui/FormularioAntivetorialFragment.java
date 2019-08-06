@@ -12,13 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.Toast;
+import android.widget.*;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -64,6 +58,11 @@ public class FormularioAntivetorialFragment extends Fragment {
 	private Location location;
 	private LocationCallback locationCallback;
 	private LocationRequest mLocationRequest;
+	private TextView editTextQuadra;
+	private TextView editTextLote;
+	private TextView editTextNumero;
+	private Switch switchNotificado;
+	private TextView editTextSetor;
 
 	static FormularioAntivetorialFragment newInstance() {
 		return new FormularioAntivetorialFragment();
@@ -109,6 +108,11 @@ public class FormularioAntivetorialFragment extends Fragment {
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 		editTextQuantidade = view.findViewById(R.id.editTextQuantidade);
 		editTextCep = view.findViewById(R.id.editTextCep);
+		editTextQuadra = view.findViewById(R.id.editTextQuadra);
+		editTextLote = view.findViewById(R.id.editTextLote);
+		editTextNumero = view.findViewById(R.id.editTextNumero);
+		switchNotificado = view.findViewById(R.id.switchNotificado);
+		editTextSetor = view.findViewById(R.id.editTextSetor);
 		configuraTipoImovel(view);
 		configuraStatusImovel(view);
 		configuraSpinnerLarvicida(view);
@@ -223,7 +227,12 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private Antivetorial criaAntivetorial() {
 		Double quantidade = Double.valueOf(editTextQuantidade.getText().toString());
-		String cep = editTextQuantidade.getText().toString();
+		String cep = editTextCep.getText().toString();
+		String setor = editTextSetor.getText().toString();
+		String quadra = editTextQuadra.getText().toString();
+		String lote = editTextLote.getText().toString();
+		String numero = editTextNumero.getText().toString();
+		boolean notificado = switchNotificado.isChecked();
 
 		Antivetorial antivetorial = new Antivetorial();
 		antivetorial.setIdUsuario(Configuracao.getUsuarioLogado().getId());
@@ -234,6 +243,11 @@ public class FormularioAntivetorialFragment extends Fragment {
 		antivetorial.setTipoImovel(tipoImoveSelecionado);
 		antivetorial.setDataVisita(Util.getDataHojeString());
 		antivetorial.setStatus(Status.NAO_ENVIANDO.valor);
+		antivetorial.setSetor(setor);
+		antivetorial.setQuadra(quadra);
+		antivetorial.setLote(lote);
+		antivetorial.setNumero(numero);
+		antivetorial.setNotificado(notificado);
 
 		return antivetorial;
 	}

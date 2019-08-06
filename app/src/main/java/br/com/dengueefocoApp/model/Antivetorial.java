@@ -22,14 +22,17 @@ public class Antivetorial {
     private String statusImovel;
     @ColumnInfo(name = "tipo_imovel")
     private String tipoImovel;
-    @ColumnInfo(name = "regiao")
-    private String regiao;
+    @ColumnInfo(name = "setor")
+    private String setor;
     @ColumnInfo(name = "longitude")
     private Double longitude;
     @ColumnInfo(name = "latitude")
     private Double latitude;
     private String status;
     private Boolean notificado;
+    private String quadra;
+    private String lote;
+    private String numero;
 
     public Antivetorial() {
         this.status = Status.AGUARDANDO.valor;
@@ -99,12 +102,12 @@ public class Antivetorial {
         this.tipoImovel = tipoImovel;
     }
 
-    public String getRegiao() {
-        return regiao;
+    public String getSetor() {
+        return setor;
     }
 
-    public void setRegiao(String regiao) {
-        this.regiao = regiao;
+    public void setSetor(String setor) {
+        this.setor = setor;
     }
 
     public Double getLongitude() {
@@ -137,6 +140,30 @@ public class Antivetorial {
 
 	public void setNotificado(Boolean notificado) {
 		this.notificado = notificado;
+	}
+
+	public String getQuadra() {
+		return quadra;
+	}
+
+	public void setQuadra(String quadra) {
+		this.quadra = quadra;
+	}
+
+	public String getLote() {
+		return lote;
+	}
+
+	public void setLote(String lote) {
+		this.lote = lote;
+	}
+
+	public String getNumero() {
+		return numero;
+	}
+
+	public void setNumero(String numero) {
+		this.numero = numero;
 	}
 }
 
