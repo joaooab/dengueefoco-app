@@ -7,9 +7,11 @@ public class RetrofitClient {
 
     private static String URL = "https://api.github.com/";
     private static String GOOGLE_URL = "https://maps.googleapis.com/maps/api/";
+    private static String VIA_CEP_URL = "https://viacep.com.br/ws/";
     private static Retrofit INSTANCE;
     private static Retrofit GOOGLE_INSTANSE;
-
+    private static Retrofit VIA_CEP_INSTANSE;
+//74603240/json/
     static Retrofit getInstance() {
         if (INSTANCE == null) {
             return createInstance();
@@ -26,6 +28,14 @@ public class RetrofitClient {
         }
     }
 
+    static Retrofit getViaCepInstance() {
+        if (VIA_CEP_INSTANSE == null) {
+            return createViaCepInstance();
+        } else {
+            return VIA_CEP_INSTANSE;
+        }
+    }
+
     private static Retrofit createInstance() {
         return new Retrofit.Builder()
                 .baseUrl(URL)
@@ -38,6 +48,17 @@ public class RetrofitClient {
                 .baseUrl(GOOGLE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+    }
+
+    private static Retrofit createViaCepInstance() {
+        return new Retrofit.Builder()
+                .baseUrl(VIA_CEP_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
+
+    public static ViaCepApi getViaCepApi() {
+        return getViaCepInstance().create(ViaCepApi.class);
     }
 
     public static Api getApi() {

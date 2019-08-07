@@ -6,7 +6,6 @@ public class Usuario {
     private String email;
     private String nome;
     private String senha;
-    private Long idSupervisor;
     private TipoUsuario tipoUsuario;
 
     public Long getId() {
@@ -49,11 +48,4 @@ public class Usuario {
         this.tipoUsuario = tipoUsuario;
     }
 
-	public Long getIdSupervisor() {
-		return idSupervisor;
-	}
-
-	public void setIdSupervisor(Long idSupervisor) {
-		this.idSupervisor = idSupervisor;
-	}
 }

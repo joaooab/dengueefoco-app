@@ -25,15 +25,20 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import br.com.dengueefocoApp.api.ViaCepApi;
+import br.com.dengueefocoApp.model.Endereco;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import br.com.dengueefocoApp.AppDatabase;
 import br.com.dengueefocoApp.Configuracao;
@@ -67,6 +72,7 @@ public class FormularioAntivetorialFragment extends Fragment {
     private TextView editTextNumero;
     private Switch switchNotificado;
     private TextView editTextSetor;
+    private TextView editTextLogradouro;
     private Configuracao configuracao;
 
     static FormularioAntivetorialFragment newInstance() {
@@ -119,6 +125,7 @@ public class FormularioAntivetorialFragment extends Fragment {
         editTextNumero = view.findViewById(R.id.editTextNumero);
         switchNotificado = view.findViewById(R.id.switchNotificado);
         editTextSetor = view.findViewById(R.id.editTextSetor);
+        editTextLogradouro = view.findViewById(R.id.editTextLogradouro);
         configuraTipoImovel(view);
         configuraStatusImovel(view);
         configuraSpinnerLarvicida(view);
@@ -214,11 +221,11 @@ public class FormularioAntivetorialFragment extends Fragment {
     }
 
     private void salvaAntivetorial(final Antivetorial antivetorial) {
-        antivetorial.setStatus(Status.AGUARDANDO.valor);
         RetrofitClient.getApi().salvaAntivetorial(antivetorial).enqueue(new Callback<JsonElement>() {
             @Override
             public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
                 Toast.makeText(getContext(), "Operação realizada com sucesso", Toast.LENGTH_SHORT).show();
+                antivetorial.setStatus(Status.ENVIADO.valor);
                 antivetorialDao.insertAll(antivetorial);
             }
 
@@ -233,16 +240,15 @@ public class FormularioAntivetorialFragment extends Fragment {
 
     private Antivetorial criaAntivetorial() {
         Double quantidade = Double.valueOf(editTextQuantidade.getText().toString());
-        String cep = editTextCep.getText().toString();
         String setor = editTextSetor.getText().toString();
         String quadra = editTextQuadra.getText().toString();
         String lote = editTextLote.getText().toString();
         String numero = editTextNumero.getText().toString();
+        String logradouro = editTextLogradouro.getText().toString();
         boolean notificado = switchNotificado.isChecked();
 
         Antivetorial antivetorial = new Antivetorial();
         antivetorial.setIdUsuario(configuracao.getUsuarioLogado().getId());
-        antivetorial.setIdSupervisor(configuracao.getUsuarioLogado().getIdSupervisor());
         antivetorial.setQtdLarvicida(quantidade);
         antivetorial.setLarvicida(larvicidaSelecionado);
         antivetorial.setStatusImovel(statusImovelSelecionado);
@@ -254,6 +260,9 @@ public class FormularioAntivetorialFragment extends Fragment {
         antivetorial.setLote(lote);
         antivetorial.setNumero(numero);
         antivetorial.setNotificado(notificado);
+        antivetorial.setLatitude(location.getLatitude());
+        antivetorial.setLongitude(location.getLongitude());
+        antivetorial.setLogradouro(logradouro);
 
         return antivetorial;
     }
@@ -305,23 +314,48 @@ public class FormularioAntivetorialFragment extends Fragment {
         if (location == null) {
             return;
         }
-        String latitude = String.valueOf(location.getLatitude());
-        String longitude = String.valueOf(location.getLongitude());
-        String latLng = String.format("%s, %s", latitude, longitude);
-        GoogleApi service = RetrofitClient.getGoogleApi();
-        Call<JsonElement> call = service.reverseGeocode(latLng, "AIzaSyBuuq_Td4NjK9DSowVe03PegsojAI70Hxw");
-        call.enqueue(new Callback<JsonElement>() {
+        ViaCepApi viaCepApi = RetrofitClient.getViaCepApi();
+        String cep = editTextCep.getText().toString();
+        if(cep.isEmpty() || !isCepValido(cep)) {
+            editTextCep.setError("CEP inválido");
+            return;
+        }
+        viaCepApi.getEndereco(cep).enqueue(new Callback<JsonElement>() {
             @Override
             public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
-                Log.e("Response", "sucesso");
+                Endereco endereco = new Gson().fromJson(response.body(), Endereco.class);
+                editTextSetor.setText(endereco.getBairro());
+                editTextLogradouro.setText(endereco.getLogradouro());
             }
 
             @Override
             public void onFailure(Call<JsonElement> call, Throwable t) {
-                Log.e("Response", "error");
+                Log.e(this.getClass().getSimpleName(), t.getMessage());
             }
         });
+//        String latitude = String.valueOf(location.getLatitude());
+//        String longitude = String.valueOf(location.getLongitude());
+//        String latLng = String.format("%s, %s", latitude, longitude);
+//        GoogleApi service = RetrofitClient.getGoogleApi();
+//        Call<JsonElement> call = service.reverseGeocode(latLng, "AIzaSyBuuq_Td4NjK9DSowVe03PegsojAI70Hxw");
+//        call.enqueue(new Callback<JsonElement>() {
+//            @Override
+//            public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
+//                Log.e("Response", "sucesso");
+//            }
+//
+//            @Override
+//            public void onFailure(Call<JsonElement> call, Throwable t) {
+//                Log.e("Response", "error");
+//            }
+//        });
 
+    }
+
+    private boolean isCepValido(String cep) {
+        Pattern p = Pattern.compile("[0-9]{8}$");
+        Matcher m = p.matcher(cep);
+        return m.find();
     }
 
     @Override

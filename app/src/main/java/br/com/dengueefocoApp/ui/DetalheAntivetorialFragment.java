@@ -13,67 +13,86 @@ import android.widget.TextView;
 import br.com.dengueefocoApp.R;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.Status;
+import br.com.dengueefocoApp.util.Util;
 
 public class DetalheAntivetorialFragment extends Fragment {
 
-    private MainActivity mActivity;
-    private static Antivetorial antivetorial;
-    private TextView agente;
-    private TextView larvicida;
-    private TextView quantidade;
-    private TextView status;
-    private TextView data;
-    private TextView statusImovel;
-    private TextView tipoImovel;
+	private MainActivity mActivity;
+	private static Antivetorial antivetorial;
+	private TextView larvicida;
+	private TextView quantidade;
+	private TextView status;
+	private TextView data;
+	private TextView statusImovel;
+	private TextView tipoImovel;
+	private TextView notificado;
+	private TextView horario;
+	private TextView logradouro;
+	private TextView setor;
+	private TextView quadra;
+	private TextView lote;
+	private TextView numero;
 
-    static DetalheAntivetorialFragment newInstance(final Antivetorial antivetorial) {
-        setAntivetorial(antivetorial);
-        return new DetalheAntivetorialFragment();
-    }
+	static DetalheAntivetorialFragment newInstance(final Antivetorial antivetorial) {
+		setAntivetorial(antivetorial);
+		return new DetalheAntivetorialFragment();
+	}
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mActivity = (MainActivity) getActivity();
-        mActivity.setActionBarTitle("Detalhes antivetorial");
-    }
+	@Override
+	public void onCreate(@Nullable Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		mActivity = (MainActivity) getActivity();
+		mActivity.setActionBarTitle("Detalhes antivetorial");
+	}
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_detalhe_antivetorial, container, false);
-        agente = view.findViewById(R.id.textViewAgente);
-        larvicida = view.findViewById(R.id.textViewLarvicida);
-        quantidade = view.findViewById(R.id.textViewQuantidade);
-        status = view.findViewById(R.id.textViewLabelStatus);
-        data = view.findViewById(R.id.textViewData);
-        statusImovel = view.findViewById(R.id.textViewStatusImovel);
-        tipoImovel = view.findViewById(R.id.textViewTipoImovel);
-        return view;
-    }
+	@Nullable
+	@Override
+	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.fragment_detalhe_antivetorial, container, false);
+		larvicida = view.findViewById(R.id.textViewLarvicida);
+		quantidade = view.findViewById(R.id.textViewQuantidade);
+		status = view.findViewById(R.id.textViewLabelStatus);
+		data = view.findViewById(R.id.textViewData);
+		statusImovel = view.findViewById(R.id.textViewStatusImovel);
+		tipoImovel = view.findViewById(R.id.textViewTipoImovel);
+		notificado = view.findViewById(R.id.textViewNotificado);
+		horario = view.findViewById(R.id.textViewHorario);
+		logradouro = view.findViewById(R.id.textViewLogradouro);
+		setor = view.findViewById(R.id.textViewSetor);
+		quadra = view.findViewById(R.id.textViewQuadra);
+		lote = view.findViewById(R.id.textViewLote);
+		numero = view.findViewById(R.id.textViewNumero);
+		return view;
+	}
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        agente.setText(String.valueOf(antivetorial.getId()));
-        larvicida.setText(antivetorial.getLarvicida());
-        quantidade.setText(String.valueOf(antivetorial.getQtdLarvicida()));
-        status.setText(antivetorial.getStatus());
-        if (antivetorial.getStatus().equals(Status.APROVADO.valor)) {
-            int corAprovado = ContextCompat.getColor(getContext(), android.R.color.holo_green_dark);
-            status.setTextColor(corAprovado);
-        }
-        data.setText(antivetorial.getDataVisita());
-        statusImovel.setText(antivetorial.getStatusImovel());
-        tipoImovel.setText(antivetorial.getTipoImovel());
-    }
+	@Override
+	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+		super.onViewCreated(view, savedInstanceState);
+		larvicida.setText(antivetorial.getLarvicida());
+		quantidade.setText(String.valueOf(antivetorial.getQtdLarvicida()));
+		status.setText(antivetorial.getStatus());
+		notificado.setText(Util.getNotificado(antivetorial.getNotificado()));
+		horario.setText(Util.getHora(antivetorial.getDataVisita()));
+		logradouro.setText(antivetorial.getLogradouro());
+		setor.setText(antivetorial.getSetor());
+		quadra.setText(antivetorial.getQuadra());
+		lote.setText(antivetorial.getLote());
+		numero.setText(antivetorial.getNumero());
+		if (antivetorial.getStatus().equals(Status.ENVIADO.valor)) {
+			int cor = ContextCompat.getColor(getContext(), android.R.color.holo_green_dark);
+			status.setTextColor(cor);
+		}
+		data.setText(Util.getData(antivetorial.getDataVisita()));
+		statusImovel.setText(antivetorial.getStatusImovel());
+		tipoImovel.setText(antivetorial.getTipoImovel());
+	}
 
-    private static Antivetorial getAntivetorial() {
-        return antivetorial;
-    }
+	private static Antivetorial getAntivetorial() {
+		return antivetorial;
+	}
 
-    private static void setAntivetorial(Antivetorial antivetorial) {
-        DetalheAntivetorialFragment.antivetorial = antivetorial;
-    }
+	private static void setAntivetorial(Antivetorial antivetorial) {
+		DetalheAntivetorialFragment.antivetorial = antivetorial;
+	}
 
 }

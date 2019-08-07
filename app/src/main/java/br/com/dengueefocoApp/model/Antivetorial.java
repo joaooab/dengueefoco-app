@@ -10,8 +10,6 @@ public class Antivetorial {
     private Long id;
     @ColumnInfo(name = "id_usuario")
     private Long idUsuario;
-    @ColumnInfo(name = "id_supervisor")
-    private Long idSupervisor;
     @ColumnInfo(name = "data_visita")
     private String dataVisita;
     @ColumnInfo(name = "larvicida")
@@ -33,6 +31,7 @@ public class Antivetorial {
     private String quadra;
     private String lote;
     private String numero;
+    private String logradouro;
 
     public Antivetorial() {
         this.status = Status.AGUARDANDO.valor;
@@ -52,14 +51,6 @@ public class Antivetorial {
 
     public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
-    }
-
-    public Long getIdSupervisor() {
-        return idSupervisor;
-    }
-
-    public void setIdSupervisor(Long idSupervisor) {
-        this.idSupervisor = idSupervisor;
     }
 
     public String getDataVisita() {
@@ -164,6 +155,14 @@ public class Antivetorial {
 
 	public void setNumero(String numero) {
 		this.numero = numero;
+	}
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
 	}
 }
 

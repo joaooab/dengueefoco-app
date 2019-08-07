@@ -33,7 +33,7 @@ public class Configuracao {
         } catch (Exception e) {
             Log.e(Configuracao.class.getSimpleName(), "Erro ao obter o usuário: " + e.getMessage());
         }
-        return new Usuario();
+        return null;
     }
 
     public void setUsuarioLogado(Usuario usuario) {

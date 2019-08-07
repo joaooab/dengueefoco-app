@@ -8,7 +8,7 @@ import android.content.Context;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
 
-@Database(entities = {Antivetorial.class}, version = 3)
+@Database(entities = {Antivetorial.class}, version = 4)
 public abstract class AppDatabase extends RoomDatabase {
 	public abstract AntivetorialDao antivetorialDao();
 
