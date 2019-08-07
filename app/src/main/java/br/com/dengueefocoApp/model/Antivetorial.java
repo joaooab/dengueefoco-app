@@ -32,6 +32,7 @@ public class Antivetorial {
     private String lote;
     private String numero;
     private String logradouro;
+    private String observacao;
 
     public Antivetorial() {
         this.status = Status.AGUARDANDO.valor;
@@ -164,5 +165,14 @@ public class Antivetorial {
 	public void setLogradouro(String logradouro) {
 		this.logradouro = logradouro;
 	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
+
 }
 

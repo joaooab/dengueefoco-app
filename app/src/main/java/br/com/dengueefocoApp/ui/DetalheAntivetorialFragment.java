@@ -32,6 +32,7 @@ public class DetalheAntivetorialFragment extends Fragment {
 	private TextView quadra;
 	private TextView lote;
 	private TextView numero;
+	private TextView observacao;
 
 	static DetalheAntivetorialFragment newInstance(final Antivetorial antivetorial) {
 		setAntivetorial(antivetorial);
@@ -62,6 +63,7 @@ public class DetalheAntivetorialFragment extends Fragment {
 		quadra = view.findViewById(R.id.textViewQuadra);
 		lote = view.findViewById(R.id.textViewLote);
 		numero = view.findViewById(R.id.textViewNumero);
+		observacao = view.findViewById(R.id.textViewObservacao);
 		return view;
 	}
 
@@ -78,6 +80,7 @@ public class DetalheAntivetorialFragment extends Fragment {
 		quadra.setText(antivetorial.getQuadra());
 		lote.setText(antivetorial.getLote());
 		numero.setText(antivetorial.getNumero());
+		observacao.setText(antivetorial.getObservacao());
 		if (antivetorial.getStatus().equals(Status.ENVIADO.valor)) {
 			int cor = ContextCompat.getColor(getContext(), android.R.color.holo_green_dark);
 			status.setTextColor(cor);

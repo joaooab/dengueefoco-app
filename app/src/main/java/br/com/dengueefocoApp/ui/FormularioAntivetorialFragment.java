@@ -73,6 +73,7 @@ public class FormularioAntivetorialFragment extends Fragment {
     private Switch switchNotificado;
     private TextView editTextSetor;
     private TextView editTextLogradouro;
+    private TextView editTextObservacao;
     private Configuracao configuracao;
 
     static FormularioAntivetorialFragment newInstance() {
@@ -126,6 +127,7 @@ public class FormularioAntivetorialFragment extends Fragment {
         switchNotificado = view.findViewById(R.id.switchNotificado);
         editTextSetor = view.findViewById(R.id.editTextSetor);
         editTextLogradouro = view.findViewById(R.id.editTextLogradouro);
+        editTextObservacao = view.findViewById(R.id.editTextObservacao);
         configuraTipoImovel(view);
         configuraStatusImovel(view);
         configuraSpinnerLarvicida(view);
@@ -208,6 +210,12 @@ public class FormularioAntivetorialFragment extends Fragment {
     private void limparFormulario() {
         editTextQuantidade.setText("");
         editTextCep.setText("");
+        editTextLogradouro.setText("");
+        editTextQuadra.setText("");
+        editTextLote.setText("");
+        editTextNumero.setText("");
+        editTextSetor.setText("");
+        editTextObservacao.setText("");
     }
 
     private void configuraBotaoSalvar(@NonNull View view) {
@@ -245,6 +253,7 @@ public class FormularioAntivetorialFragment extends Fragment {
         String lote = editTextLote.getText().toString();
         String numero = editTextNumero.getText().toString();
         String logradouro = editTextLogradouro.getText().toString();
+        String observacao = editTextObservacao.getText().toString();
         boolean notificado = switchNotificado.isChecked();
 
         Antivetorial antivetorial = new Antivetorial();
@@ -263,6 +272,7 @@ public class FormularioAntivetorialFragment extends Fragment {
         antivetorial.setLatitude(location.getLatitude());
         antivetorial.setLongitude(location.getLongitude());
         antivetorial.setLogradouro(logradouro);
+        antivetorial.setObservacao(observacao);
 
         return antivetorial;
     }
