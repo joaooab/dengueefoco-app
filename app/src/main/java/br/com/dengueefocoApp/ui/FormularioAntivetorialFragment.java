@@ -75,6 +75,10 @@ public class FormularioAntivetorialFragment extends Fragment {
     private TextView editTextLogradouro;
     private TextView editTextObservacao;
     private Configuracao configuracao;
+    private TextView editTextTipoPendencia;
+    private TextView editTextSequencia;
+    private TextView editTextQtdFoco;
+    private TextView editTextQtdEliminado;
 
     static FormularioAntivetorialFragment newInstance() {
         return new FormularioAntivetorialFragment();
@@ -128,6 +132,10 @@ public class FormularioAntivetorialFragment extends Fragment {
         editTextSetor = view.findViewById(R.id.editTextSetor);
         editTextLogradouro = view.findViewById(R.id.editTextLogradouro);
         editTextObservacao = view.findViewById(R.id.editTextObservacao);
+        editTextTipoPendencia = view.findViewById(R.id.editTextTipoPendencia);
+        editTextSequencia = view.findViewById(R.id.editTextSequencia);
+        editTextQtdFoco = view.findViewById(R.id.editTextQtdFoco);
+        editTextQtdEliminado = view.findViewById(R.id.editTextQtdEliminado);
         configuraTipoImovel(view);
         configuraStatusImovel(view);
         configuraSpinnerLarvicida(view);
@@ -216,6 +224,10 @@ public class FormularioAntivetorialFragment extends Fragment {
         editTextNumero.setText("");
         editTextSetor.setText("");
         editTextObservacao.setText("");
+        editTextTipoPendencia.setText("");
+        editTextSequencia.setText("");
+        editTextQtdFoco.setText("");
+        editTextQtdEliminado.setText("");
     }
 
     private void configuraBotaoSalvar(@NonNull View view) {
