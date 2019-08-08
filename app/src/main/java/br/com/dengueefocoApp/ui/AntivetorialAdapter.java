@@ -93,7 +93,7 @@ public class AntivetorialAdapter extends RecyclerView.Adapter<AntivetorialAdapte
 			status = itemView.findViewById(R.id.textViewStatus);
 			data = itemView.findViewById(R.id.textViewData);
 			horario = itemView.findViewById(R.id.textViewHorario);
-			notificado = itemView.findViewById(R.id.textViewNotificado);
+			notificado = itemView.findViewById(R.id.textViewBairro);
 			this.context = context;
 		}
 	}

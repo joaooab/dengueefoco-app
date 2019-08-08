@@ -6,7 +6,17 @@ public class Usuario {
     private String email;
     private String nome;
     private String senha;
+    private String matricula;
     private TipoUsuario tipoUsuario;
+
+    public Usuario(Long id, String email, String nome, String senha, String matricula, TipoUsuario tipoUsuario) {
+        this.id = id;
+        this.email = email;
+        this.nome = nome;
+        this.senha = senha;
+        this.matricula = matricula;
+        this.tipoUsuario = tipoUsuario;
+    }
 
     public Long getId() {
         return id;
@@ -46,6 +56,14 @@ public class Usuario {
 
     public void setTipoUsuario(br.com.dengueefocoApp.model.TipoUsuario tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
 }

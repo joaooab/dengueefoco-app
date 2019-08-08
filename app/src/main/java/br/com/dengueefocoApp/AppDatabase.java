@@ -7,10 +7,13 @@ import androidx.room.RoomDatabase;
 import android.content.Context;
 import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
+import br.com.dengueefocoApp.model.RegistroDiario;
+import br.com.dengueefocoApp.model.RegistroDiarioDao;
 
-@Database(entities = {Antivetorial.class}, version = 4)
+@Database(entities = {Antivetorial.class, RegistroDiario.class}, version = 5)
 public abstract class AppDatabase extends RoomDatabase {
 	public abstract AntivetorialDao antivetorialDao();
+	public abstract RegistroDiarioDao registroDiarioDao();
 
 	private static AppDatabase INSTANCE = null;
 
