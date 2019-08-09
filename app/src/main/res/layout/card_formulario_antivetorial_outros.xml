@@ -1,0 +1,167 @@
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    app:cardCornerRadius="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <EditText
+            android:ems="10"
+            android:hint="Qtd. Larv."
+            android:id="@+id/editTextQuantidade"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextQtdFoco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchNotificado" />
+
+        <TextView
+            android:id="@+id/labelSpinnerTipoImovel"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:text="Tipo Imóvel:"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerTipoImovel"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/labelSpinnerTipoImovel"
+            app:layout_constraintTop_toBottomOf="@+id/labelSpinnerTipoImovel" />
+
+        <Button
+            android:background="@color/colorPrimary"
+            android:id="@+id/buttonSalvar"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:text="Salvar"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonLimpar"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:background="@color/colorAccent"
+            android:id="@+id/buttonLimpar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:text="Limpar"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonSalvar"
+            app:layout_constraintTop_toTopOf="@+id/buttonSalvar" />
+
+        <EditText
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Observação"
+            android:id="@+id/editTextObservacao"
+            android:inputType="textMultiLine"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonSalvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextQuantidade" />
+
+        <Switch
+            android:checked="true"
+            android:id="@+id/switchNotificado"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:text="Notificado"
+            android:textColor="@color/colorTextoLabel"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/switchImovelFoco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPendencia" />
+
+        <EditText
+            android:ems="10"
+            android:hint="Qtd. Foco"
+            android:id="@+id/editTextQtdFoco"
+            android:inputType="textPersonName"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextQtdEliminado"
+            app:layout_constraintStart_toEndOf="@+id/editTextQuantidade"
+            app:layout_constraintTop_toTopOf="@+id/editTextQuantidade" />
+
+        <EditText
+            android:ems="10"
+            android:hint="Qtd. Eliminado"
+            android:id="@+id/editTextQtdEliminado"
+            android:inputType="textPersonName"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editTextQtdFoco"
+            app:layout_constraintTop_toTopOf="@+id/editTextQtdFoco" />
+
+        <Spinner
+            android:id="@+id/spinnerPendencia"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:text="Pendência:"
+            app:layout_constraintStart_toStartOf="@+id/spinnerTipoImovel"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTipoImovel" />
+
+        <Switch
+            android:id="@+id/switchImovelFoco"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:text="Imóvel com foco"
+            android:textColor="@color/colorTextoLabel"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switchNotificado"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPendencia" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
