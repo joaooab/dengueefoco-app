@@ -86,7 +86,6 @@ public class DetalheAntivetorialFragment extends Fragment {
 			status.setTextColor(cor);
 		}
 		data.setText(Util.getData(antivetorial.getDataVisita()));
-		statusImovel.setText(antivetorial.getStatusImovel());
 		tipoImovel.setText(antivetorial.getTipoImovel());
 	}
 

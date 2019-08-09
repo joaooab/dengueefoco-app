@@ -130,17 +130,17 @@ public class FormularioAntivetorialFragment extends Fragment {
 		editTextCep = view.findViewById(R.id.editTextCep);
 		editTextQuadra = view.findViewById(R.id.editTextQuadra);
 		editTextLote = view.findViewById(R.id.editTextLote);
-		editTextNumero = view.findViewById(R.id.editTextNumero);
+//		editTextNumero = view.findViewById(R.id.editTextNumero);
 		switchNotificado = view.findViewById(R.id.switchNotificado);
 		switchImovelFoco = view.findViewById(R.id.switchImovelFoco);
 		editTextSetor = view.findViewById(R.id.editTextBairro);
 		editTextLogradouro = view.findViewById(R.id.editTextLogradouro);
 		editTextObservacao = view.findViewById(R.id.editTextObservacao);
-		editTextSequencia = view.findViewById(R.id.editTextSequencia);
+//		editTextSequencia = view.findViewById(R.id.editTextSequencia);
 		editTextQtdFoco = view.findViewById(R.id.editTextQtdFoco);
 		editTextQtdEliminado = view.findViewById(R.id.editTextQtdEliminado);
 		editTextNumQuarto = view.findViewById(R.id.editTextNumQuarto);
-		editTextLado = view.findViewById(R.id.editTextLado);
+//		editTextLado = view.findViewById(R.id.editTextLado);
 		configuraTipoImovel(view);
 		configuraSpinnerLarvicida(view);
 		configuraSpinnerDistrito(view);
@@ -179,7 +179,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 
 	private void configuraSpinnerDistrito(View view) {
-		final List<String> distritos = Arrays.asList("Central", "Noter", "Sul", "Leste", "Oeste");
+		final List<String> distritos = Arrays.asList("Centro", "Norte", "Sul", "Leste", "Oeste", "Sudeste", "Noroeste", "Nordeste", "Sudoeste");
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(distritos);
 		spinnerDistrito = view.findViewById(R.id.spinnerDistrito);
 		spinnerDistrito.setAdapter(stringArrayAdapter);
