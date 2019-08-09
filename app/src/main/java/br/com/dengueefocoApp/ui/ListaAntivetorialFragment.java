@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import br.com.dengueefocoApp.model.Antivetorial;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -26,11 +27,11 @@ import br.com.dengueefocoApp.model.RegistroDiarioDao;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class ListaAntivetorialFragment extends Fragment implements RegistroDiarioAdapterCallback {
+public class ListaAntivetorialFragment extends Fragment implements AntivetorialAdapterCallback {
 
     private MainActivity mActivity;
-    private RegistroDiarioDao registroDiarioDao;
-    private RegistroDiarioAdapter adapter;
+    private AntivetorialDao antivetorialDao;
+    private AntivetorialAdapter adapter;
 
     static ListaAntivetorialFragment newInstance() {
         return new ListaAntivetorialFragment();
@@ -40,7 +41,7 @@ public class ListaAntivetorialFragment extends Fragment implements RegistroDiari
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = (MainActivity) getActivity();
-        registroDiarioDao = AppDatabase.newInstance(getContext()).registroDiarioDao();
+        antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
     }
 
     @Nullable
@@ -54,25 +55,25 @@ public class ListaAntivetorialFragment extends Fragment implements RegistroDiari
 
     private void configuraLista(View view) {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewAntivetorial);
-        adapter = new RegistroDiarioAdapter(new ArrayList<>(), this);
+        adapter = new AntivetorialAdapter(new ArrayList<>(), this);
         recyclerView.setAdapter(adapter);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        mActivity.setActionBarTitle("Registro diario Antivetorial");
+        mActivity.setActionBarTitle("Antivetorial");
         processaLista();
     }
 
     private void processaLista() {
-        registroDiarioDao.getAll()
+        antivetorialDao.getAll()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::processaLista, e -> Log.e(this.getTag(), e.getMessage()));
     }
 
-    private void processaLista(List<RegistroDiario> lista) {
+    private void processaLista(List<Antivetorial> lista) {
         adapter.atualizaLista(lista);
     }
 
@@ -80,24 +81,24 @@ public class ListaAntivetorialFragment extends Fragment implements RegistroDiari
         final FloatingActionButton fab = view.findViewById(R.id.fab);
         fab.setOnClickListener(v -> {
             if (mActivity != null) {
-                mActivity.abreFragment(FormularioRegistroDiarioFragment.newInstance(), true);
+                mActivity.abreFragment(FormularioAntivetorialFragment.newInstance(), true);
             }
         });
     }
 
     @Override
-    public void onClick(RegistroDiario registroDiario) {
+    public void onClick(Antivetorial antivetorial) {
         if (mActivity != null) {
-//			mActivity.abreFragment(DetalheAntivetorialFragment.newInstance(registroDiario));
+			mActivity.abreFragment(DetalheAntivetorialFragment.newInstance(antivetorial));
         }
     }
 
     @Override
-    public void onLongClick(final RegistroDiario registroDiario) {
+    public void onLongClick(final Antivetorial antivetorial) {
         new AlertDialog.Builder(getContext())
                 .setTitle("Tem certeza que deseja excluir?")
                 .setPositiveButton("Sim", (dialog, which) -> {
-                    registroDiarioDao.delete(registroDiario);
+                    antivetorialDao.delete(antivetorial);
                     processaLista();
                     Toast.makeText(getContext(), "Item excluído com sucesso", Toast.LENGTH_SHORT).show();
                 })

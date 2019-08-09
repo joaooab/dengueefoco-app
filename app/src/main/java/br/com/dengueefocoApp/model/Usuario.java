@@ -9,6 +9,9 @@ public class Usuario {
     private String matricula;
     private TipoUsuario tipoUsuario;
 
+    public Usuario() {
+    }
+
     public Usuario(Long id, String email, String nome, String senha, String matricula, TipoUsuario tipoUsuario) {
         this.id = id;
         this.email = email;

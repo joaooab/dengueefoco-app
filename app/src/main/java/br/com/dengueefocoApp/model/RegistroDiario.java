@@ -8,8 +8,7 @@ public class RegistroDiario {
 
     @PrimaryKey ()
     private Long id;
-    private String nomeAgente;
-    private String matricula;
+    private Long idUsuario;
     private String distrito;
     private String bairro;
     private String larvicida;
@@ -17,9 +16,8 @@ public class RegistroDiario {
     private String ciclo;
     private String data;
 
-    public RegistroDiario(String nomeAgente, String matricula, String distrito, String bairro, String larvicida, String supervisor, String ciclo, String data) {
-        this.nomeAgente = nomeAgente;
-        this.matricula = matricula;
+    public RegistroDiario(Long idUsuario, String distrito, String bairro, String larvicida, String supervisor, String ciclo, String data) {
+        this.idUsuario = idUsuario;
         this.distrito = distrito;
         this.bairro = bairro;
         this.larvicida = larvicida;
@@ -36,20 +34,12 @@ public class RegistroDiario {
         this.id = id;
     }
 
-    public String getNomeAgente() {
-        return nomeAgente;
+    public Long getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setNomeAgente(String nomeAgente) {
-        this.nomeAgente = nomeAgente;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
+    public void setIdUsuario(Long idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getDistrito() {
@@ -99,4 +89,5 @@ public class RegistroDiario {
     public void setData(String data) {
         this.data = data;
     }
+
 }

@@ -13,7 +13,6 @@ import br.com.dengueefocoApp.model.RegistroDiarioDao;
 @Database(entities = {Antivetorial.class, RegistroDiario.class}, version = 5)
 public abstract class AppDatabase extends RoomDatabase {
 	public abstract AntivetorialDao antivetorialDao();
-	public abstract RegistroDiarioDao registroDiarioDao();
 
 	private static AppDatabase INSTANCE = null;
 

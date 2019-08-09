@@ -12,10 +12,10 @@ import io.reactivex.Single;
 @Dao
 public interface RegistroDiarioDao {
 
-    @Query ("SELECT * FROM RegistroDiario")
+    @Query ("SELECT * FROM registro_diario")
     Single<List<RegistroDiario>> getAll();
 
-    @Query ("SELECT * FROM antivetorial WHERE id = :id")
+    @Query ("SELECT * FROM registro_diario WHERE id = :id")
     RegistroDiario loadAllById(int id);
 
     @Insert
