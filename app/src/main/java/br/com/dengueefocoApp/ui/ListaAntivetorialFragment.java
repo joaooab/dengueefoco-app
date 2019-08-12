@@ -22,8 +22,6 @@ import java.util.List;
 import br.com.dengueefocoApp.AppDatabase;
 import br.com.dengueefocoApp.R;
 import br.com.dengueefocoApp.model.AntivetorialDao;
-import br.com.dengueefocoApp.model.RegistroDiario;
-import br.com.dengueefocoApp.model.RegistroDiarioDao;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
@@ -41,7 +39,7 @@ public class ListaAntivetorialFragment extends Fragment implements AntivetorialA
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = (MainActivity) getActivity();
-        antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
+        antivetorialDao = AppDatabase.getInstance(getContext()).antivetorialDao();
     }
 
     @Nullable

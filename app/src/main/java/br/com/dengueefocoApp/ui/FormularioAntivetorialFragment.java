@@ -93,7 +93,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 		mActivity = (MainActivity) getActivity();
 		mActivity.setActionBarTitle("Cadastrar antivetorial");
 		configuracao = new Configuracao(getContext());
-		antivetorialDao = AppDatabase.newInstance(getContext()).antivetorialDao();
+		antivetorialDao = AppDatabase.getInstance(getContext()).antivetorialDao();
 		fusedLocationClient = LocationServices.getFusedLocationProviderClient(mActivity);
 		mLocationRequest = LocationRequest.create()
 				.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
@@ -156,7 +156,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 	private void configuraGps(@NonNull View view) {
 		ImageView iconGps = view.findViewById(R.id.iconGps);
 		iconGps.setOnClickListener(v -> startLocationRequests());
-
 	}
 
 	private void configuraTipoImovel(@NonNull View view) {

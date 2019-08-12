@@ -1,0 +1,5612 @@
+[
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 305,
+    "nome": "Jd Nova Esperança",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 157,
+    "nome": "S Parque Tremendão",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1144,
+    "nome": "Res Flores do Cerrado",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 720,
+    "nome": "Cj Primavera",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1045,
+    "nome": "Jd Colorado I",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 733,
+    "nome": "Res Anglo",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 982,
+    "nome": "Jd Colorado Extensão",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 249,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 748,
+    "nome": "Res Recanto do Bosque",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 262,
+    "nome": "Ch Maria Dilce",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 254,
+    "nome": "Ch Helou",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 763,
+    "nome": "Jd das Hortências",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1019,
+    "nome": "Res Senador Albino Boaventura",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 756,
+    "nome": "Res Recreio Panorama",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 712,
+    "nome": "Jd Colorado",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 313,
+    "nome": "Vl Mutirão I",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 148,
+    "nome": "Sir Panorama",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 399,
+    "nome": "Res Green Park",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 838,
+    "nome": "Jd Colorado Sul",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1009,
+    "nome": "Jd Colorado II",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 170,
+    "nome": "Prq Aeronáutico Antônio Sebba Filho",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 831,
+    "nome": "Res Jardim Belvedere Expansão",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 788,
+    "nome": "Res Jardim Belvedere",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 860,
+    "nome": "Res Recreio Panorama extensão",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 805,
+    "nome": "Lot Recanto Barravento",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 991,
+    "nome": "Res Jardim Camargo",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 738,
+    "nome": "Res Mansões Paraíso",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1051,
+    "nome": "Jd Fonte Nova I",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 839,
+    "nome": "Res Brisas da Mata",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 262,
+    "nome": "Ch Maria Dilce",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 348,
+    "nome": "Lot Recreio Panorama",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 915,
+    "nome": "Res Jardim Helou",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 249,
+    "nome": "S Empresarial",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 262,
+    "nome": "Ch Maria Dilce",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 825,
+    "nome": "S Alto do Vale",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1081,
+    "nome": "S Marabá Extensão",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 828,
+    "nome": "S Marabá",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1115,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 767,
+    "nome": "Bro São Carlos",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 804,
+    "nome": "Bro São Domingos",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 802,
+    "nome": "Bro Boa Vista",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 120,
+    "nome": "S Candida de Morais",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 210,
+    "nome": "S Estrela Dalva",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 774,
+    "nome": "Bro Floresta",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 342,
+    "nome": "Jd Curitiba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1114,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 367,
+    "nome": "Res Fortaleza",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 340,
+    "nome": "Jd Liberdade",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 981,
+    "nome": "Vl Mutirão II",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 398,
+    "nome": "S Novo Planalto",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 324,
+    "nome": "Res Privê Norte",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 399,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 730,
+    "nome": "Jd Vista Bela",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 777,
+    "nome": "Res Barravento",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 791,
+    "nome": "Jd Fonte Nova",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 873,
+    "nome": "S Noroeste",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 995,
+    "nome": "Jd Lago Azul",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1050,
+    "nome": "Res Estrela D'alva",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 723,
+    "nome": "Res Maringá",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 174,
+    "nome": "S Morada do Sol",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Juscelino Kubitschek",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 715,
+    "nome": "Bro da Vitória",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 668,
+    "nome": "Sit São Domingos",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1073,
+    "nome": "Res Mirante",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 269,
+    "nome": "Vl Finsocial",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1043,
+    "nome": "Res Fonte das Aguas",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 208,
+    "nome": "Prq Maracanã",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 1155,
+    "nome": "Res Alfa",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Primavera Parque",
+    "distrito": "Distrito Sanitário Noroeste"
+  },
+  {
+    "id": 213,
+    "nome": "Vlg Casa Grande",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1136,
+    "nome": "Res Elizene Santana",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 781,
+    "nome": "Res dos Ipês",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 727,
+    "nome": "S Asa Branca",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 918,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 257,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 142,
+    "nome": "Jd Balneário Meia Ponte",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1078,
+    "nome": "Res Flores do Parque",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 212,
+    "nome": "Ch Retiro",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 904,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 882,
+    "nome": "Res Antônio Barbosa",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 646,
+    "nome": "Ch Samambaia",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1017,
+    "nome": "Res Orlando de Morais",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1041,
+    "nome": "Res Antonio Carlos Pires",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 666,
+    "nome": "Cj Parque dos Eucaliptos",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 334,
+    "nome": "Vl dos Oficiais",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1156,
+    "nome": "Vl Felicidade",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 191,
+    "nome": "Lot Granjas Brasil",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Jd Gramado II",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 404,
+    "nome": "Res Maria Lourença",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1040,
+    "nome": "Res Bethel",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 402,
+    "nome": "Jd Guanabara IV",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 827,
+    "nome": "Vl Militar",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 261,
+    "nome": "Lot Panorama Parque",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 692,
+    "nome": "Res Morumbi",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 833,
+    "nome": "Prq Balneário",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 974,
+    "nome": "Vl Cristina Extensão",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 846,
+    "nome": "Res Licardino Ney",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 395,
+    "nome": "Vl Roriz",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 665,
+    "nome": "Vl Santa Cruz",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 325,
+    "nome": "Con Cidade Universitária",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 845,
+    "nome": "Jd Bom Jesus",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 107,
+    "nome": "Vl Nossa Senhora Aparecida",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 753,
+    "nome": "Res Morada do Ipê",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 153,
+    "nome": "Vl Itatiaia",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 928,
+    "nome": "Res Perim Continuação",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 722,
+    "nome": "Lot Morada dos Sonhos",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 127,
+    "nome": "Vl Maria Dilce",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 782,
+    "nome": "Res Nossa Morada",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 161,
+    "nome": "Ch Califórnia",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 126,
+    "nome": "S Progresso",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 927,
+    "nome": "Res José Viandeli",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 101,
+    "nome": "Jd Guanabara",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 990,
+    "nome": "Jd Gramado",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 719,
+    "nome": "Vl Cristina Continuação",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 218,
+    "nome": "Grj Cruzeiro do Sul",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 847,
+    "nome": "Jd Santa Cecília",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 717,
+    "nome": "Res Felicidade",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 776,
+    "nome": "Res Atalaia",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 193,
+    "nome": "Res Guanabara",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 793,
+    "nome": "Res Itália",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 237,
+    "nome": "S Gentil Meirelles",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 124,
+    "nome": "Bro Jardim Diamantina",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 947,
+    "nome": "Res Humaita",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 357,
+    "nome": "Jd Guanabara III",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 780,
+    "nome": "Vlg Atalaia",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 746,
+    "nome": "Res Balneário",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 128,
+    "nome": "Vl Cristina",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 404,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1057,
+    "nome": "Res Portal da Mata",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 639,
+    "nome": "Prq dos Cisnes",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 904,
+    "nome": "Res Itamaraca",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 725,
+    "nome": "Prq das Flores",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 850,
+    "nome": "Sir Caraíbas",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1054,
+    "nome": "Sir Pindorama",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1152,
+    "nome": "Jd Gramado I",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 854,
+    "nome": "Res das Acácias",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 646,
+    "nome": "Con Samambaia",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Lot Privê Elza Fronza - 2ª Etapa",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 337,
+    "nome": "S Sevene",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 848,
+    "nome": "Res Hugo de Moraes",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1039,
+    "nome": "Res São Geraldo",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1080,
+    "nome": "Res Bela Goiânia",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 714,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 173,
+    "nome": "Prq das Nações",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1002,
+    "nome": "Res Alice Barbosa extensão",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 737,
+    "nome": "Jd Ipê",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 619,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 395,
+    "nome": "S Urias Magalhães II",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 385,
+    "nome": "Con Bougainville",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Lot Privê Elza Fronza - 1ª Etapa",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1077,
+    "nome": "Res Frei Galvão",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 945,
+    "nome": "Res Alice Barbosa",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 336,
+    "nome": "Sir São Geraldo",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1087,
+    "nome": "Res Alice Barbosa I",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 145,
+    "nome": "Vl Jardim São Judas Tadeu",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 883,
+    "nome": "Res Vale dos Sonhos I",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 984,
+    "nome": "Res Perim",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 242,
+    "nome": "Zon Industrial Pedro Abrão",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 212,
+    "nome": "Ch Retiro",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 98,
+    "nome": "S Jaó",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 360,
+    "nome": "Res Morada do Bosque",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 822,
+    "nome": "Cjr Campus",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1063,
+    "nome": "Res Privê Itanhangã",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1103,
+    "nome": "Lot Balneário Gran Viena",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 863,
+    "nome": "Res Vale da Serra",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 118,
+    "nome": "Vl Clemente",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 955,
+    "nome": "Res Vale dos Sonhos II",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 115,
+    "nome": "S Urias Magalhães",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 356,
+    "nome": "Jd Guanabara II",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 196,
+    "nome": "Ch Nossa Senhora da Piedade",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 900,
+    "nome": "Prq das Flores Complemento",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 172,
+    "nome": "Lot Mansões Goianas",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 196,
+    "nome": "Ch Nossa Senhora da Piedade",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 204,
+    "nome": "Ch Rio Branco",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 146,
+    "nome": "Vl Jardim Pompéia",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 285,
+    "nome": "Sir Mansões do Campus",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 134,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 209,
+    "nome": "Vl Maria Rosa",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 868,
+    "nome": "Res Guarema",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1001,
+    "nome": "Res João Paulo II",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 268,
+    "nome": "Lot Shangry-la",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 125,
+    "nome": "S Perim",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 102,
+    "nome": "Bro Santa Genoveva",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 198,
+    "nome": "Lot Goiânia 2",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 262,
+    "nome": "Ch Maria Dilce",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1069,
+    "nome": "Res Shangri-la I",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 2564,
+    "nome": "Res Shangri-la II",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1138,
+    "nome": "Res Paraíso",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 1146,
+    "nome": "Res Villagio Toscana",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Norte"
+  },
+  {
+    "id": 956,
+    "nome": "Res Campos Dourados",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 826,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 667,
+    "nome": "Prq Anhangüera II",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 53,
+    "nome": "Jd Europa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 57,
+    "nome": "Prq Anhangüera",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1102,
+    "nome": "Cj Madre Germana II - Extensão",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 801,
+    "nome": "Cj Habitacional Madre Germana 2",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Con Santa Rita Irregular",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 799,
+    "nome": "Jd Eli Forte",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 789,
+    "nome": "Res Rio Verde",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 783,
+    "nome": "Res Canadá",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 732,
+    "nome": "Jd Itaipú",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 61,
+    "nome": "Jd Atlântico",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 814,
+    "nome": "Jd Madri",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 49,
+    "nome": "Vl Mauá",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 660,
+    "nome": "Jd Caravelas 1ª Etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 205,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1067,
+    "nome": "S Três Marias I",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1147,
+    "nome": "Res Acrópole II",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 189,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1010,
+    "nome": "Con Santa Rita 4ª Etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 316,
+    "nome": "Lot Alphaville Residencial",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 987,
+    "nome": "Res Real Conquista",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 875,
+    "nome": "Prq das Paineiras II Etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 876,
+    "nome": "Prq das Paineiras III Etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 886,
+    "nome": "Res Aquários",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 933,
+    "nome": "Res Linda Vista",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 135,
+    "nome": "Cjr Cachoeira Dourada",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 56,
+    "nome": "Vl Rezende",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 362,
+    "nome": "Res Eldorado",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 975,
+    "nome": "Res Aquários II",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 852,
+    "nome": "Prq das Paineiras I",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 934,
+    "nome": "Jd Presidente - Extensão III",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 672,
+    "nome": "Cj Baliza",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 759,
+    "nome": "Res Eli Forte",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1035,
+    "nome": "Res Itaipú I",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 311,
+    "nome": "S Rio Formoso",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 874,
+    "nome": "Vlg Veneza",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 901,
+    "nome": "Res Ana Clara",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 821,
+    "nome": "Jd Presidente - Extensão",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 46,
+    "nome": "Vl Anchieta",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 745,
+    "nome": "Vlg Santa Rita",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 911,
+    "nome": "Res Village Santa Rita I",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 803,
+    "nome": "Res Porto Seguro",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 877,
+    "nome": "Prq das Paineiras IV Etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 896,
+    "nome": "Jd Eli Forte - Complemento",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 919,
+    "nome": "Res Barcelona",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 52,
+    "nome": "Jd Ana Lúcia",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 993,
+    "nome": "Res Village Santa Rita IV",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 735,
+    "nome": "Res Jardim Florença",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 678,
+    "nome": "S Maria Celeste",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 841,
+    "nome": "Res Eli Forte - Extensão",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 224,
+    "nome": "Bro Anhangüera",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 624,
+    "nome": "Con Santa Rita - 2a etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 231,
+    "nome": "Vl Luciana",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 996,
+    "nome": "Jd Gardênia",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 926,
+    "nome": "Jd Presidente - Extensão II",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 629,
+    "nome": "Res Manhattan",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 912,
+    "nome": "Res Village Santa Rita II",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1003,
+    "nome": "Res Santa Fé I",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 842,
+    "nome": "Prq Oeste Industrial Extensão",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 895,
+    "nome": "Res Sevilha",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 871,
+    "nome": "Jd Presidente - Extensão I",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 858,
+    "nome": "Res Forte Ville - Extensão",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 211,
+    "nome": "Vl Bela",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 676,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 59,
+    "nome": "Jd Presidente",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 721,
+    "nome": "Vl São Paulo",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 365,
+    "nome": "Res Monte Carlo",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 381,
+    "nome": "Jd Tancredo Neves",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Alphaville",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1145,
+    "nome": "Ch Village Santa Rita",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1065,
+    "nome": "Res Talismã I",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1022,
+    "nome": "Res Privê Ilhas do Caribe",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 891,
+    "nome": "Res Talismã",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 889,
+    "nome": "S dos Dourados Extensão",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Glória Real",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 256,
+    "nome": "Lot Faiçalville",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 380,
+    "nome": "S Ulisses Guimarães",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 966,
+    "nome": "Con Santa Rita - 9a etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 676,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 220,
+    "nome": "S Cristina",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 768,
+    "nome": "S Garavelo",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 660,
+    "nome": "Jd Caravelas",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1079,
+    "nome": "Prq Oeste Industrial - Prolongamento",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 61,
+    "nome": "Res Prive Atlântico",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 62,
+    "nome": "Vl Rosa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 924,
+    "nome": "S Três Marias",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 784,
+    "nome": "Res Vereda dos Buritis",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 826,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 202,
+    "nome": "Prq Santa Rita",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1014,
+    "nome": "Res Florida",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 755,
+    "nome": "Res Center Ville",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 390,
+    "nome": "Res Itaipú",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 910,
+    "nome": "Res Village Santa Rita III",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 302,
+    "nome": "Ch Salinos",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 298,
+    "nome": "Lot Celina Park",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 189,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 989,
+    "nome": "Jd Ipanema",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 631,
+    "nome": "S dos Dourados",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 245,
+    "nome": "S Andréia",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 969,
+    "nome": "Res Jardins Lisboa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 139,
+    "nome": "Bro Recreio do Funcionário Publico",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 232,
+    "nome": "Vl Alpes",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 54,
+    "nome": "S União",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 55,
+    "nome": "Jd Planalto",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 189,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 674,
+    "nome": "S Amim Camargo",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 734,
+    "nome": "S Solar Santa Rita",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1091,
+    "nome": "Res Portal Santa Rita",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 739,
+    "nome": "Jd Sônia Maria",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 806,
+    "nome": "S Grajaú",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 247,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 48,
+    "nome": "Vl Lucy",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1052,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 673,
+    "nome": "Con Santa Rita - 7a etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Con Santa Rita - 8a etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 673,
+    "nome": "Con Santa Rita - 9a etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 625,
+    "nome": "Bro Santa Rita",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 622,
+    "nome": "Con Santa Rita - 6a etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 623,
+    "nome": "Vl Santa Rita - 5ª Etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1013,
+    "nome": "Res Eldorado Expansão",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 936,
+    "nome": "Res Santa Fé",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1093,
+    "nome": "Res Portal do Oriente",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1055,
+    "nome": "Res Brasil Central",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 922,
+    "nome": "Lot Moinho dos Ventos",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 954,
+    "nome": "Res Fidélis",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 778,
+    "nome": "Res Forteville",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1096,
+    "nome": "Res Recanto das Emas",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 217,
+    "nome": "Vl Alvorada",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 881,
+    "nome": "Res Flamingo",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Itália",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 379,
+    "nome": "Res Santa Rita - 4a etapa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 913,
+    "nome": "Jd Madri Complemento",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 123,
+    "nome": "S Novo Horizonte",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 761,
+    "nome": "Res Granville",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 58,
+    "nome": "Jd Vila Boa",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 792,
+    "nome": "Res Solar Bougainville",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 664,
+    "nome": "S OrientVille",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 50,
+    "nome": "Vl Adélia",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 834,
+    "nome": "Jd Alphaville",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1070,
+    "nome": "Jd Alphavilly I",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 20,
+    "nome": "S Sudoeste",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 762,
+    "nome": "Con das Esmeraldas",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 51,
+    "nome": "Prq Oeste Industrial",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 977,
+    "nome": "Res Kátia",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1086,
+    "nome": "Res Porto Dourado",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 770,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Lot Jardim dos Bougainvilles",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 1142,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sudoeste"
+  },
+  {
+    "id": 86,
+    "nome": "Ch Botafogo",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 81,
+    "nome": "Bro Jardim Califórnia",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 74,
+    "nome": "Jd Novo Mundo",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 659,
+    "nome": "Lot Park Lozandes",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 167,
+    "nome": "Ch São Francisco de Assis",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 948,
+    "nome": "Res Vale do Araguaia",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 965,
+    "nome": "Res Ville de France 1",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 890,
+    "nome": "Res Belo Horizonte",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1021,
+    "nome": "Res Brisas do Cerrado",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 86,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 175,
+    "nome": "Prq Atheneu",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 731,
+    "nome": "Lot Tupynambá dos Reis",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 155,
+    "nome": "Res Aldeia do Vale",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 765,
+    "nome": "Res Mar Del Plata",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 83,
+    "nome": "Vl Romana",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1062,
+    "nome": "Res Português",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Portal Petropolis",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1072,
+    "nome": "Res Lucy Pinheiro",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 960,
+    "nome": "Vl Martins Extensão",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 151,
+    "nome": "Sir Ipê",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 97,
+    "nome": "Faz Retiro",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 197,
+    "nome": "Ch São Silvestre",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1066,
+    "nome": "Res Paulo Estrela",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 259,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 223,
+    "nome": "Vl Matilde",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 378,
+    "nome": "Jd Novo Mundo II",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 830,
+    "nome": "Res São Leopoldo - Complemento",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 338,
+    "nome": "Jd Dom Fernando II",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 952,
+    "nome": "Lot Vila Pedroso Extensão",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1000,
+    "nome": "Jd Verona",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 79,
+    "nome": "Vl Parque Santa Maria",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 227,
+    "nome": "Cj Riviera",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 988,
+    "nome": "Res Costa Paranhos",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 347,
+    "nome": "Res Sonho Verde Complemento",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 729,
+    "nome": "Jd Conquista",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 235,
+    "nome": "Cj Habitacional Aruanã II",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 736,
+    "nome": "Res Sonho Dourado",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 225,
+    "nome": "Cj Anhangüera",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 307,
+    "nome": "Jd Lageado",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 85,
+    "nome": "Vl Bandeirantes",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 706,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 675,
+    "nome": "Col Santa Marta",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 880,
+    "nome": "Res Ville de France",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 797,
+    "nome": "Res Olinda",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 234,
+    "nome": "Cj Habitacional Aruanã I",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 961,
+    "nome": "Vl Santa Maria Extensão",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 743,
+    "nome": "Jd Abaporu",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 361,
+    "nome": "Bro Santo Hilário II",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 923,
+    "nome": "Jd Novo Mundo - Extensão",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 844,
+    "nome": "Lot Portal do Sol II",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 138,
+    "nome": "Jd Bela Vista",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 347,
+    "nome": "Res Sonho Verde",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 752,
+    "nome": "Res Aruanã",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 999,
+    "nome": "Jd Valência",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 967,
+    "nome": "Res Vale das Brisas",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 319,
+    "nome": "Vl Legionárias",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 818,
+    "nome": "Res São Leopoldo",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 87,
+    "nome": "Vl Martins",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 333,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 752,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 97,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 341,
+    "nome": "Cjr Palmares",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 86,
+    "nome": "Ch Botafogo",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Carlos de Freitas",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 840,
+    "nome": "Lot Aruanã Park",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 341,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 972,
+    "nome": "Res Arco Verde",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Lot Brisas do Cerrado",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 293,
+    "nome": "Prq Santa Cruz",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 293,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 769,
+    "nome": "Res Parque Flamboyant",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 169,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 267,
+    "nome": "Prq Acalanto",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 861,
+    "nome": "Jd Maria Helena",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 388,
+    "nome": "Res Senador Paranhos",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1064,
+    "nome": "Sir Mansões Bernardo Sayão",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 970,
+    "nome": "Res Aruanã - Complemento",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 129,
+    "nome": "Bro Santo Hilário",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 706,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 796,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 250,
+    "nome": "Prq das Amendoeiras",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 905,
+    "nome": "Bro Santo Hilário - Expansão",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 236,
+    "nome": "Cj Habitacional Aruanã III",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 82,
+    "nome": "Jd Califórnia - Parque Industrial",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Lageado",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 711,
+    "nome": "Ch Santa Bárbara",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 796,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 916,
+    "nome": "Res Hawaí",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1037,
+    "nome": "Res Havaí - Extensão",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 630,
+    "nome": "Jd Dom Fernando I",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 339,
+    "nome": "Jd Aroeiras",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 636,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 909,
+    "nome": "Jd Atenas",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 964,
+    "nome": "Prq das Amendoeiras I",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 914,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 914,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 914,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 168,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 658,
+    "nome": "Bro Água Branca",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 168,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 159,
+    "nome": "Ch Alto da Glória",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 67,
+    "nome": "Jd da Luz",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 925,
+    "nome": "Prq das Laranjeiras Acréscimo",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 308,
+    "nome": "Ch do Governador",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 921,
+    "nome": "Res Belo Horizonte Complemento",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 978,
+    "nome": "Res Rio Jordão",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 914,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 914,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 914,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 914,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 354,
+    "nome": "Vl Alto da Glória",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 354,
+    "nome": "Vl Alto da Glória I",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1148,
+    "nome": "Res Village Campos Verdes",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 355,
+    "nome": "Lot Grande Retiro",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 130,
+    "nome": "Vl Concórdia",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1099,
+    "nome": "Lot Expansão Grande Retiro",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 706,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 333,
+    "nome": "Faz Retiro ou Petrópolis",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 320,
+    "nome": "S Recanto das Minas Gerais",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1095,
+    "nome": "Res Ouro Preto",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 872,
+    "nome": "Res Clea Borges",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 837,
+    "nome": "Lot Portal do Sol I",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 855,
+    "nome": "Lot Alphaville Flamboyant",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 951,
+    "nome": "Lot Alphaville Flamboyant/Res Arag",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 96,
+    "nome": "Cj Caiçara",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 222,
+    "nome": "Cj Fabiana",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 992,
+    "nome": "Res Recanto dos Buritis",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 88,
+    "nome": "Vl Morais",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 75,
+    "nome": "Vl Maria Luiza",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 959,
+    "nome": "Res Jardins Milão",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1044,
+    "nome": "Res Jardins Munique",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 937,
+    "nome": "Res Goiânia Golfe Clube",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 908,
+    "nome": "Jd Paris",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Montes Claros",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 312,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 77,
+    "nome": "Jd Brasil",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 73,
+    "nome": "Vl Jardim Vitória",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 136,
+    "nome": "Prq das Laranjeiras",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 131,
+    "nome": "Vl Pedroso",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 140,
+    "nome": "Jd Mariliza",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1061,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1154,
+    "nome": "Lot Parque Cidade",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 1158,
+    "nome": "Jd Itália",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Leste"
+  },
+  {
+    "id": 111,
+    "nome": "Vl Abajá",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 289,
+    "nome": "S Centro Oeste",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 108,
+    "nome": "Vl São Francisco",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 41,
+    "nome": "Vl Santa Rita",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 109,
+    "nome": "Vl Isaura",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 28,
+    "nome": "Bro dos Aeroviários",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 266,
+    "nome": "Cj Morada Nova",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 246,
+    "nome": "Vl Santo Afonso",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 38,
+    "nome": "Cj Guadalajara",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 902,
+    "nome": "Vl Mooca - Complemento",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 741,
+    "nome": "Vl Santa Rita Acréscimo",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 39,
+    "nome": "Bro Industrial Mooca",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 40,
+    "nome": "Bro Nossa Senhora de Fátima",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 31,
+    "nome": "S São José",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 647,
+    "nome": "Grj Agrícola Jacirema",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 13,
+    "nome": "S Coimbra",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 276,
+    "nome": "Cjr Padre Pelágio",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 186,
+    "nome": "Vl Santana",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 91,
+    "nome": "Vl Santa Isabel",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 25,
+    "nome": "Cj Castelo Branco",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 214,
+    "nome": "S Marechal Rondon",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 29,
+    "nome": "Vl Oswaldo Rosa",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 2,
+    "nome": "S Aeroporto",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 230,
+    "nome": "Vl Jaraguá",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 1,
+    "nome": "S Central",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 117,
+    "nome": "Vl Irany",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 888,
+    "nome": "Vl São José - Complemento",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 292,
+    "nome": "Vl Jacaré",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 239,
+    "nome": "Vl Paraíso",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 894,
+    "nome": "Vl São José - Extensão",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 808,
+    "nome": "S Morais",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 773,
+    "nome": "Vl Isaura Extensão",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 291,
+    "nome": "Cjr Romildo F. R. do Amaral",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 114,
+    "nome": "Vl Ofugi",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 216,
+    "nome": "Vl Fernandes",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 270,
+    "nome": "Vl Canaã",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 23,
+    "nome": "Vl Aguiar",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 657,
+    "nome": "S Jardim Ana Flávia",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 7,
+    "nome": "S dos Funcionários",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 103,
+    "nome": "Vl Monticelli",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 195,
+    "nome": "Cjr Yara",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 8,
+    "nome": "Lot Nova Vila",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 45,
+    "nome": "Vl Viandelli",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 95,
+    "nome": "Vl Viana",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 133,
+    "nome": "Vl Megale",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 350,
+    "nome": "S Norte Ferroviário II",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 119,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 266,
+    "nome": "Cj Morada Nova",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 294,
+    "nome": "Vl Mooca",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 263,
+    "nome": "Ch Elísios Campos",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 112,
+    "nome": "Vl Vera Cruz",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 30,
+    "nome": "Esp do Anicuns",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 27,
+    "nome": "Bro Rodoviário",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 226,
+    "nome": "Vl Bethel",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 501,
+    "nome": "Vl Santa Tereza",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 106,
+    "nome": "Vl São Luiz",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 279,
+    "nome": "Cjr Rodoviário",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 93,
+    "nome": "Bro Feliz",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 21,
+    "nome": "S Sol Nascente",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 22,
+    "nome": "Vl Boa Sorte",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 243,
+    "nome": "Vl Colemar Natal e Silva",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 110,
+    "nome": "Jd Xavier",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 240,
+    "nome": "Vl Froes",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 264,
+    "nome": "Prq Industrial de Goiânia",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 280,
+    "nome": "Grj Santos Dumont",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 12,
+    "nome": "S Campinas",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 113,
+    "nome": "Vl Santa Helena",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 315,
+    "nome": "Vl Aurora Oeste",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 26,
+    "nome": "Vl Aurora",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 391,
+    "nome": "Vl Adélia I e III",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 233,
+    "nome": "Vl Perdiz",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 9,
+    "nome": "S Norte Ferroviário",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 228,
+    "nome": "S Negrão de Lima",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 44,
+    "nome": "Vl Nova Canaã",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 968,
+    "nome": "Ch Tocafundo",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 105,
+    "nome": "S Criméia Oeste",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 5,
+    "nome": "S Leste Universitário",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 6,
+    "nome": "S Leste Vila Nova",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 37,
+    "nome": "Bro Cidade Jardim",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 104,
+    "nome": "S Criméia Leste",
+    "distrito": "Distrito Sanitário Campinas Centro"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 726,
+    "nome": "Prq Eldorado Oeste",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 32,
+    "nome": "Vl João Vaz",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 887,
+    "nome": "S das Nações Extensão",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1049,
+    "nome": "Res Coronel Álvaro Alves Júnior",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1105,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 187,
+    "nome": "Cj Vera Cruz",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res João Bueno",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Con União",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1140,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1134,
+    "nome": "Res Santa Efigênia",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 248,
+    "nome": "Ch São José",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 870,
+    "nome": "Res Mendanha",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 973,
+    "nome": "Res Ana Moraes",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 980,
+    "nome": "Res Portinari",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 288,
+    "nome": "Con Santa Rita",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 42,
+    "nome": "Bro Goiá",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1132,
+    "nome": "Res Tuzimoto",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 386,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 686,
+    "nome": "Res Goiânia Viva",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 869,
+    "nome": "Res Parque Oeste",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 920,
+    "nome": "Res Lírios do Campo",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Nossa Senhora Auxiliadora",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 929,
+    "nome": "S Barra da Tijuca",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 149,
+    "nome": "Ch Mansões Rosa de Ouro",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 957,
+    "nome": "Prq Eldorado Oeste Extensão",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 137,
+    "nome": "Prq Industrial João Braz",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1015,
+    "nome": "Res Real",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 879,
+    "nome": "Res Dezopi",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1027,
+    "nome": "Res Jardins do Cerrado 4",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1032,
+    "nome": "Res Jardins do Cerrado 9",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1034,
+    "nome": "Res Jardins do Cerrado 11",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1029,
+    "nome": "Res Jardins do Cerrado 6",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 205,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 189,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 150,
+    "nome": "Ch Maringá",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Lot Quinta da Boa Vista Fechad",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 823,
+    "nome": "Res Junqueira",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 849,
+    "nome": "Prq Industrial João Braz 2",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 215,
+    "nome": "Jd Leblon",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 718,
+    "nome": "Lot Tropical Verde",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1028,
+    "nome": "Res Jardins do Cerrado 5",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 829,
+    "nome": "Jd Pampulha",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Con Residencial Santa Rita",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 795,
+    "nome": "Res Recanto das Garças",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1024,
+    "nome": "Res Jardins do Cerrado 1",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 787,
+    "nome": "Res 14 Bis",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 751,
+    "nome": "Jd Leblon II",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1026,
+    "nome": "Res Jardins do Cerrado 3",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 976,
+    "nome": "Res Anicuns",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 950,
+    "nome": "Vlg Maringá",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 810,
+    "nome": "Res Primavera",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 986,
+    "nome": "Res Serra Azul",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 985,
+    "nome": "Res Parque Mendanha",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 907,
+    "nome": "Res 14 Bis - Extensão",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 851,
+    "nome": "Res Ytapuã",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 931,
+    "nome": "Res São Bernardo",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1025,
+    "nome": "Res Jardins do Cerrado 2",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 815,
+    "nome": "Lot Tropical Ville",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 205,
+    "nome": "Ch Santa Rita",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 816,
+    "nome": "Res Tempo Novo",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 946,
+    "nome": "Jd Novo Petrópolis",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Santa Maria",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 284,
+    "nome": "Prq Buriti",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1031,
+    "nome": "Res Jardins do Cerrado 8",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1059,
+    "nome": "Res Mundo Novo 1",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1060,
+    "nome": "Res Mundo Novo 2",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 396,
+    "nome": "Bro Goiá Setor Veloso",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 813,
+    "nome": "Bro Goiá 2 Complemento",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 997,
+    "nome": "Jd Imperial",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 878,
+    "nome": "Res Nova Aurora",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 740,
+    "nome": "S Maysa Extensão",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 853,
+    "nome": "Jd Bonanza",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 798,
+    "nome": "Bro Goiá IV",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 122,
+    "nome": "Vl Regina",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 949,
+    "nome": "Res London Park",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 43,
+    "nome": "Jd Mirabel",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 779,
+    "nome": "Jd Real",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 121,
+    "nome": "S Santos Dumont",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 917,
+    "nome": "Jd São José",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 403,
+    "nome": "Bro Goiá 2",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 884,
+    "nome": "Res Carla Cristina",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 771,
+    "nome": "Res Solar Ville",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Jd Real Extensão",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 824,
+    "nome": "Jd Corte Real",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 820,
+    "nome": "Res Noroeste",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1058,
+    "nome": "Res Mundo Novo 3",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 358,
+    "nome": "Con Jardim das Oliveiras",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1012,
+    "nome": "Res Della Penna Extensão",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 330,
+    "nome": "Lot Solange Parque II",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 843,
+    "nome": "Res Luana Park - Continuação",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Ch Solange Parque II",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 772,
+    "nome": "Jd das Rosas",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 331,
+    "nome": "Lot Solange Parque III",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 944,
+    "nome": "Jd Clarissa",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 938,
+    "nome": "Res Nunes de Morais 2ª Etapa",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 864,
+    "nome": "Res Goyaz Park",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 935,
+    "nome": "Res Ponta Negra",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 353,
+    "nome": "S das Nações",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 953,
+    "nome": "Res Petrópolis",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1005,
+    "nome": "Res Buena Vista I",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 328,
+    "nome": "Lot Araguaia Park",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 332,
+    "nome": "Prq Paraíso",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 897,
+    "nome": "Res Pilar dos Sonhos",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 326,
+    "nome": "Lot Lorena Parque",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 859,
+    "nome": "Lot Solange Parque - Extensão",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1006,
+    "nome": "Res Buena Vista II",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 638,
+    "nome": "Ch Solange Parque",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1033,
+    "nome": "Res Jardins do Cerrado 10",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 979,
+    "nome": "Res Dom Rafael",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 898,
+    "nome": "Res São Marcos",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 939,
+    "nome": "Res Nunes de Morais 3ª Etapa",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 790,
+    "nome": "Lot Capuava Residencial Privê",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 892,
+    "nome": "Res Park Solar",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1007,
+    "nome": "Res Buena Vista III",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 302,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 386,
+    "nome": "Faz São José",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 811,
+    "nome": "Res Della Pena",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1104,
+    "nome": "Res San Marino",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1048,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1030,
+    "nome": "Res Jardins do Cerrado 7",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1109,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Monte Pascoal I",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 144,
+    "nome": "Ch Anhangüera",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 800,
+    "nome": "Lot Carolina Parque Extensão",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 176,
+    "nome": "Ch de Recreio São Joaquim",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1108,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 899,
+    "nome": "Res Monte Pascoal",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1085,
+    "nome": "Jd São José I",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 693,
+    "nome": "Res Luana Park",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 329,
+    "nome": "Lot Solange Parque I",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 154,
+    "nome": "Prq Bom Jesus",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Solar Ville Complemento",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 661,
+    "nome": "Res Cidade Verde",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 749,
+    "nome": "Lot Carolina Parque",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1016,
+    "nome": "Res Beatriz Nascimento",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1157,
+    "nome": "Jd dos Flamboyants",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 33,
+    "nome": "Bro Capuava",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 141,
+    "nome": "Prq Industrial Paulista",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 386,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 386,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 386,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 184,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1088,
+    "nome": "Lot Carolina Parque - Complemento",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 716,
+    "nome": "S Delta Village",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 728,
+    "nome": "Res Jardim Leblon",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1036,
+    "nome": "Con do Lago 2ª Etapa",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1046,
+    "nome": "Con do Lago 3ª Etapa",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 318,
+    "nome": "Jd Marques de Abreu",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 310,
+    "nome": "Jd Aritana",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 147,
+    "nome": "Ch Buritis",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 346,
+    "nome": "Con Anhangüera",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 856,
+    "nome": "Lot Solange Parque Complemento",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 760,
+    "nome": "Res Nunes de Morais 1ª Etapa",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 36,
+    "nome": "Jd Petrópolis",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 34,
+    "nome": "Bro Ipiranga",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 190,
+    "nome": "Bro Jardim Botânico",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 35,
+    "nome": "Bro São Francisco",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 309,
+    "nome": "Con Rio Branco",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 184,
+    "nome": "Vl Rizzo",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 903,
+    "nome": "Con do Lago",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 1008,
+    "nome": "Res Buena Vista IV",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Edilberto Nascimento",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Res Arlinda Parque",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 386,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": "NULL",
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 189,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 170,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Oeste"
+  },
+  {
+    "id": 72,
+    "nome": "Jd Goiás",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 69,
+    "nome": "Bro Alto da Glória",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 0,
+    "nome": "Gleba",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 314,
+    "nome": "Cj Vila Isabel",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 893,
+    "nome": "S Areião II",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 628,
+    "nome": "Vl Divino Pai Eterno",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 219,
+    "nome": "Vl Americano do Brasil",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 229,
+    "nome": "Vl Santa Efigênia",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 932,
+    "nome": "S dos Afonsos",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 182,
+    "nome": "Vl Teófilo Neto",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 785,
+    "nome": "Vl São Tomaz",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 65,
+    "nome": "Bro Jardim das Esmeraldas",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 1071,
+    "nome": "Jd Goiás - Área I",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 64,
+    "nome": "Bro da Serrinha",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 17,
+    "nome": "Bro Jardim América",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 63,
+    "nome": "Prq Amazônia",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 70,
+    "nome": "Vl Maria José",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 3,
+    "nome": "S Oeste",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 68,
+    "nome": "Vl Redenção",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 71,
+    "nome": "Vl São João",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 14,
+    "nome": "S Marista",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 648,
+    "nome": "Lot Areião I",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 18,
+    "nome": "S Bela Vista",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 66,
+    "nome": "Jd Santo Antônio",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 19,
+    "nome": "Bro Nova Suiça",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 16,
+    "nome": "S Bueno",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 4,
+    "nome": "S Sul",
+    "distrito": "Distrito Sanitário Sul"
+  },
+  {
+    "id": 15,
+    "nome": "S Pedro Ludovico",
+    "distrito": "Distrito Sanitário Sul"
+  }
+]

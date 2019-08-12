@@ -19,46 +19,48 @@
                 layout="@layout/card_formulario_antivetorial_diario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"></include>
+                android:layout_margin="8dp" />
 
             <include
                 layout="@layout/card_formulario_antivetorial_endereco"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"></include>
+                android:layout_margin="8dp" />
 
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="vertical">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                <!--<Button-->
-                    <!--android:id="@+id/buttonSalvar"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginStart="8dp"-->
-                    <!--android:layout_marginBottom="8dp"-->
-                    <!--android:background="@color/colorPrimary"-->
-                    <!--android:text="Salvar"-->
-                    <!--android:textColor="@android:color/white"-->
-                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-                    <!--app:layout_constraintEnd_toStartOf="@+id/buttonLimpar"-->
-                    <!--app:layout_constraintStart_toStartOf="parent" />-->
+                <Button
+                    android:id="@+id/buttonSalvar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="Salvar"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/buttonLimpar"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <!--<Button-->
-                    <!--android:id="@+id/buttonLimpar"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginStart="8dp"-->
-                    <!--android:layout_marginEnd="8dp"-->
-                    <!--android:background="@color/colorAccent"-->
-                    <!--android:text="Limpar"-->
-                    <!--android:textColor="@android:color/white"-->
-                    <!--app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--app:layout_constraintStart_toEndOf="@+id/buttonSalvar"-->
-                    <!--app:layout_constraintTop_toTopOf="@+id/buttonSalvar" />-->
+                <Button
+                    android:id="@+id/buttonLimpar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:text="Limpar"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/buttonSalvar"
+                    app:layout_constraintTop_toTopOf="@+id/buttonSalvar" />
 
-            <!--</LinearLayout>-->
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
