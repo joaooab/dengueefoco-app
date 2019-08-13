@@ -16,7 +16,7 @@ import br.com.dengueefocoApp.model.Bairro;
 import br.com.dengueefocoApp.model.BairroDao;
 import br.com.dengueefocoApp.util.BairroWorker;
 
-@Database (entities = {Antivetorial.class, Bairro.class}, version = 6)
+@Database (entities = {Antivetorial.class, Bairro.class}, version = 6, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract AntivetorialDao antivetorialDao();
 
