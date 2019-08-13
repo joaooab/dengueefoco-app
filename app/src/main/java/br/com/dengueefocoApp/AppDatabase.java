@@ -31,10 +31,7 @@ public abstract class AppDatabase extends RoomDatabase {
                         @Override
                         public void onCreate(@NonNull SupportSQLiteDatabase db) {
                             super.onCreate(db);
-                            OneTimeWorkRequest request = new OneTimeWorkRequest
-                                    .Builder(BairroWorker.class)
-                                    .build();
-                            WorkManager.getInstance().enqueue(request);
+                            WorkManager.getInstance().enqueue(new OneTimeWorkRequest.Builder(BairroWorker.class).build());
                         }
                     })
                     .allowMainThreadQueries()

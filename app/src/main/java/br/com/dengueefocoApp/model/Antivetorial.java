@@ -15,7 +15,7 @@ public class Antivetorial {
 	@ColumnInfo(name = "larvicida")
 	private String larvicida;
 	@ColumnInfo(name = "qtd_larvicida")
-	private Double qtdLarvicida;
+	private String qtdLarvicida;
 	@ColumnInfo(name = "tipo_imovel")
 	private String tipoImovel;
 	@ColumnInfo(name = "setor")
@@ -32,13 +32,23 @@ public class Antivetorial {
 	private String numero;
 	private String logradouro;
 	private String observacao;
+    @ColumnInfo(name = "num_quarto")
 	private String numQuarto;
 	private String lado;
 	private String cilo;
 	private String distrito;
 	private String pendencia;
+    @ColumnInfo(name = "qtd_foco")
 	private String qtdFoco;
+    @ColumnInfo(name = "qtd_eliminado")
 	private String qtdEliminado;
+	private String sequencia;
+    @ColumnInfo(name = "qtd_dep_tratado")
+	private String qtdDepTratado;
+    @ColumnInfo(name = "tipo_foco")
+    private String tipoFoco;
+    @ColumnInfo(name = "num_dep_eliminado")
+    private String numDepEliminado;
 
 	public Antivetorial() {
 		this.status = Status.AGUARDANDO.valor;
@@ -76,11 +86,11 @@ public class Antivetorial {
 		this.larvicida = larvicida;
 	}
 
-	public Double getQtdLarvicida() {
+	public String getQtdLarvicida() {
 		return qtdLarvicida;
 	}
 
-	public void setQtdLarvicida(Double qtdLarvicida) {
+	public void setQtdLarvicida(String qtdLarvicida) {
 		this.qtdLarvicida = qtdLarvicida;
 	}
 
@@ -235,5 +245,37 @@ public class Antivetorial {
 	public void setQtdEliminado(String qtdEliminado) {
 		this.qtdEliminado = qtdEliminado;
 	}
+
+    public String getSequencia() {
+        return sequencia;
+    }
+
+    public void setSequencia(String sequencia) {
+        this.sequencia = sequencia;
+    }
+
+    public String getQtdDepTratado() {
+        return qtdDepTratado;
+    }
+
+    public void setQtdDepTratado(String qtdDepTratado) {
+        this.qtdDepTratado = qtdDepTratado;
+    }
+
+    public String getTipoFoco() {
+        return tipoFoco;
+    }
+
+    public void setTipoFoco(String tipoFoco) {
+        this.tipoFoco = tipoFoco;
+    }
+
+    public String getNumDepEliminado() {
+        return numDepEliminado;
+    }
+
+    public void setNumDepEliminado(String numDepEliminado) {
+        this.numDepEliminado = numDepEliminado;
+    }
 }
 

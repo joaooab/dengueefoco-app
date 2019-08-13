@@ -3,6 +3,8 @@ package br.com.dengueefocoApp.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Objects;
+
 @Entity (tableName = "bairro")
 public class Bairro {
 
@@ -35,4 +37,16 @@ public class Bairro {
         this.distrito = distrito;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Bairro bairro = (Bairro) o;
+        return Objects.equals(nome, bairro.nome);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome);
+    }
 }

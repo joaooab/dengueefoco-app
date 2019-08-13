@@ -33,6 +33,7 @@ import retrofit2.Response;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -168,10 +169,22 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 
 	private void configuraSpinnerDistrito(View view) {
-		final List<String> distritos = Arrays.asList("Centro", "Norte", "Sul", "Leste", "Oeste", "Sudeste", "Noroeste", "Nordeste", "Sudoeste");
+        final List<String> distritos = Distrito.getDistrito();
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(distritos);
 		spinnerDistrito = view.findViewById(R.id.spinnerDistrito);
 		spinnerDistrito.setAdapter(stringArrayAdapter);
+        spinnerDistrito.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String distrito = distritos.get(position);
+                buscarBairros(distrito);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 	}
 
 	private void configuraSpinnerPendencia(View view) {
@@ -204,7 +217,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private void configuraSpinnerQtdGrama(View view) {
-		final List<String> lista = Arrays.asList("1/8","1/4","1/2","1,2","3");
+		final List<String> lista = Arrays.asList("1/8","1/4","1/2","3");
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerQtdGrama = view.findViewById(R.id.spinnerQtdGrama);
 		spinnerQtdGrama.setAdapter(stringArrayAdapter);
@@ -225,7 +238,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private void configuraSpinnerTipoFoco(View view) {
-		final List<String> lista = Arrays.asList("Bacia", "Balde", "bebedouro de animais", "Bromélia", "Caixa d'agua", "Caixa de Passagem", "Calha", "Cascata", "Fonte de água", "Garrafa pet", "Lata", "Lona", "Piscina", "Pneu", "Pratinho planta", "Ralinhos", "Tambor", "Vaso de Planta", "Vaso Sanitário", "Outros");
+		final List<String> lista = Arrays.asList("Bacia", "Balde", "Bebedouro de animais", "Bromélia", "Caixa d'agua", "Caixa de Passagem", "Calha", "Cascata", "Fonte de água", "Garrafa pet", "Lata", "Lona", "Piscina", "Pneu", "Pratinho planta", "Ralinhos", "Tambor", "Vaso de Planta", "Vaso Sanitário", "Outros");
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerTipoFoco = view.findViewById(R.id.spinnerTipoFoco);
 		spinnerTipoFoco.setAdapter(stringArrayAdapter);
@@ -240,17 +253,23 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private void configuraSpinnerBairro(View view) {
 		spinnerBairro = view.findViewById(R.id.spinnerBairro);
-		bairroDao.getAll()
+        String distrito = spinnerDistrito.getSelectedItem().toString();
+        buscarBairros(distrito);
+    }
+
+    private void buscarBairros(String distrito) {
+        bairroDao.getAllByDistrito(distrito)
 				.subscribeOn(Schedulers.io())
 				.observeOn(AndroidSchedulers.mainThread())
 				.subscribe(lista -> listaBairros(lista), e -> Log.e(this.getTag(), e.getMessage()));
-	}
+    }
 
-	private void listaBairros(List<Bairro> bairros) {
+    private void listaBairros(List<Bairro> bairros) {
 		List<String> lista = new ArrayList<>();
 		for (Bairro bairro : bairros) {
 			lista.add(bairro.getNome());
 		}
+        Collections.sort(lista);
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerBairro.setAdapter(stringArrayAdapter);
 	}
@@ -324,6 +343,13 @@ public class FormularioAntivetorialFragment extends Fragment {
 		antivetorial.setCilo(spinnerCiclo.getSelectedItem().toString());
 		antivetorial.setDistrito(spinnerDistrito.getSelectedItem().toString());
 		antivetorial.setPendencia(spinnerPendencia.getSelectedItem().toString());
+		antivetorial.setLado(spinnerLado.getSelectedItem().toString());
+        antivetorial.setSequencia(spinnerSequencia.getSelectedItem().toString());
+        antivetorial.setQtdLarvicida(spinnerQtdGrama.getSelectedItem().toString());
+        antivetorial.setQtdDepTratado(spinnerQtdDepTrat.getSelectedItem().toString());
+        antivetorial.setTipoFoco(spinnerTipoFoco.getSelectedItem().toString());
+        antivetorial.setQtdFoco(spinnerQtdFoco.getSelectedItem().toString());
+        antivetorial.setQtdFoco(spinnerNumDepElim.getSelectedItem().toString());
 
 		return antivetorial;
 	}

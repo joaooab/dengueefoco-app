@@ -15,6 +15,9 @@ public interface BairroDao {
     @Query ("SELECT * FROM bairro")
     Single<List<Bairro>> getAll();
 
+    @Query ("SELECT * FROM bairro WHERE distrito = :distrito")
+    Single<List<Bairro>> getAllByDistrito(String distrito);
+
     @Query ("SELECT * FROM bairro WHERE id = :id")
     Bairro loadAllById(int id);
 
