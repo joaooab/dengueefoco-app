@@ -37,6 +37,8 @@ public class Antivetorial {
 	private String cilo;
 	private String distrito;
 	private String pendencia;
+	private String qtdFoco;
+	private String qtdEliminado;
 
 	public Antivetorial() {
 		this.status = Status.AGUARDANDO.valor;
@@ -216,6 +218,22 @@ public class Antivetorial {
 
 	public void setImovelFoco(Boolean imovelFoco) {
 		this.imovelFoco = imovelFoco;
+	}
+
+	public String getQtdFoco() {
+		return qtdFoco;
+	}
+
+	public void setQtdFoco(String qtdFoco) {
+		this.qtdFoco = qtdFoco;
+	}
+
+	public String getQtdEliminado() {
+		return qtdEliminado;
+	}
+
+	public void setQtdEliminado(String qtdEliminado) {
+		this.qtdEliminado = qtdEliminado;
 	}
 }
 

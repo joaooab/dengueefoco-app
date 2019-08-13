@@ -23,16 +23,21 @@ public class DetalheAntivetorialFragment extends Fragment {
 	private TextView quantidade;
 	private TextView status;
 	private TextView data;
-	private TextView statusImovel;
 	private TextView tipoImovel;
 	private TextView notificado;
 	private TextView horario;
 	private TextView logradouro;
-	private TextView setor;
+	private TextView bairro;
 	private TextView quadra;
 	private TextView lote;
 	private TextView numero;
 	private TextView observacao;
+	private TextView distrito;
+	private TextView ciclo;
+	private TextView imovelComFoco;
+	private TextView pendencia;
+	private TextView qtdEliminado;
+	private TextView qtdFoco;
 
 	static DetalheAntivetorialFragment newInstance(final Antivetorial antivetorial) {
 		setAntivetorial(antivetorial);
@@ -54,16 +59,21 @@ public class DetalheAntivetorialFragment extends Fragment {
 		quantidade = view.findViewById(R.id.textViewQuantidade);
 		status = view.findViewById(R.id.textViewLabelStatus);
 		data = view.findViewById(R.id.textViewData);
-		statusImovel = view.findViewById(R.id.textViewStatusImovel);
 		tipoImovel = view.findViewById(R.id.textViewTipoImovel);
-		notificado = view.findViewById(R.id.textViewBairro);
+		notificado = view.findViewById(R.id.textViewNotificado);
+		imovelComFoco = view.findViewById(R.id.textViewImovelComFoco);
 		horario = view.findViewById(R.id.textViewHorario);
 		logradouro = view.findViewById(R.id.textViewLogradouro);
-		setor = view.findViewById(R.id.textViewSetor);
+		bairro = view.findViewById(R.id.textViewBairro);
 		quadra = view.findViewById(R.id.textViewQuadra);
 		lote = view.findViewById(R.id.textViewLote);
 		numero = view.findViewById(R.id.textViewNumero);
 		observacao = view.findViewById(R.id.textViewObservacao);
+		distrito = view.findViewById(R.id.textViewDistrito);
+		ciclo = view.findViewById(R.id.textViewCiclo);
+		pendencia = view.findViewById(R.id.textViewPendencia);
+		qtdEliminado = view.findViewById(R.id.textViewQtdEliminado);
+		qtdFoco = view.findViewById(R.id.textViewQtdFoco);
 		return view;
 	}
 
@@ -74,9 +84,10 @@ public class DetalheAntivetorialFragment extends Fragment {
 		quantidade.setText(String.valueOf(antivetorial.getQtdLarvicida()));
 		status.setText(antivetorial.getStatus());
 		notificado.setText(Util.getNotificado(antivetorial.getNotificado()));
+		imovelComFoco.setText(Util.getNotificado(antivetorial.getImovelFoco()));
 		horario.setText(Util.getHora(antivetorial.getDataVisita()));
 		logradouro.setText(antivetorial.getLogradouro());
-		setor.setText(antivetorial.getSetor());
+		bairro.setText(antivetorial.getSetor());
 		quadra.setText(antivetorial.getQuadra());
 		lote.setText(antivetorial.getLote());
 		numero.setText(antivetorial.getNumero());
@@ -87,6 +98,11 @@ public class DetalheAntivetorialFragment extends Fragment {
 		}
 		data.setText(Util.getData(antivetorial.getDataVisita()));
 		tipoImovel.setText(antivetorial.getTipoImovel());
+		distrito.setText(antivetorial.getDistrito());
+		ciclo.setText(antivetorial.getCilo());
+		pendencia.setText(antivetorial.getPendencia());
+		qtdEliminado.setText(antivetorial.getQtdEliminado());
+		qtdFoco.setText(antivetorial.getQtdFoco());
 	}
 
 	private static Antivetorial getAntivetorial() {

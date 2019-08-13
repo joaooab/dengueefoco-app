@@ -14,7 +14,7 @@ import br.com.dengueefocoApp.model.Antivetorial;
 import br.com.dengueefocoApp.model.AntivetorialDao;
 import br.com.dengueefocoApp.model.Bairro;
 import br.com.dengueefocoApp.model.BairroDao;
-import br.com.dengueefocoApp.util.BairroWorker2;
+import br.com.dengueefocoApp.util.BairroWorker;
 
 @Database (entities = {Antivetorial.class, Bairro.class}, version = 6)
 public abstract class AppDatabase extends RoomDatabase {
@@ -32,7 +32,7 @@ public abstract class AppDatabase extends RoomDatabase {
                         public void onCreate(@NonNull SupportSQLiteDatabase db) {
                             super.onCreate(db);
                             OneTimeWorkRequest request = new OneTimeWorkRequest
-                                    .Builder(BairroWorker2.class)
+                                    .Builder(BairroWorker.class)
                                     .build();
                             WorkManager.getInstance().enqueue(request);
                         }

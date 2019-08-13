@@ -9,47 +9,33 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
-
+import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
-import com.google.android.gms.location.LocationServices;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import br.com.dengueefocoApp.AppDatabase;
 import br.com.dengueefocoApp.Configuracao;
 import br.com.dengueefocoApp.R;
 import br.com.dengueefocoApp.api.RetrofitClient;
 import br.com.dengueefocoApp.api.ViaCepApi;
-import br.com.dengueefocoApp.model.Antivetorial;
-import br.com.dengueefocoApp.model.AntivetorialDao;
-import br.com.dengueefocoApp.model.Endereco;
-import br.com.dengueefocoApp.model.Status;
+import br.com.dengueefocoApp.model.*;
 import br.com.dengueefocoApp.util.Util;
+import com.google.android.gms.location.*;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class FormularioAntivetorialFragment extends Fragment {
 
@@ -64,24 +50,23 @@ public class FormularioAntivetorialFragment extends Fragment {
 	private LocationRequest mLocationRequest;
 	private TextView editTextQuadra;
 	private TextView editTextLote;
-	private TextView editTextNumero;
 	private Switch switchNotificado;
-	private TextView editTextSetor;
 	private TextView editTextLogradouro;
 	private TextView editTextObservacao;
 	private Configuracao configuracao;
-	private TextView editTextSequencia;
 	private TextView editTextQtdFoco;
 	private TextView editTextQtdEliminado;
 	private Spinner spinnerTipoImovel;
 	private Spinner spinnerLarvicida;
 	private Spinner spinnerDistrito;
-	private Spinner spinnerSupervisor;
 	private Spinner spinnerPendencia;
 	private TextView editTextNumQuarto;
-	private TextView editTextLado;
 	private Switch switchImovelFoco;
 	private Spinner spinnerCiclo;
+	private BairroDao bairroDao;
+	private Spinner spinnerBairro;
+	private Spinner spinnerLado;
+	private Spinner spinnerSequencia;
 
 	static FormularioAntivetorialFragment newInstance() {
 		return new FormularioAntivetorialFragment();
@@ -93,7 +78,9 @@ public class FormularioAntivetorialFragment extends Fragment {
 		mActivity = (MainActivity) getActivity();
 		mActivity.setActionBarTitle("Cadastrar antivetorial");
 		configuracao = new Configuracao(getContext());
-		antivetorialDao = AppDatabase.getInstance(getContext()).antivetorialDao();
+		AppDatabase db = AppDatabase.getInstance(getContext());
+		antivetorialDao = db.antivetorialDao();
+		bairroDao = db.bairroDao();
 		fusedLocationClient = LocationServices.getFusedLocationProviderClient(mActivity);
 		mLocationRequest = LocationRequest.create()
 				.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
@@ -130,22 +117,21 @@ public class FormularioAntivetorialFragment extends Fragment {
 		editTextCep = view.findViewById(R.id.editTextCep);
 		editTextQuadra = view.findViewById(R.id.editTextQuadra);
 		editTextLote = view.findViewById(R.id.editTextLote);
-//		editTextNumero = view.findViewById(R.id.editTextNumero);
 		switchNotificado = view.findViewById(R.id.switchNotificado);
 		switchImovelFoco = view.findViewById(R.id.switchImovelFoco);
-		editTextSetor = view.findViewById(R.id.editTextBairro);
 		editTextLogradouro = view.findViewById(R.id.editTextLogradouro);
 		editTextObservacao = view.findViewById(R.id.editTextObservacao);
-//		editTextSequencia = view.findViewById(R.id.editTextSequencia);
 		editTextQtdFoco = view.findViewById(R.id.editTextQtdFoco);
 		editTextQtdEliminado = view.findViewById(R.id.editTextQtdEliminado);
 		editTextNumQuarto = view.findViewById(R.id.editTextNumQuarto);
-//		editTextLado = view.findViewById(R.id.editTextLado);
 		configuraTipoImovel(view);
 		configuraSpinnerLarvicida(view);
 		configuraSpinnerDistrito(view);
 		configuraSpinnerPendencia(view);
 		configuraSpinnerCiclo(view);
+		configuraSpinnerBairro(view);
+		configuraSpinnerLado(view);
+		configuraSpinnerSequencia(view);
 		configuraBotaoSalvar(view);
 		configuraBotaoLimpar(view);
 		configuraGps(view);
@@ -193,13 +179,43 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 
 	private void configuraSpinnerCiclo(View view) {
-		final List<String> ciclos = Arrays.asList("1", "2", "3", "4", "5" ,"6");
+		final List<String> ciclos = Arrays.asList("1", "2", "3", "4", "5", "6");
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(ciclos);
 		spinnerCiclo = view.findViewById(R.id.spinnerCiclo);
 		spinnerCiclo.setAdapter(stringArrayAdapter);
 	}
 
+	private void configuraSpinnerLado(View view) {
+		final List<String> ciclos = Arrays.asList("1", "2", "3", "4");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(ciclos);
+		spinnerLado = view.findViewById(R.id.spinnerLado);
+		spinnerLado.setAdapter(stringArrayAdapter);
+	}
 
+	private void configuraSpinnerSequencia(View view) {
+		final List<String> ciclos = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(ciclos);
+		spinnerSequencia = view.findViewById(R.id.spinnerSequencia);
+		spinnerSequencia.setAdapter(stringArrayAdapter);
+	}
+
+
+	private void configuraSpinnerBairro(View view) {
+		spinnerBairro = view.findViewById(R.id.spinnerBairro);
+		bairroDao.getAll()
+				.subscribeOn(Schedulers.io())
+				.observeOn(AndroidSchedulers.mainThread())
+				.subscribe(lista -> listaBairros(lista), e -> Log.e(this.getTag(), e.getMessage()));
+	}
+
+	private void listaBairros(List<Bairro> bairros) {
+		List<String> lista = new ArrayList<>();
+		for (Bairro bairro : bairros) {
+			lista.add(bairro.getNome());
+		}
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
+		spinnerBairro.setAdapter(stringArrayAdapter);
+	}
 
 	private void configuraBotaoLimpar(@NonNull View view) {
 		Button buttonLimpar = view.findViewById(R.id.buttonLimpar);
@@ -212,14 +228,10 @@ public class FormularioAntivetorialFragment extends Fragment {
 		editTextLogradouro.setText("");
 		editTextQuadra.setText("");
 		editTextLote.setText("");
-		editTextNumero.setText("");
-		editTextSetor.setText("");
 		editTextObservacao.setText("");
-		editTextSequencia.setText("");
 		editTextQtdFoco.setText("");
 		editTextQtdEliminado.setText("");
 		editTextNumQuarto.setText("");
-		editTextLado.setText("");
 	}
 
 	private void configuraBotaoSalvar(@NonNull View view) {
@@ -227,7 +239,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 		buttonSalvar.setOnClickListener(v -> {
 			Antivetorial antivetorial = criaAntivetorial();
 			salvaAntivetorial(antivetorial);
-
 			limparFormulario();
 		});
 	}
@@ -252,14 +263,11 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private Antivetorial criaAntivetorial() {
 		Double quantidade = Double.valueOf(editTextQuantidade.getText().toString());
-		String setor = editTextSetor.getText().toString();
 		String quadra = editTextQuadra.getText().toString();
 		String lote = editTextLote.getText().toString();
-		String numero = editTextNumero.getText().toString();
 		String logradouro = editTextLogradouro.getText().toString();
 		String observacao = editTextObservacao.getText().toString();
 		String numQuarto = editTextNumQuarto.getText().toString();
-		String lado = editTextLado.getText().toString();
 
 		boolean notificado = switchNotificado.isChecked();
 		boolean imovelFoco = switchImovelFoco.isChecked();
@@ -271,10 +279,8 @@ public class FormularioAntivetorialFragment extends Fragment {
 		antivetorial.setTipoImovel(spinnerTipoImovel.getSelectedItem().toString());
 		antivetorial.setDataVisita(Util.getDataHojeString());
 		antivetorial.setStatus(Status.NAO_ENVIANDO.valor);
-		antivetorial.setSetor(setor);
 		antivetorial.setQuadra(quadra);
 		antivetorial.setLote(lote);
-		antivetorial.setNumero(numero);
 		antivetorial.setNotificado(notificado);
 		antivetorial.setImovelFoco(imovelFoco);
 		antivetorial.setLatitude(location.getLatitude());
@@ -282,7 +288,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 		antivetorial.setLogradouro(logradouro);
 		antivetorial.setObservacao(observacao);
 		antivetorial.setNumQuarto(numQuarto);
-		antivetorial.setLado(lado);
 		antivetorial.setCilo(spinnerCiclo.getSelectedItem().toString());
 		antivetorial.setDistrito(spinnerDistrito.getSelectedItem().toString());
 		antivetorial.setPendencia(spinnerPendencia.getSelectedItem().toString());
@@ -347,7 +352,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 			@Override
 			public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
 				Endereco endereco = new Gson().fromJson(response.body(), Endereco.class);
-				editTextSetor.setText(endereco.getBairro());
 				editTextLogradouro.setText(endereco.getLogradouro());
 			}
 
