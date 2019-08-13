@@ -41,7 +41,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private MainActivity mActivity;
 	private AntivetorialDao antivetorialDao;
-	private EditText editTextQuantidade;
 	private EditText editTextCep;
 	private int LOCATION_PERMISSION_CODE = 1;
 	private FusedLocationProviderClient fusedLocationClient;
@@ -54,8 +53,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 	private TextView editTextLogradouro;
 	private TextView editTextObservacao;
 	private Configuracao configuracao;
-	private TextView editTextQtdFoco;
-	private TextView editTextQtdEliminado;
 	private Spinner spinnerTipoImovel;
 	private Spinner spinnerLarvicida;
 	private Spinner spinnerDistrito;
@@ -67,6 +64,11 @@ public class FormularioAntivetorialFragment extends Fragment {
 	private Spinner spinnerBairro;
 	private Spinner spinnerLado;
 	private Spinner spinnerSequencia;
+	private Spinner spinnerQtdGrama;
+	private Spinner spinnerQtdDepTrat;
+	private Spinner spinnerTipoFoco;
+	private Spinner spinnerQtdFoco;
+	private Spinner spinnerNumDepElim;
 
 	static FormularioAntivetorialFragment newInstance() {
 		return new FormularioAntivetorialFragment();
@@ -113,7 +115,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	@Override
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-		editTextQuantidade = view.findViewById(R.id.editTextQuantidade);
 		editTextCep = view.findViewById(R.id.editTextCep);
 		editTextQuadra = view.findViewById(R.id.editTextQuadra);
 		editTextLote = view.findViewById(R.id.editTextLote);
@@ -121,8 +122,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 		switchImovelFoco = view.findViewById(R.id.switchImovelFoco);
 		editTextLogradouro = view.findViewById(R.id.editTextLogradouro);
 		editTextObservacao = view.findViewById(R.id.editTextObservacao);
-		editTextQtdFoco = view.findViewById(R.id.editTextQtdFoco);
-		editTextQtdEliminado = view.findViewById(R.id.editTextQtdEliminado);
 		editTextNumQuarto = view.findViewById(R.id.editTextNumQuarto);
 		configuraTipoImovel(view);
 		configuraSpinnerLarvicida(view);
@@ -132,6 +131,11 @@ public class FormularioAntivetorialFragment extends Fragment {
 		configuraSpinnerBairro(view);
 		configuraSpinnerLado(view);
 		configuraSpinnerSequencia(view);
+		configuraSpinnerQtdGrama(view);
+		configuraSpinnerQtdDepTrat(view);
+		configuraSpinnerQtdFoco(view);
+		configuraSpinnerTipoFoco(view);
+		configuraSpinnerNumDepElim(view);
 		configuraBotaoSalvar(view);
 		configuraBotaoLimpar(view);
 		configuraGps(view);
@@ -171,34 +175,68 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private void configuraSpinnerPendencia(View view) {
-		final List<String> pendencias = Arrays.asList("Recusado", "Abandonado", "Fechado", "Imobiliaria");
-		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(pendencias);
+		final List<String> lista = Arrays.asList("Recusado", "Abandonado", "Fechado", "Imobiliaria");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerPendencia = view.findViewById(R.id.spinnerPendencia);
 		spinnerPendencia.setAdapter(stringArrayAdapter);
 	}
 
 
 	private void configuraSpinnerCiclo(View view) {
-		final List<String> ciclos = Arrays.asList("1", "2", "3", "4", "5", "6");
-		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(ciclos);
+		final List<String> lista = Arrays.asList("1", "2", "3", "4", "5", "6");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerCiclo = view.findViewById(R.id.spinnerCiclo);
 		spinnerCiclo.setAdapter(stringArrayAdapter);
 	}
 
 	private void configuraSpinnerLado(View view) {
-		final List<String> ciclos = Arrays.asList("1", "2", "3", "4");
-		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(ciclos);
+		final List<String> lista = Arrays.asList("1", "2", "3", "4");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerLado = view.findViewById(R.id.spinnerLado);
 		spinnerLado.setAdapter(stringArrayAdapter);
 	}
 
 	private void configuraSpinnerSequencia(View view) {
-		final List<String> ciclos = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
-		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(ciclos);
+		final List<String> lista = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerSequencia = view.findViewById(R.id.spinnerSequencia);
 		spinnerSequencia.setAdapter(stringArrayAdapter);
 	}
 
+	private void configuraSpinnerQtdGrama(View view) {
+		final List<String> lista = Arrays.asList("1/8","1/4","1/2","1,2","3");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
+		spinnerQtdGrama = view.findViewById(R.id.spinnerQtdGrama);
+		spinnerQtdGrama.setAdapter(stringArrayAdapter);
+	}
+
+	private void configuraSpinnerQtdDepTrat(View view) {
+		final List<String> lista = Arrays.asList("0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
+		spinnerQtdDepTrat = view.findViewById(R.id.spinnerQtdDepTrat);
+		spinnerQtdDepTrat.setAdapter(stringArrayAdapter);
+	}
+
+	private void configuraSpinnerQtdFoco(View view) {
+		final List<String> lista = Arrays.asList("0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
+		spinnerQtdFoco = view.findViewById(R.id.spinnerQtdFoco);
+		spinnerQtdFoco.setAdapter(stringArrayAdapter);
+	}
+
+	private void configuraSpinnerTipoFoco(View view) {
+		final List<String> lista = Arrays.asList("Bacia", "Balde", "bebedouro de animais", "Bromélia", "Caixa d'agua", "Caixa de Passagem", "Calha", "Cascata", "Fonte de água", "Garrafa pet", "Lata", "Lona", "Piscina", "Pneu", "Pratinho planta", "Ralinhos", "Tambor", "Vaso de Planta", "Vaso Sanitário", "Outros");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
+		spinnerTipoFoco = view.findViewById(R.id.spinnerTipoFoco);
+		spinnerTipoFoco.setAdapter(stringArrayAdapter);
+	}
+
+	private void configuraSpinnerNumDepElim(View view) {
+		final List<String> lista = Arrays.asList("0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
+		spinnerNumDepElim = view.findViewById(R.id.spinnerNumDepElim);
+		spinnerNumDepElim.setAdapter(stringArrayAdapter);
+	}
 
 	private void configuraSpinnerBairro(View view) {
 		spinnerBairro = view.findViewById(R.id.spinnerBairro);
@@ -223,14 +261,11 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private void limparFormulario() {
-		editTextQuantidade.setText("");
 		editTextCep.setText("");
 		editTextLogradouro.setText("");
 		editTextQuadra.setText("");
 		editTextLote.setText("");
 		editTextObservacao.setText("");
-		editTextQtdFoco.setText("");
-		editTextQtdEliminado.setText("");
 		editTextNumQuarto.setText("");
 	}
 
@@ -262,7 +297,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private Antivetorial criaAntivetorial() {
-		Double quantidade = Double.valueOf(editTextQuantidade.getText().toString());
 		String quadra = editTextQuadra.getText().toString();
 		String lote = editTextLote.getText().toString();
 		String logradouro = editTextLogradouro.getText().toString();
@@ -274,7 +308,6 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 		Antivetorial antivetorial = new Antivetorial();
 		antivetorial.setIdUsuario(configuracao.getUsuarioLogado().getId());
-		antivetorial.setQtdLarvicida(quantidade);
 		antivetorial.setLarvicida(spinnerLarvicida.getSelectedItem().toString());
 		antivetorial.setTipoImovel(spinnerTipoImovel.getSelectedItem().toString());
 		antivetorial.setDataVisita(Util.getDataHojeString());

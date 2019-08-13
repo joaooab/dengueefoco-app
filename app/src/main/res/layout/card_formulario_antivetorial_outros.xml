@@ -10,22 +10,8 @@
     app:layout_constraintTop_toTopOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <EditText
-            android:id="@+id/editTextQuantidade"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Qtd. Larv."
-            android:inputType="numberDecimal"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@+id/editTextQtdFoco"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switchNotificado" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <TextView
                 android:id="@+id/labelSpinnerTipoImovel"
@@ -42,71 +28,42 @@
                 android:layout_marginEnd="8dp"
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/labelSpinnerTipoImovel" android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintStart_toEndOf="@+id/labelSpinnerTipoImovel" android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent"/>
 
         <EditText
-            android:id="@+id/editTextObservacao"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="Observação"
-            android:inputType="textMultiLine"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextQuantidade" />
+                android:id="@+id/editTextObservacao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Observação"
+                android:inputType="textMultiLine"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/spinnerNumDepElim" app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"/>
 
         <Switch
-            android:id="@+id/switchNotificado"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:checked="true"
-            android:text="Notificado"
-            android:textColor="@color/colorTextoLabel"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/switchImovelFoco"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerPendencia" />
-
-        <EditText
-            android:id="@+id/editTextQtdFoco"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:ems="10"
-            android:hint="Qtd. Foco"
-            android:inputType="textPersonName"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@+id/editTextQtdEliminado"
-            app:layout_constraintStart_toEndOf="@+id/editTextQuantidade"
-            app:layout_constraintTop_toTopOf="@+id/editTextQuantidade" />
-
-        <EditText
-            android:id="@+id/editTextQtdEliminado"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:hint="Qtd. Eliminado"
-            android:inputType="textPersonName"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editTextQtdFoco"
-            app:layout_constraintTop_toTopOf="@+id/editTextQtdFoco" />
+                android:id="@+id/switchNotificado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:checked="true"
+                android:text="Notificado"
+                android:textColor="@color/colorTextoLabel"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/switchImovelFoco"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPendencia"/>
 
         <Spinner
                 android:id="@+id/spinnerPendencia"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -120,18 +77,58 @@
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="@+id/spinnerPendencia" app:layout_constraintBottom_toBottomOf="@+id/spinnerPendencia"/>
 
         <Switch
-            android:id="@+id/switchImovelFoco"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="Imóvel com foco"
-            android:textColor="@color/colorTextoLabel"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/switchNotificado"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerPendencia" />
+                android:id="@+id/switchImovelFoco"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Imóvel com foco"
+                android:textColor="@color/colorTextoLabel"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/switchNotificado"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPendencia"/>
+        <TextView
+                android:text="Quantidade grama:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView25" app:layout_constraintStart_toStartOf="@+id/switchNotificado" app:layout_constraintTop_toTopOf="@+id/spinnerQtdGrama" app:layout_constraintBottom_toBottomOf="@+id/spinnerQtdGrama"/>
+        <Spinner
+                android:layout_width="0dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_height="wrap_content" android:id="@+id/spinnerQtdGrama" app:layout_constraintTop_toBottomOf="@+id/switchNotificado" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/textView25" android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="Qtd. Dep. Trat."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView27" app:layout_constraintTop_toTopOf="@+id/spinnerQtdDepTrat" app:layout_constraintBottom_toBottomOf="@+id/spinnerQtdDepTrat" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+        <Spinner
+                android:layout_width="0dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_height="wrap_content" android:id="@+id/spinnerQtdDepTrat" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/spinnerQtdGrama" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/textView27" android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="Qtd. de foco:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView29" app:layout_constraintTop_toTopOf="@+id/spinnerQtdFoco" app:layout_constraintBottom_toBottomOf="@+id/spinnerQtdFoco" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+        <Spinner
+                android:layout_width="0dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_height="wrap_content" android:id="@+id/spinnerQtdFoco" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/textView29" android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/spinnerQtdDepTrat"/>
+        <TextView
+                android:text="Tipos de foco:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView32" app:layout_constraintTop_toTopOf="@+id/spinnerTipoFoco" app:layout_constraintBottom_toBottomOf="@+id/spinnerTipoFoco" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+        <Spinner
+                android:layout_width="0dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_height="wrap_content" android:id="@+id/spinnerTipoFoco" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/textView32" android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/spinnerQtdFoco"/>
+        <TextView
+                android:text="Num. Dep. Eliminado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView33" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="@+id/spinnerNumDepElim" app:layout_constraintBottom_toBottomOf="@+id/spinnerNumDepElim"/>
+        <Spinner
+                android:layout_width="0dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_height="wrap_content" android:id="@+id/spinnerNumDepElim" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/spinnerTipoFoco" app:layout_constraintStart_toEndOf="@+id/textView33" android:layout_marginStart="8dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
