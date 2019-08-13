@@ -1,9 +1,5 @@
 package br.com.dengueefocoApp.ui;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
-import android.content.pm.PackageManager;
-import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,18 +8,13 @@ import android.view.ViewGroup;
 import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import br.com.dengueefocoApp.AppDatabase;
 import br.com.dengueefocoApp.Configuracao;
 import br.com.dengueefocoApp.R;
 import br.com.dengueefocoApp.api.RetrofitClient;
-import br.com.dengueefocoApp.api.ViaCepApi;
 import br.com.dengueefocoApp.model.*;
 import br.com.dengueefocoApp.util.Util;
-import com.google.android.gms.location.*;
-import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -35,21 +26,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class FormularioAntivetorialFragment extends Fragment {
 
 	private MainActivity mActivity;
 	private AntivetorialDao antivetorialDao;
-	private EditText editTextCep;
-	private int LOCATION_PERMISSION_CODE = 1;
-	private FusedLocationProviderClient fusedLocationClient;
-	private Location location;
-	private LocationCallback locationCallback;
-	private LocationRequest mLocationRequest;
+//	private EditText editTextCep;
+//	private int LOCATION_PERMISSION_CODE = 1;
+//	private FusedLocationProviderClient fusedLocationClient;
+//	private Location location;
+//	private LocationCallback locationCallback;
+//	private LocationRequest mLocationRequest;
 	private TextView editTextQuadra;
-	private TextView editTextLote;
+	private TextView editTextNumLote;
 	private Switch switchNotificado;
 	private TextView editTextLogradouro;
 	private TextView editTextObservacao;
@@ -84,28 +73,28 @@ public class FormularioAntivetorialFragment extends Fragment {
 		AppDatabase db = AppDatabase.getInstance(getContext());
 		antivetorialDao = db.antivetorialDao();
 		bairroDao = db.bairroDao();
-		fusedLocationClient = LocationServices.getFusedLocationProviderClient(mActivity);
-		mLocationRequest = LocationRequest.create()
-				.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-				.setInterval(60000)      // 10 seconds, in milliseconds
-				.setFastestInterval(10000); // 1 second, in milliseconds
-		locationCallback = new LocationCallback() {
-			@Override
-			public void onLocationResult(LocationResult locationResult) {
-				Log.e("teste", "teste");
-				if (locationResult == null) {
-					return;
-				}
-				for (Location location : locationResult.getLocations()) {
-					// Update UI with location data
-					// ...
-					FormularioAntivetorialFragment.this.location = location;
-					Log.i("onLocationChanged", location.getLatitude() + String.valueOf(location.getLongitude()));
-					geocode();
-				}
-			}
-
-		};
+//		fusedLocationClient = LocationServices.getFusedLocationProviderClient(mActivity);
+//		mLocationRequest = LocationRequest.create()
+//				.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+//				.setInterval(60000)      // 10 seconds, in milliseconds
+//				.setFastestInterval(10000); // 1 second, in milliseconds
+//		locationCallback = new LocationCallback() {
+//			@Override
+//			public void onLocationResult(LocationResult locationResult) {
+//				Log.e("teste", "teste");
+//				if (locationResult == null) {
+//					return;
+//				}
+//				for (Location location : locationResult.getLocations()) {
+//					// Update UI with location data
+//					// ...
+//					FormularioAntivetorialFragment.this.location = location;
+//					Log.i("onLocationChanged", location.getLatitude() + String.valueOf(location.getLongitude()));
+//					geocode();
+//				}
+//			}
+//
+//		};
 	}
 
 	@Nullable
@@ -116,9 +105,9 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	@Override
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-		editTextCep = view.findViewById(R.id.editTextCep);
+//		editTextCep = view.findViewById(R.id.editTextCep);
 		editTextQuadra = view.findViewById(R.id.editTextQuadra);
-		editTextLote = view.findViewById(R.id.editTextLote);
+		editTextNumLote = view.findViewById(R.id.editTextNumLote);
 		switchNotificado = view.findViewById(R.id.switchNotificado);
 		switchImovelFoco = view.findViewById(R.id.switchImovelFoco);
 		editTextLogradouro = view.findViewById(R.id.editTextLogradouro);
@@ -139,15 +128,15 @@ public class FormularioAntivetorialFragment extends Fragment {
 		configuraSpinnerNumDepElim(view);
 		configuraBotaoSalvar(view);
 		configuraBotaoLimpar(view);
-		configuraGps(view);
+//		configuraGps(view);
 
 		super.onViewCreated(view, savedInstanceState);
 	}
 
-	private void configuraGps(@NonNull View view) {
-		ImageView iconGps = view.findViewById(R.id.iconGps);
-		iconGps.setOnClickListener(v -> startLocationRequests());
-	}
+//	private void configuraGps(@NonNull View view) {
+//		ImageView iconGps = view.findViewById(R.id.iconGps);
+//		iconGps.setOnClickListener(v -> startLocationRequests());
+//	}
 
 	private void configuraTipoImovel(@NonNull View view) {
 		final List<String> tipoImovel = Arrays.asList("Casa", "Apartamento", "Terreno baldio", "Comércio");
@@ -280,10 +269,10 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private void limparFormulario() {
-		editTextCep.setText("");
+//		editTextCep.setText("");
 		editTextLogradouro.setText("");
 		editTextQuadra.setText("");
-		editTextLote.setText("");
+		editTextNumLote.setText("");
 		editTextObservacao.setText("");
 		editTextNumQuarto.setText("");
 	}
@@ -317,7 +306,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private Antivetorial criaAntivetorial() {
 		String quadra = editTextQuadra.getText().toString();
-		String lote = editTextLote.getText().toString();
+		String numLote = editTextNumLote.getText().toString();
 		String logradouro = editTextLogradouro.getText().toString();
 		String observacao = editTextObservacao.getText().toString();
 		String numQuarto = editTextNumQuarto.getText().toString();
@@ -332,14 +321,14 @@ public class FormularioAntivetorialFragment extends Fragment {
 		antivetorial.setDataVisita(Util.getDataHojeString());
 		antivetorial.setStatus(Status.NAO_ENVIANDO.valor);
 		antivetorial.setQuadra(quadra);
-		antivetorial.setLote(lote);
+		antivetorial.setNumLote(numLote);
 		antivetorial.setNotificado(notificado);
 		antivetorial.setImovelFoco(imovelFoco);
-		antivetorial.setLatitude(location.getLatitude());
-		antivetorial.setLongitude(location.getLongitude());
+//		antivetorial.setLatitude(location.getLatitude());
+//		antivetorial.setLongitude(location.getLongitude());
 		antivetorial.setLogradouro(logradouro);
 		antivetorial.setObservacao(observacao);
-		antivetorial.setNumQuarto(numQuarto);
+		antivetorial.setQuarteirao(numQuarto);
 		antivetorial.setCilo(spinnerCiclo.getSelectedItem().toString());
 		antivetorial.setDistrito(spinnerDistrito.getSelectedItem().toString());
 		antivetorial.setPendencia(spinnerPendencia.getSelectedItem().toString());
@@ -349,7 +338,8 @@ public class FormularioAntivetorialFragment extends Fragment {
         antivetorial.setQtdDepTratado(spinnerQtdDepTrat.getSelectedItem().toString());
         antivetorial.setTipoFoco(spinnerTipoFoco.getSelectedItem().toString());
         antivetorial.setQtdFoco(spinnerQtdFoco.getSelectedItem().toString());
-        antivetorial.setQtdFoco(spinnerNumDepElim.getSelectedItem().toString());
+        antivetorial.setNumDepEliminado(spinnerNumDepElim.getSelectedItem().toString());
+        antivetorial.setBairro(spinnerBairro.getSelectedItem().toString());
 
 		return antivetorial;
 	}
@@ -359,66 +349,66 @@ public class FormularioAntivetorialFragment extends Fragment {
 		super.onResume();
 	}
 
-	private void startLocationRequests() {
-		if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
-				!= PackageManager.PERMISSION_GRANTED) {
-			if (ActivityCompat.shouldShowRequestPermissionRationale(
-					getActivity(),
-					Manifest.permission.ACCESS_FINE_LOCATION
-			)) {
-			} else {
-				ActivityCompat.requestPermissions(
-						getActivity(),
-						new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-						LOCATION_PERMISSION_CODE
-				);
-			}
-		} else {
-			initLocationRequests();
-		}
-		geocode();
-	}
+//	private void startLocationRequests() {
+//		if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
+//				!= PackageManager.PERMISSION_GRANTED) {
+//			if (ActivityCompat.shouldShowRequestPermissionRationale(
+//					getActivity(),
+//					Manifest.permission.ACCESS_FINE_LOCATION
+//			)) {
+//			} else {
+//				ActivityCompat.requestPermissions(
+//						getActivity(),
+//						new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+//						LOCATION_PERMISSION_CODE
+//				);
+//			}
+//		} else {
+//			initLocationRequests();
+//		}
+//		geocode();
+//	}
+//
+//	@Override
+//	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//		if (requestCode == LOCATION_PERMISSION_CODE) {
+//			if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//				startLocationRequests();
+//			}
+//		}
+//	}
 
-	@Override
-	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-		if (requestCode == LOCATION_PERMISSION_CODE) {
-			if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-				startLocationRequests();
-			}
-		}
-	}
-
-	@SuppressLint("MissingPermission")
-	private void initLocationRequests() {
-		fusedLocationClient.requestLocationUpdates(
-				mLocationRequest,
-				locationCallback,
-				null /* Looper */
-		);
-	}
-
-	private void geocode() {
-		if (location == null) {
-			return;
-		}
-		ViaCepApi viaCepApi = RetrofitClient.getViaCepApi();
-		String cep = editTextCep.getText().toString();
-		if (cep.isEmpty() || !isCepValido(cep)) {
-			editTextCep.setError("CEP inválido");
-			return;
-		}
-		viaCepApi.getEndereco(cep).enqueue(new Callback<JsonElement>() {
-			@Override
-			public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
-				Endereco endereco = new Gson().fromJson(response.body(), Endereco.class);
-				editTextLogradouro.setText(endereco.getLogradouro());
-			}
-
-			@Override
-			public void onFailure(Call<JsonElement> call, Throwable t) {
-				Log.e(this.getClass().getSimpleName(), t.getMessage());
-			}
-		});
+//	@SuppressLint("MissingPermission")
+//	private void initLocationRequests() {
+//		fusedLocationClient.requestLocationUpdates(
+//				mLocationRequest,
+//				locationCallback,
+//				null /* Looper */
+//		);
+//	}
+//
+//	private void geocode() {
+//		if (location == null) {
+//			return;
+//		}
+//		ViaCepApi viaCepApi = RetrofitClient.getViaCepApi();
+//		String cep = editTextCep.getText().toString();
+//		if (cep.isEmpty() || !isCepValido(cep)) {
+//			editTextCep.setError("CEP inválido");
+//			return;
+//		}
+//		viaCepApi.getEndereco(cep).enqueue(new Callback<JsonElement>() {
+//			@Override
+//			public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
+//				Endereco endereco = new Gson().fromJson(response.body(), Endereco.class);
+//				editTextLogradouro.setText(endereco.getLogradouro());
+//			}
+//
+//			@Override
+//			public void onFailure(Call<JsonElement> call, Throwable t) {
+//				Log.e(this.getClass().getSimpleName(), t.getMessage());
+//			}
+//		});
 //        String latitude = String.valueOf(location.getLatitude());
 //        String longitude = String.valueOf(location.getLongitude());
 //        String latLng = String.format("%s, %s", latitude, longitude);
@@ -436,18 +426,18 @@ public class FormularioAntivetorialFragment extends Fragment {
 //            }
 //        });
 
-	}
+//	}
 
-	private boolean isCepValido(String cep) {
-		Pattern p = Pattern.compile("[0-9]{8}$");
-		Matcher m = p.matcher(cep);
-		return m.find();
-	}
+//	private boolean isCepValido(String cep) {
+//		Pattern p = Pattern.compile("[0-9]{8}$");
+//		Matcher m = p.matcher(cep);
+//		return m.find();
+//	}
 
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-		fusedLocationClient.removeLocationUpdates(locationCallback);
-	}
+//	@Override
+//	public void onDestroy() {
+//		super.onDestroy();
+//		fusedLocationClient.removeLocationUpdates(locationCallback);
+//	}
 
 }

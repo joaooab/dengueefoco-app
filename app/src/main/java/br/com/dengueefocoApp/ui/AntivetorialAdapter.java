@@ -63,7 +63,7 @@ public class AntivetorialAdapter extends RecyclerView.Adapter<AntivetorialAdapte
 	class ViewHolder extends RecyclerView.ViewHolder {
 
 		void bindView(Antivetorial antivetorial) {
-			distrito.setText(antivetorial.getSetor());
+			distrito.setText(antivetorial.getDistrito());
 			larvicida.setText(antivetorial.getLarvicida());
 			data.setText(Util.getData(antivetorial.getDataVisita()));
 			horario.setText(Util.getHora(antivetorial.getDataVisita()));

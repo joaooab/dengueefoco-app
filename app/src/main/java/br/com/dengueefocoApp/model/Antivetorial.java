@@ -18,8 +18,6 @@ public class Antivetorial {
 	private String qtdLarvicida;
 	@ColumnInfo(name = "tipo_imovel")
 	private String tipoImovel;
-	@ColumnInfo(name = "setor")
-	private String setor;
 	@ColumnInfo(name = "longitude")
 	private Double longitude;
 	@ColumnInfo(name = "latitude")
@@ -28,20 +26,18 @@ public class Antivetorial {
 	private Boolean notificado;
 	private Boolean imovelFoco;
 	private String quadra;
-	private String lote;
-	private String numero;
+	@ColumnInfo(name = "num_lote")
+	private String numLote;
 	private String logradouro;
 	private String observacao;
     @ColumnInfo(name = "num_quarto")
-	private String numQuarto;
+	private String quarteirao;
 	private String lado;
 	private String cilo;
 	private String distrito;
 	private String pendencia;
     @ColumnInfo(name = "qtd_foco")
 	private String qtdFoco;
-    @ColumnInfo(name = "qtd_eliminado")
-	private String qtdEliminado;
 	private String sequencia;
     @ColumnInfo(name = "qtd_dep_tratado")
 	private String qtdDepTratado;
@@ -49,6 +45,7 @@ public class Antivetorial {
     private String tipoFoco;
     @ColumnInfo(name = "num_dep_eliminado")
     private String numDepEliminado;
+    private String bairro;
 
 	public Antivetorial() {
 		this.status = Status.AGUARDANDO.valor;
@@ -102,14 +99,6 @@ public class Antivetorial {
 		this.tipoImovel = tipoImovel;
 	}
 
-	public String getSetor() {
-		return setor;
-	}
-
-	public void setSetor(String setor) {
-		this.setor = setor;
-	}
-
 	public Double getLongitude() {
 		return longitude;
 	}
@@ -150,20 +139,12 @@ public class Antivetorial {
 		this.quadra = quadra;
 	}
 
-	public String getLote() {
-		return lote;
+	public String getNumLote() {
+		return numLote;
 	}
 
-	public void setLote(String lote) {
-		this.lote = lote;
-	}
-
-	public String getNumero() {
-		return numero;
-	}
-
-	public void setNumero(String numero) {
-		this.numero = numero;
+	public void setNumLote(String numLote) {
+		this.numLote = numLote;
 	}
 
 	public String getLogradouro() {
@@ -182,12 +163,12 @@ public class Antivetorial {
 		this.observacao = observacao;
 	}
 
-	public String getNumQuarto() {
-		return numQuarto;
+	public String getQuarteirao() {
+		return quarteirao;
 	}
 
-	public void setNumQuarto(String numQuarto) {
-		this.numQuarto = numQuarto;
+	public void setQuarteirao(String quarteirao) {
+		this.quarteirao = quarteirao;
 	}
 
 	public String getLado() {
@@ -238,14 +219,6 @@ public class Antivetorial {
 		this.qtdFoco = qtdFoco;
 	}
 
-	public String getQtdEliminado() {
-		return qtdEliminado;
-	}
-
-	public void setQtdEliminado(String qtdEliminado) {
-		this.qtdEliminado = qtdEliminado;
-	}
-
     public String getSequencia() {
         return sequencia;
     }
@@ -277,5 +250,13 @@ public class Antivetorial {
     public void setNumDepEliminado(String numDepEliminado) {
         this.numDepEliminado = numDepEliminado;
     }
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
 }
 
