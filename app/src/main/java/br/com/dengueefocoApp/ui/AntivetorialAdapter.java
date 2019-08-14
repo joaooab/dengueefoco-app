@@ -66,7 +66,7 @@ public class AntivetorialAdapter extends RecyclerView.Adapter<AntivetorialAdapte
 			distrito.setText(antivetorial.getDistrito());
 			larvicida.setText(antivetorial.getLarvicida());
 			data.setText(Util.getData(antivetorial.getDataVisita()));
-			horario.setText(Util.getHora(antivetorial.getDataVisita()));
+//			horario.setText(Util.getHora(antivetorial.getDataVisita()));
 			notificado.setText(Util.getNotificado(antivetorial.getNotificado()));
 			status.setText(antivetorial.getStatus());
 			if(antivetorial.getStatus().equals(Status.NAO_ENVIANDO.valor) ) {

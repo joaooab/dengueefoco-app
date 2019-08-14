@@ -14,7 +14,6 @@ import br.com.dengueefocoApp.Configuracao;
 import br.com.dengueefocoApp.R;
 import br.com.dengueefocoApp.api.RetrofitClient;
 import br.com.dengueefocoApp.model.*;
-import br.com.dengueefocoApp.util.Util;
 import com.google.gson.JsonElement;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -22,16 +21,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class FormularioAntivetorialFragment extends Fragment {
 
 	private MainActivity mActivity;
 	private AntivetorialDao antivetorialDao;
-//	private EditText editTextCep;
+	//	private EditText editTextCep;
 //	private int LOCATION_PERMISSION_CODE = 1;
 //	private FusedLocationProviderClient fusedLocationClient;
 //	private Location location;
@@ -158,22 +154,22 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 
 	private void configuraSpinnerDistrito(View view) {
-        final List<String> distritos = Distrito.getDistrito();
+		final List<String> distritos = Distrito.getDistrito();
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(distritos);
 		spinnerDistrito = view.findViewById(R.id.spinnerDistrito);
 		spinnerDistrito.setAdapter(stringArrayAdapter);
-        spinnerDistrito.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String distrito = distritos.get(position);
-                buscarBairros(distrito);
-            }
+		spinnerDistrito.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+				String distrito = distritos.get(position);
+				buscarBairros(distrito);
+			}
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
 
-            }
-        });
+			}
+		});
 	}
 
 	private void configuraSpinnerPendencia(View view) {
@@ -206,21 +202,21 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private void configuraSpinnerQtdGrama(View view) {
-		final List<String> lista = Arrays.asList("1/8","1/4","1/2","3");
+		final List<String> lista = Arrays.asList("1/8", "1/4", "1/2", "3");
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerQtdGrama = view.findViewById(R.id.spinnerQtdGrama);
 		spinnerQtdGrama.setAdapter(stringArrayAdapter);
 	}
 
 	private void configuraSpinnerQtdDepTrat(View view) {
-		final List<String> lista = Arrays.asList("0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		final List<String> lista = Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerQtdDepTrat = view.findViewById(R.id.spinnerQtdDepTrat);
 		spinnerQtdDepTrat.setAdapter(stringArrayAdapter);
 	}
 
 	private void configuraSpinnerQtdFoco(View view) {
-		final List<String> lista = Arrays.asList("0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		final List<String> lista = Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerQtdFoco = view.findViewById(R.id.spinnerQtdFoco);
 		spinnerQtdFoco.setAdapter(stringArrayAdapter);
@@ -234,7 +230,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private void configuraSpinnerNumDepElim(View view) {
-		final List<String> lista = Arrays.asList("0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+		final List<String> lista = Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerNumDepElim = view.findViewById(R.id.spinnerNumDepElim);
 		spinnerNumDepElim.setAdapter(stringArrayAdapter);
@@ -242,23 +238,23 @@ public class FormularioAntivetorialFragment extends Fragment {
 
 	private void configuraSpinnerBairro(View view) {
 		spinnerBairro = view.findViewById(R.id.spinnerBairro);
-        String distrito = spinnerDistrito.getSelectedItem().toString();
-        buscarBairros(distrito);
-    }
+		String distrito = spinnerDistrito.getSelectedItem().toString();
+		buscarBairros(distrito);
+	}
 
-    private void buscarBairros(String distrito) {
-        bairroDao.getAllByDistrito(distrito)
+	private void buscarBairros(String distrito) {
+		bairroDao.getAllByDistrito(distrito)
 				.subscribeOn(Schedulers.io())
 				.observeOn(AndroidSchedulers.mainThread())
 				.subscribe(lista -> listaBairros(lista), e -> Log.e(this.getTag(), e.getMessage()));
-    }
+	}
 
-    private void listaBairros(List<Bairro> bairros) {
+	private void listaBairros(List<Bairro> bairros) {
 		List<String> lista = new ArrayList<>();
 		for (Bairro bairro : bairros) {
 			lista.add(bairro.getNome());
 		}
-        Collections.sort(lista);
+		Collections.sort(lista);
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(lista);
 		spinnerBairro.setAdapter(stringArrayAdapter);
 	}
@@ -318,7 +314,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 		antivetorial.setIdUsuario(configuracao.getUsuarioLogado().getId());
 		antivetorial.setLarvicida(spinnerLarvicida.getSelectedItem().toString());
 		antivetorial.setTipoImovel(spinnerTipoImovel.getSelectedItem().toString());
-		antivetorial.setDataVisita(Util.getDataHojeString());
+		antivetorial.setDataVisita(new Date());
 		antivetorial.setStatus(Status.NAO_ENVIANDO.valor);
 		antivetorial.setQuadra(quadra);
 		antivetorial.setNumLote(numLote);
@@ -333,13 +329,13 @@ public class FormularioAntivetorialFragment extends Fragment {
 		antivetorial.setDistrito(spinnerDistrito.getSelectedItem().toString());
 		antivetorial.setPendencia(spinnerPendencia.getSelectedItem().toString());
 		antivetorial.setLado(spinnerLado.getSelectedItem().toString());
-        antivetorial.setSequencia(spinnerSequencia.getSelectedItem().toString());
-        antivetorial.setQtdLarvicida(spinnerQtdGrama.getSelectedItem().toString());
-        antivetorial.setQtdDepTratado(spinnerQtdDepTrat.getSelectedItem().toString());
-        antivetorial.setTipoFoco(spinnerTipoFoco.getSelectedItem().toString());
-        antivetorial.setQtdFoco(spinnerQtdFoco.getSelectedItem().toString());
-        antivetorial.setNumDepEliminado(spinnerNumDepElim.getSelectedItem().toString());
-        antivetorial.setBairro(spinnerBairro.getSelectedItem().toString());
+		antivetorial.setSequencia(spinnerSequencia.getSelectedItem().toString());
+		antivetorial.setQtdLarvicida(spinnerQtdGrama.getSelectedItem().toString());
+		antivetorial.setQtdDepTratado(spinnerQtdDepTrat.getSelectedItem().toString());
+		antivetorial.setTipoFoco(spinnerTipoFoco.getSelectedItem().toString());
+		antivetorial.setQtdFoco(spinnerQtdFoco.getSelectedItem().toString());
+		antivetorial.setNumDepEliminado(spinnerNumDepElim.getSelectedItem().toString());
+		antivetorial.setBairro(spinnerBairro.getSelectedItem().toString());
 
 		return antivetorial;
 	}

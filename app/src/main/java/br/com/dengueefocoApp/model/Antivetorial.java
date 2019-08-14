@@ -4,6 +4,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Calendar;
+import java.util.Date;
+
 @Entity(tableName = "antivetorial")
 public class Antivetorial {
 	@PrimaryKey()
@@ -11,7 +14,7 @@ public class Antivetorial {
 	@ColumnInfo(name = "id_usuario")
 	private Long idUsuario;
 	@ColumnInfo(name = "data_visita")
-	private String dataVisita;
+	private Date dataVisita;
 	@ColumnInfo(name = "larvicida")
 	private String larvicida;
 	@ColumnInfo(name = "qtd_larvicida")
@@ -67,11 +70,11 @@ public class Antivetorial {
 		this.idUsuario = idUsuario;
 	}
 
-	public String getDataVisita() {
+	public Date getDataVisita() {
 		return dataVisita;
 	}
 
-	public void setDataVisita(String dataVisita) {
+	public void setDataVisita(Date dataVisita) {
 		this.dataVisita = dataVisita;
 	}
 

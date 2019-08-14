@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
@@ -17,6 +18,7 @@ import br.com.dengueefocoApp.model.BairroDao;
 import br.com.dengueefocoApp.util.BairroWorker;
 
 @Database (entities = {Antivetorial.class, Bairro.class}, version = 6, exportSchema = false)
+@TypeConverters(Converter.class)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract AntivetorialDao antivetorialDao();
 
