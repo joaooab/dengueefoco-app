@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_antivetorial) {
             abreFragment(ListaAntivetorialFragment.newInstance());
         } else if (id == R.id.nav_ovitrampas) {
-
+            abreFragment(ListaOvitrampasFragment.newInstance());
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

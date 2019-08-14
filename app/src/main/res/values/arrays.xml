@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="observacoes">
+		<item>1 - Intervalo entre instalação e coleta >7</item>
+		<item>2 - Ovitrampa ou paleta desaparecida</item>
+		<item>3 - Ovitrampa ou paleta quebrada</item>
+		<item>4 - Ovitrampa ou paleta removida</item>
+		<item>5 - Ovitrampa seca</item>
+		<item>6 - Casa fechada</item>
+		<item>7 - Paleta positiva para ovos</item>
+		<item>8 - Ovitrampa cheia de água</item>
+		<item>9 - Ovitrampa com pouca água</item>
+		<item>10 - Ovitrampa com larvas</item>
+		<item>11 - Ovitrampa com pupa</item>
+		<item>12 - Paleta com ovos eclodidos</item>
+	</string-array>
+</resources>
