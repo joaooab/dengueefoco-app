@@ -139,7 +139,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 //	}
 
 	private void configuraTipoImovel(@NonNull View view) {
-		final List<String> tipoImovel = Arrays.asList("Casa", "Apartamento", "Terreno baldio", "Comércio");
+		final List<String> tipoImovel = Arrays.asList("Residencial", "Comércio", "Terreno baldio", "Ponto Estratégico", "Outros");
 		ArrayAdapter<String> stringArrayAdapter = criaArrayAdapterSpinner(tipoImovel);
 		spinnerTipoImovel = view.findViewById(R.id.spinnerTipoImovel);
 		spinnerTipoImovel.setAdapter(stringArrayAdapter);
@@ -287,7 +287,7 @@ public class FormularioAntivetorialFragment extends Fragment {
 	}
 
 	private void salvaAntivetorial(final Antivetorial antivetorial) {
-		RetrofitClient.getApi().salvaAntivetorial(antivetorial).enqueue(new Callback<JsonElement>() {
+		RetrofitClient.getApi().salvarAntivetorial2(antivetorial).enqueue(new Callback<JsonElement>() {
 			@Override
 			public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
 				Toast.makeText(getContext(), "Operação realizada com sucesso", Toast.LENGTH_SHORT).show();

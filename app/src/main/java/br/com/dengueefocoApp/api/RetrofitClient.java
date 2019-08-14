@@ -5,13 +5,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static String URL = "https://api.github.com/";
+    private static String URL = "http://192.168.0.13:8080/";
     private static String GOOGLE_URL = "https://maps.googleapis.com/maps/api/";
     private static String VIA_CEP_URL = "https://viacep.com.br/ws/";
     private static Retrofit INSTANCE;
     private static Retrofit GOOGLE_INSTANSE;
     private static Retrofit VIA_CEP_INSTANSE;
-//74603240/json/
+
     static Retrofit getInstance() {
         if (INSTANCE == null) {
             return createInstance();

@@ -18,6 +18,10 @@ public interface Api {
 
 	@Headers("Content-Type: application/json;charset=utf-8")
 	@POST("antivetoriais")
-	Call<JsonElement> salvaAntivetorial(@Body Antivetorial antivetorial);
+	Call<JsonElement> salvarAntivetorial(@Body Antivetorial antivetorial);
+
+	@Headers("Content-Type: application/json;charset=utf-8")
+	@POST("antivetoriais/2")
+	Call<JsonElement> salvarAntivetorial2(@Body Antivetorial antivetorial);
 
 }
