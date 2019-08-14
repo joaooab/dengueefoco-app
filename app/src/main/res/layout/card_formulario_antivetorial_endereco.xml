@@ -1,147 +1,177 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_formulario_antivetorial_endereco"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/card_formulario_antivetorial_endereco"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="8dp"
+	app:cardCornerRadius="8dp"
+	app:layout_constraintBottom_toBottomOf="parent"
+	app:layout_constraintEnd_toEndOf="parent"
+	app:layout_constraintStart_toStartOf="parent"
+	app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/editTextNumQuarto"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:hint="Nº Quarteirão"
-            android:inputType="number"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/input1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="8dp"
+			android:hint="Nº Quarteirão"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
 
-        <!--<EditText-->
-            <!--android:id="@+id/editTextCep"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:ems="10"-->
-            <!--android:hint="CEP"-->
-            <!--android:inputType="number"-->
-            <!--android:textSize="14sp"-->
-            <!--app:layout_constraintEnd_toStartOf="@+id/iconGps"-->
-            <!--app:layout_constraintStart_toStartOf="parent"-->
-            <!--app:layout_constraintTop_toBottomOf="@+id/spinnerLado" />-->
+			<EditText
+				android:id="@+id/editTextNumQuarto"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:inputType="number"
+				android:textSize="14sp" />
 
-        <!--<ImageView-->
-            <!--android:id="@+id/iconGps"-->
-            <!--android:layout_width="30dp"-->
-            <!--android:layout_height="30dp"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:src="@drawable/ic_gps_fixed_black_24dp"-->
-            <!--app:layout_constraintBottom_toBottomOf="@+id/editTextCep"-->
-            <!--app:layout_constraintEnd_toEndOf="parent"-->
-            <!--app:layout_constraintStart_toEndOf="@+id/editTextCep"-->
-            <!--app:layout_constraintTop_toTopOf="@+id/editTextCep" />-->
+		</com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-                android:id="@+id/editTextLogradouro"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:ems="10"
-                android:hint="Logradouro"
-                android:inputType="textPersonName"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerLado"/>
+		<!--<EditText-->
+		<!--android:id="@+id/editTextCep"-->
+		<!--android:layout_width="0dp"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:layout_marginStart="8dp"-->
+		<!--android:layout_marginTop="8dp"-->
+		<!--android:layout_marginEnd="8dp"-->
+		<!--android:ems="10"-->
+		<!--android:hint="CEP"-->
+		<!--android:inputType="number"-->
+		<!--android:textSize="14sp"-->
+		<!--app:layout_constraintEnd_toStartOf="@+id/iconGps"-->
+		<!--app:layout_constraintStart_toStartOf="parent"-->
+		<!--app:layout_constraintTop_toBottomOf="@+id/spinnerLado" />-->
 
-        <EditText
-            android:id="@+id/editTextQuadra"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:hint="Quadra"
-            android:inputType="number"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextLogradouro"
-            app:layout_constraintVertical_chainStyle="packed" />
+		<!--<ImageView-->
+		<!--android:id="@+id/iconGps"-->
+		<!--android:layout_width="30dp"-->
+		<!--android:layout_height="30dp"-->
+		<!--android:layout_marginEnd="8dp"-->
+		<!--android:src="@drawable/ic_gps_fixed_black_24dp"-->
+		<!--app:layout_constraintBottom_toBottomOf="@+id/editTextCep"-->
+		<!--app:layout_constraintEnd_toEndOf="parent"-->
+		<!--app:layout_constraintStart_toEndOf="@+id/editTextCep"-->
+		<!--app:layout_constraintTop_toTopOf="@+id/editTextCep" />-->
 
-        <EditText
-            android:id="@+id/editTextNumLote"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:hint="Número ou Lote"
-            android:inputType="number"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/editTextQuadra"
-            app:layout_constraintTop_toBottomOf="@+id/editTextQuadra" />
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/input2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="8dp"
+			android:hint="Logradouro"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/spinnerLado">
 
-        <Spinner
-                android:id="@+id/spinnerLado"
-                style="@style/Widget.AppCompat.Spinner.Underlined"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView15"
-                app:layout_constraintTop_toBottomOf="@+id/editTextNumQuarto"/>
+			<EditText
+				android:id="@+id/editTextLogradouro"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:inputType="textPersonName"
+				android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lado:"
-            app:layout_constraintBottom_toBottomOf="@+id/spinnerLado"
+		</com.google.android.material.textfield.TextInputLayout>
 
-            app:layout_constraintStart_toStartOf="@+id/editTextNumQuarto"
-            app:layout_constraintTop_toTopOf="@+id/spinnerLado" />
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/input3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="8dp"
+			android:hint="Quadra"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/input2"
+			app:layout_constraintVertical_chainStyle="packed">
 
-        <TextView
-                android:id="@+id/textView22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sequência:"
-                app:layout_constraintBottom_toBottomOf="@+id/spinnerSequencia"
-                app:layout_constraintTop_toTopOf="@+id/spinnerSequencia" app:layout_constraintStart_toStartOf="@+id/editTextNumLote"/>
+			<EditText
+				android:id="@+id/editTextQuadra"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:inputType="number"
+				android:textSize="14sp" />
 
-        <Spinner
-                android:id="@+id/spinnerSequencia"
-                style="@style/Widget.AppCompat.Spinner.Underlined"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView22"
-                app:layout_constraintTop_toBottomOf="@+id/editTextNumLote"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/input4"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="8dp"
+			android:hint="Número ou Lote"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="@+id/input3"
+			app:layout_constraintTop_toBottomOf="@+id/input3">
+
+		<EditText
+			android:id="@+id/editTextNumLote"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:inputType="number"
+			android:textSize="14sp" />
+
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<Spinner
+			android:id="@+id/spinnerLado"
+			style="@style/Widget.AppCompat.Spinner.Underlined"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toEndOf="@+id/textView15"
+			app:layout_constraintTop_toBottomOf="@+id/input1" />
+
+		<TextView
+			android:id="@+id/textView15"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Lado:"
+			app:layout_constraintBottom_toBottomOf="@+id/spinnerLado"
+
+			app:layout_constraintStart_toStartOf="@+id/input1"
+			app:layout_constraintTop_toTopOf="@+id/spinnerLado" />
+
+		<TextView
+			android:id="@+id/textView22"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Sequência:"
+			app:layout_constraintBottom_toBottomOf="@+id/spinnerSequencia"
+			app:layout_constraintStart_toStartOf="@+id/input4"
+			app:layout_constraintTop_toTopOf="@+id/spinnerSequencia" />
+
+		<Spinner
+			android:id="@+id/spinnerSequencia"
+			style="@style/Widget.AppCompat.Spinner.Underlined"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginBottom="8dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/textView22"
+			app:layout_constraintTop_toBottomOf="@+id/input4" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
