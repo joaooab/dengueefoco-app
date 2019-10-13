@@ -10,4 +10,5 @@ public interface GoogleApi {
 
     @GET ("geocode/json")
     Call<JsonElement> reverseGeocode(@Query ("latlng") String latlng, @Query ("key") String key);
+
 }

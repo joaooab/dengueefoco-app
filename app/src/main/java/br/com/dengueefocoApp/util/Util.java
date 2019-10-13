@@ -19,7 +19,6 @@ public class Util {
 		return formataParaString(data).split("T")[0];
 	}
 
-
 	public static String getHora(Calendar data) {
 		return formataParaString(data).split("T")[1].split("-")[0];
 	}
@@ -31,7 +30,6 @@ public class Util {
 	public static String getNotificado(Boolean notificado) {
 		return notificado ? "Sim" : "Não";
 	}
-
 
 	public static Date formataParaDate(String value) {
 		try {
@@ -45,7 +43,6 @@ public class Util {
 	public static String formataParaString(Date date) {
 		return simpleDateFormat.format(date);
 	}
-
 
 	public static Calendar formataParaCalendar(String value) {
 		try {

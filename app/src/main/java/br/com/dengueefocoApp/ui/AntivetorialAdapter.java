@@ -103,4 +103,5 @@ interface AntivetorialAdapterCallback {
 	void onClick(Antivetorial antivetorial);
 
 	void onLongClick(Antivetorial antivetorial);
+
 }

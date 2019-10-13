@@ -7,4 +7,5 @@ public enum TipoUsuario {
     TipoUsuario(String valor) {
         this.valor = valor;
     }
+
 }

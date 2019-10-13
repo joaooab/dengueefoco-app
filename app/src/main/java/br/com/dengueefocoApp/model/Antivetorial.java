@@ -261,5 +261,5 @@ public class Antivetorial {
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-}
 
+}
