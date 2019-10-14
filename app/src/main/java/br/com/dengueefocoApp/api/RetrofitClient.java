@@ -71,4 +71,5 @@ public class RetrofitClient {
     }
 
     public static GoogleApi getGoogleApi() { return getGoogleInstance().create(GoogleApi.class); }
+
 }

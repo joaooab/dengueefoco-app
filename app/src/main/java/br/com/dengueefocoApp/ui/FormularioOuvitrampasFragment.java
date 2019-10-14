@@ -122,4 +122,5 @@ public class FormularioOuvitrampasFragment extends Fragment {
     private ArrayAdapter<String> criaArrayAdapterSpinner(List<String> lista) {
         return new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, lista);
     }
+
 }

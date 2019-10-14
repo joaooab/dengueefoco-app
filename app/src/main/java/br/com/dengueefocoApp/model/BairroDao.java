@@ -26,4 +26,5 @@ public interface BairroDao {
 
     @Delete
     void delete(Bairro antivetorials);
+
 }

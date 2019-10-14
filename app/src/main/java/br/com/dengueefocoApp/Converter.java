@@ -42,7 +42,4 @@ public class Converter {
 		return Util.formataParaString(value);
 	}
 
-
-
-
 }

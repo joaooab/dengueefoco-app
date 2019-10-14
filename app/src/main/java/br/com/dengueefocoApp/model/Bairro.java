@@ -49,4 +49,5 @@ public class Bairro {
     public int hashCode() {
         return Objects.hash(nome);
     }
+
 }

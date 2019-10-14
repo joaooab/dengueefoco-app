@@ -94,4 +94,5 @@ public class Endereco {
 	public void setUnidade(String unidade) {
 		this.unidade = unidade;
 	}
+
 }
